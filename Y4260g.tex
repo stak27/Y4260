@@ -1,0 +1,2325 @@
+\documentclass[a4j]{jarticle}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{wrapfig}
+\usepackage{lscape}
+%% local definitions
+
+\def\bra{\langle}
+\def\ket{\rangle}
+\def\rmd{{\rm d}}
+\def\rmi{{\rm i}}
+
+\def\Im{{\rm Im}~}
+
+\def\lamlam{{\lambda\cdot\lambda}}
+\def\lamilamj{{\lambda_i\cdot\lambda_j}}
+\def\sigsig{{\sigma\cdot\sigma}}
+\def\sigisigj{{\sigma_i\cdot\sigma_j}}
+
+\def\calE{{\cal E}}
+\def\calH{{\cal H}}
+\def\calO{{\cal O}}
+\def\calF{{\cal F}}
+\def\calT{{\cal T}}
+\def\calM{{\cal M}}
+
+
+\def\Jpsi{{J\!/\!\psi}{}}
+\def\X{\text{$X$(3872)}}
+
+\def\ubar{\overline{{u}}}
+\def\dbar{\overline{{d}}}
+\def\cbar{\overline{{c}}}
+\def\qbar{\overline{{q}}}
+\def\Qbar{\overline{{Q}}}
+\def\sbar{\overline{{s}}}
+\def\Kbar{\overline{{K}}}
+\def\Dbar{\overline{{D}}{}}
+\def\sigmabar{\overline{{\sigma}}{}}
+\def\vbar{\overline{{v}}}
+
+\def\DDbarz{$D^0\Dbar^{*0}$}
+\def\DDbarpm{$D^+D^{*-}$}
+\def\ccbar{$c\cbar$}
+\def\DDbar{$D\overline{D}{}^*$}
+
+\newcommand{\xbld}[1]{\mbox{\boldmath $#1$}}
+\def\vecx{{\xbld{x}}}
+\def\vecy{{\xbld{y}}}
+\def\vecr{{\xbld{r}}}
+\def\vecq{{\xbld{q}}}
+\def\veck{{\xbld{k}}}
+\def\vecp{{\xbld{p}}}
+\def\vecA{{\xbld{A}}}
+\def\vecL{{\xbld{L}}}
+\def\vecP{{\xbld{P}}}
+\def\vecK{{\xbld{K}}}
+\def\vecR{{\xbld{R}}}
+\def\vecsig{{\xbld{\sigma}}}
+
+\newcommand{\intp}[1]{{\int\!\!{\rmd^3 #1\over(2\pi)^3}\;}} 
+
+\def\TinP{T^{(P)}}
+\def\GinP{G^{(P)}}
+\def\ii{{\rm i}}
+\def\rmd{{\rm d}}
+
+\def\half#1{\text{${#1\over 2}$}}
+
+\def\Belle{\text{Belle}}
+\def\BABAR{\text{\it{\hspace{-.1em}B\hspace{-.1em}A\hspace{-.1em}B\hspace{-.1em}A\hspace{-.1em}R\hspace{.1em}}}}
+
+\def\Vcoul{V_\text{coul}}
+\def\Vconf{V_\text{conf}}
+\def\Vcmi{V_\text{CMI}}
+\def\Vls{V_\text{LS}}
+\def\Lsls{{\vecL_\text{SLS}}}
+\def\Lals{{\vecL_\text{ALS}}}
+
+
+\newcommand{\U}[9]{\left[\begin{array}{ccc}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\\ \end{array}\right]}
+
+\begin{document}
+
+\title{Y(4260)周辺}
+\author{}
+\date{\today}
+\maketitle
+
+
+{\bf \Large Y(4260)覚書}
+%
+%
+\par
+\vspace*{5mm}
+PDGより
+
+$J^{PC} = 1^{--}$
+
+Mass:  $4251 \pm 9$ MeV
+
+Width:  $120\pm 12$ MeV
+
+Decay Modes
+
+　$\Gamma_1 \quad$ $e^+ e^-$
+
+　$\Gamma_2 \quad$ $J/\psi \, \pi^+ \pi^-$
+
+　$\Gamma_3 \quad \quad$ $J/\psi \, f_0(980), \quad  f_0(980) \to \pi^+ \pi^-$
+
+　$\Gamma_4 \quad \quad$ $Z_c(3900)^\pm \, \pi^\mp, \quad  Z_c(3900)^\pm \to J/\psi \, \pi^\pm$
+
+　$\Gamma_5 \quad$ $J/\psi \, \pi^0 \pi^0$
+
+　$\Gamma_6 \quad$ $J/\psi \, K^+ K^-$
+
+　$\Gamma_7 \quad$ $X(3872) \, \gamma$
+%
+%
+%
+\par
+\vspace*{5mm}
+Y(4008), Y(4260), Y(4360), Y(4660)がcharmoniumとは考えられない理由
+ \begin{enumerate}
+\item
+$D \overline{D}$の閾値よりずっと質量が大きいのに、
+$Y(4008,4260,4360,4660) \to D \overline{D}$崩壊が観測されていない。
+例えば$\psi(3770)$は$1 {}^3D_1$と考えられているが
+$D \overline{D}$への崩壊は約93\%と非常に大きい。
+
+\item
+$Y(4260) \to J/\psi \pi^+ \pi^-$崩壊幅が
+通常のcharmonium状態より１桁大きい。
+
+\item
+クォークポテンシャル模型での計算では
+このくらいのエネルギーには対応する状態がない。
+$\psi(4160)$が$2 {}^3 D_1$状態で、
+$\psi(4415)$が$4 {}^3 S_1$状態と考えられる。
+
+
+\item 
+$X$(4008)$1^{--}$は$\Jpsi\pi\pi$に壊れるが$\psi(2S)\pi\pi$には壊れない??
+\item 
+$X$(4260)$1^{--}$は$\Jpsi\pi\pi$に壊れるが $\psi(2S)\pi\pi$には壊れない。
+\item 
+$X$(4260)$1^{--}$は$\Dbar^(*) D^(*)$にも壊れない。
+\item 
+$X$(4360)$1^{--}$は$\psi(2S)\pi\pi$に壊れるが$\Jpsi\pi\pi$には壊れない。
+\item 
+$X$(4660)$1^{--}$は$\psi(2S)\pi\pi$に壊れるが$\Jpsi\pi\pi$には壊れない。
+\end{enumerate}
+
+
+Hadronic Model
+では、上記5、7、8は説明されていない。
+
+
+Hadronic Model (Two-meson model)は、主には次の通り。
+
+Ref.\ \cite{Ding:2008gr}は、$Y$(4260)と
+$Z_2^+$(4250)を、それぞれneutralとchargedの$D_1\overline{D}$と$D_0\overline{D}^*$を重ね合わせたmoleculeとして
+考えられるとしている。Heavy-light quark 描像。
+DD間には、$\pi\eta\sigma\rho\omega$を
+飛ばしている。
+coupling は$D^*$-decayの実験値およびquark model, QCD-sum rule, などを
+参考に大体で決めている。
+$Y$(4260)については、$D_1D$と$D_0D^*$のdiagonalのinteraction は総じて小さく、
+off-diagonal（$\pi$-exchange origin）が大きい。
+ちょっと足りなめ（cutoff 大きめ）だが、何とか深いbound stateを作ることが出来る。
+$D_1\overline{D}$と$D_0\overline{D}^*$は半々くらい。
+$Z_2^+$(4250)は、off-diagonal が大きいが、diagonalが斥力的。
+深いBound state は無理そう。
+$D_1\overline{D}$と$D_0\overline{D}^*$は半々くらい。
+ちなみに$M_{D_0}$=2308 MeV,$M_{D_1}$=2422 MeV.
+
+Ref.\ \cite{Guo:2013nza}では、どんな$1^{--}$stateから
+$X$(3872)をradiative decayで生成することが出来るかが中心的話題。
+$\psi$(4040),
+(4160)(4415)を、それぞれ$c\cbar$の$^3S_1(n=3)$, $^3S_1(n=4)$, $^3D_1(n=2)$
+とし、$Y(4260)$を$D\overline{D}_1$のmolecule、
+$X(3872)$も$D\overline{D}^*$のmoleculeとして計算。
+radiative decayは$Y(4260)$の$D_1$が$X(3872)$の$D^*$に、
+$c\cbar$からは$D$-loopを通じてdecayするとしてある。
+$Y(4260)$からのが比較的大きく、
+$c\cbar$からのは小さいと結論。
+$\Gamma(Y(4260)\rightarrow X(3872))$は5-35 keVくらい。
+
+Ref.\ \cite{Dong:2014zka}では、
+$Y(4260)$と$X(3872)$を$DD_1$、あるいは$DD^*$と$c\cbar$との重ね合わせで
+表し、
+$D$-loop、$c$-loopを通じて$Y(4260)\rightarrow X(3872)\gamma$
+が起きるとした。
+Interactionはeffective meson-meson-gammaとか（実験でfix）、
+ccgamma（chargeで）。
+DD-ccbarはcompositness condition とか。
+実験値の半分またはそれ以下くらいが出てくる。
+$q\overline{q}$の寄与は、大きくもなり小さくもなる・・・
+$\Gamma(Y(4260)\rightarrow X(3872))$は20-50 keVくらい。
+
+\begin{thebibliography}{9}
+
+%\cite{Ding:2008gr}
+\bibitem{Ding:2008gr} 
+ G.~J.~Ding,
+ %``Are Y(4260) and Z+(2) are D(1) D or D(0) D* Hadronic Molecules?,''
+ Phys.\ Rev.\ D {\bf 79}, 014001 (2009)
+ doi:10.1103/PhysRevD.79.014001
+ [arXiv:0809.4818 [hep-ph]].
+ %%CITATION = doi:10.1103/PhysRevD.79.014001;%%
+ %95 citations counted in INSPIRE as of 19 May 2016
+
+%\cite{Guo:2013nza}
+\bibitem{Guo:2013nza} 
+ F.~K.~Guo, C.~Hanhart, U.~G.~Meissner, Q.~Wang and Q.~Zhao,
+ %``Production of the X(3872) in charmonia radiative decays,''
+ Phys.\ Lett.\ B {\bf 725}, 127 (2013)
+ doi:10.1016/j.physletb.2013.06.053
+ [arXiv:1306.3096 [hep-ph]].
+ %%CITATION = doi:10.1016/j.physletb.2013.06.053;%%
+ %46 citations counted in INSPIRE as of 19 May 2016
+
+
+
+%\cite{Dong:2014zka}
+\bibitem{Dong:2014zka} 
+ Y.~Dong, A.~Faessler, T.~Gutsche and V.~E.~Lyubovitskij,
+ %``Radiative decay $Y(4260) \to X(3872) + \gamma$ involving hadronic molecular and charmonium components,''
+ Phys.\ Rev.\ D {\bf 90}, no. 7, 074032 (2014)
+ doi:10.1103/PhysRevD.90.074032
+ [arXiv:1404.6161 [hep-ph]].
+ %%CITATION = doi:10.1103/PhysRevD.90.074032;%%
+ %6 citations counted in INSPIRE as of 19 May 2016
+ 
+\end{thebibliography}
+
+\par
+\vspace*{5mm}
+Y(4260)状態はどのような状態か？
+
+\begin{enumerate}
+\item
+$Y(4260)$を$D_1 \overline{D}$の
+束縛状態と考えた場合
+
+$D$: $J^{P} = 0^-$
+
+$D^\pm$ Mass: $1869.61 \pm 0.09$ MeV
+
+$D^0$ Mass: $1864.84 \pm 0.05$ MeV
+
+\vspace*{5mm}
+
+$D_1$: $J^{P} = 1^+$
+
+$D_1^0$ Mass: $2421.4 \pm 0.6$ MeV
+
+$D_1^0$ Width: $27.4 \pm 2.5$ MeV
+
+\newpage
+
+$D_1^0$ Decay Modes:
+
+
+　$\Gamma_1 \quad$ $D^\ast(2010)^+ \, \pi^-$
+
+　$\Gamma_2 \quad$ $D^0 \, \pi^+ \pi^-$
+
+　$\Gamma_3 \quad \quad$ $D^0 \, \rho^0, \quad  \rho^0 \to \pi^+ \pi^-$
+
+　$\Gamma_4 \quad \quad$ $D^0 \, f_0(500), \quad  f_0(500) \to \pi^+ \pi^-$
+ 
+　$\Gamma_5 \quad \quad$ $D_0^\ast(2400)^+ \, \pi^-, \quad  D_0^\ast(2400)^+ \to D^0 \pi^+$
+
+\vspace*{5mm}
+
+$D_1^\pm$ Mass: $2423.2 \pm 2.4$ MeV
+
+$D_1^\pm$ Width: $25 \pm 6$ MeV
+
+$D_1^+$ Decay Modes:
+
+
+　$\Gamma_1 \quad$ $D^\ast(2007)^0 \, \pi^+$
+
+　$\Gamma_2 \quad$ $D^+ \, \pi^+ \pi^-$
+
+　$\Gamma_3 \quad \quad$ $D^+ \, \rho^0, \quad  \rho^0 \to \pi^+ \pi^-$
+
+　$\Gamma_4 \quad \quad$ $D^+ \, f_0(500), \quad  f_0(500) \to \pi^+ \pi^-$
+ 
+　$\Gamma_5 \quad \quad$ $D_0^{\ast}(2400)^0 \, \pi^-, \quad  D_0^\ast(2400)^0 \to D^+ \pi^-$
+
+\vspace*{5mm}
+束縛エネルギー　　
+
+$(1864.84 + 2421.4) - 4251 = 35.24$ MeV
+
+ここまで深い束縛状態を作るくらい強い引力が存在するか？
+
+Decay Modeを考える。
+
+$D_1^0 \, \overline{D^0}$のS波の束縛状態とすると
+考えられるdecay modeは$D^\ast(2010)^+ \, \overline{D^0} \, \pi^-$と$D^0 \overline{D^0} \, \pi^+ \, \pi^-$である。
+
+$D_1^+ \, D^-$のS波の束縛状態とすると
+考えられるdecay modeは$D^\ast(2007)^0 \, D^- \, \pi^+$と$D^+ \, D^- \, \pi^+ \, \pi^-$である。
+
+$D^\ast(2010)^+ \, \overline{D^0} \, \pi^-$と$D^\ast(2007)^0 \, D^- \, \pi^+$は
+$Y(4260)$の崩壊モードとして調べられており、
+$D^\ast(2010)^+ \, \overline{D^0}$と$D^\ast(2007)^0 \, D^-$は
+$Z_c(3900)^\pm$として観測されていると考えられる。
+
+$Z_c(3900)^\pm$が$J/\psi \, \pi^\pm$への崩壊のブランチングレシオが
+ある程度以上あれば、$Y(4260) \to J/\psi \, \pi^+ \, \pi^-$
+崩壊幅が大きいことも説明がつく。
+
+$D^\ast(2010)^+ \, \overline{D^0} \, \pi^-$と$D^\ast(2007)^0 \, D^- \, \pi^+$
+のスペクトルでY(4260)のピークがBelle実験では見えていないことが問題。
+M. Cleven, et al. Phys. Rev. D 90, 074039 (2014)
+によると、$e^+ e^- \to Y(4260) \to D \, \overline{D}^\ast \, \pi$
+の直接崩壊モードと$e^+ e^- \to Y(4260) \to Z_c(3900) \, \pi$
+崩壊モードとの干渉効果によって
+$D \, \overline{D}^\ast \, \pi$のスペクトルには$Y(4260)$のところに
+ピークを作らない。この議論が正しければ、この問題も解決される。
+
+
+$D^0 \overline{D^0} \, \pi^+ \, \pi^-$と$D^+ \, D^- \, \pi^+ \, \pi^-$は
+$Y(4260)$の崩壊モードとして調べられていない。
+
+
+$D_1$の崩壊モードとしては観測されていないが$D_1 \to D^\ast \, \gamma$崩壊は
+可能と考えられるので、$D_1 \, \overline{D} \to D^\ast \, \overline{D}　\, \gamma \sim X(3872) \, \gamma$
+は可能と考えられる。
+
+\vspace*{5mm}
+\item
+
+$Y(4260)$を$J/\psi \, f_0(980)$のD波のレゾナンスと考えた場合
+
+\vspace*{5mm}
+
+$f_0(980)$:  $J^{PC} = 0^{++}$
+
+$f_0(980)$ Mass:  $990 \pm 20$ MeV
+
+$f_0(980)$ Width:  40 to 100 MeV
+
+$f_0(980)$ Decay Modes: $\pi \, \pi$ dominant  $K \, K$, $\gamma \, \gamma$ seen
+
+\vspace*{5mm}
+
+$J/\psi$:  $J^{PC} = 1^{--}$
+
+$J/\psi$ Mass:  $3096 \pm 0.011$ MeV
+
+$J/\psi$ Width:  $92.9 \pm 2.8$ MeV
+
+閾値：　(3096 + 990) =  4086 MeV
+
+$Y(4260)$は閾値より(4251 - 4086) = 165 MeV上の状態。
+
+D波のレゾナンスと考える根拠は？
+
+崩壊の角度分布を見る必要がある。
+
+\end{enumerate}
+
+\par
+\vspace*{5mm}
+{\bf \large Diquark model}
+
+(1) L. Maiani, F. Piccinini, A.D. Polosa and V. Riquer, Phys. Rev. D {\bf 89}, 114010 (2014)
+
+"$Z(4430)$ and a new paradigm for spin interactions in tetraquarks"
+
+\vspace{5mm}
+(2) H.-X. Chen, L. Maiani, A.D. Polosa, V. Riquer, Eur. Phys. J. C {\bf 75}, 550 (2015)
+
+"$Y(4260) \to \gamma + X(3872)$ in the diquarkonium picture"
+
+\vspace{5mm}
+(1)の論文で、tetraquark状態はdiquark- antidiquarkの束縛状態と
+いうことを主張している。spin-spin interactionはdiquark及び
+antidiquark内だけで働という大きな仮定を置く。
+これで、X,Y, Z状態が大体説明がつくと主張。
+視点として特徴的なのは、cと$\bar c$間の空間分布に
+注目しているところ。$Z(4430)$と$Z_c(3900)$の質量差と
+$\psi(2S)$と$J/\psi$の質量差はほぼ同じなので、
+$Z(4430)$は$Z_c(3900)$の動径方向の励起状態であると
+いう主張は興味深い。
+
+同様に、$Y(4008)$と$Y(4260)$の動径方向の励起状態
+が$Y(4360)$と$Y(4660)$であるとすると
+$Y(4008)$と$Y(4260)$は$J/\psi \to \pi \pi$に崩壊し
+$Y(4360)$と$Y(4660)$は$\psi(2S) \to \pi \pi$に崩壊し
+それぞれ、逆の崩壊は起きないということが説明できる。
+
+\vspace{5mm}
+(2)の論文では、diquarkとantidiquarkは点状粒子として
+その間にCornell Potentialを考えて、diquarkoniumとして
+tetraquark状態を解析している。
+
+\vspace{10mm}
+{\bf \large Hadro-charmonium model}
+
+(1)Xin Li and M.B. Voloshin, Phys. Rev. D {\bf 88}, 034012 (2013)
+
+"Suppression of the S-wave production of $\frac{3}{2}^+ + \frac{1}{2}^-$ heavy 
+meson pairs in $e^+ e^-$ annihilation"
+
+\vspace{5mm}
+
+Hadro-charmoniumはコンパクトなchamoniumの周りに
+軽いクォークが回っているというピクチャー。
+Heavy quark spin symmetryを正しく取り扱っている
+模型である。この論文は、$Y(4260)$が$D_1(2420) \bar D$の分子
+状態とすると、$e^+ + e^- -> Y(4260)$の生成はHeavy quark spin symmetry
+から強く禁止されるので、$Y(4260)$の$D_1(2420) \bar D$の分子描像に
+疑問を投げかけている。
+
+\vspace{5mm}
+
+Qian Wang, et al, Phys. Rev. D {\bf 89}, 034001 (2014)
+
+"$Y(4260)$: Hadronic molecule versus hadro-charmonium interpretation"
+
+\vspace{5mm}
+
+(1)の論文への反論。基本的にはHeavy quark spin symmetryの破れの大きさを
+評価すると、それなりに大きいので、分子描像でも実験とは矛盾しないと
+主張。
+
+\vspace{10mm}
+{\bf \large Open charm meson spectroscopy}
+
+P. Colangelo, F. De Fazio, F. Giannuzzi and S. Nicotri, Phys. Rev. D {\bf 86}, 054024 (2012)
+
+"New meson spectroscopy with open charm and beauty"
+
+\vspace{5mm}
+
+Heavy quark symmetryとchiral symmetryを考慮したeffective Lagrangian approachである。
+Table Iに観測されているopen charm and beauty mesonのHQ doubletの分類が
+出ていて便利。$D_1(2420)$は軽いクォークの角運動量が$3/2^+$で$J^P = 2^+$の
+$D_2^\ast(2460)$とdoubletを組んでいる。$D_1(2420) \to D^\ast \pi$崩壊では
+$D_1(2420)$の軽いクォークの角運動量が$3/2$なので、軽いクォークの成分が
+$q \pi$に同じパリティで崩壊するにはd-waveで崩壊する必要がある。
+そのため$D_1(2420)$の幅は小さい。一方、軽いクォークの角運動量が$1/2^+$
+の$D_0^\ast(2400)$と$D_1'(2430)$はs-waveで崩壊できるので、大きな崩壊幅を
+持つ。ちなみにTable IIにもあるように$D_0^\ast(2400)$の中性状態と荷電状態では
+その質量が約80MeVも異なっており、今後の実験が待たれる。
+
+%\begin{tabular}{ccccc}
+%$\Jpsi$& 3097
+%\\
+%$\Jpsi\pi\pi$ & 3377
+%\\
+%$\Jpsi KK$ & 4085
+%\\
+%$\psi(2S)$&3686
+%\\
+%$\psi(2S)\pi\pi$ & 3966
+%\\
+%$D$&1869.61
+%\\
+%$D^*$&2006.97
+%\\
+%$D_1$&2421.4
+%\\
+%$D_s$&1968
+%\\
+%$D_s^*$&2112
+%\\
+%$D_{s1}$&2460
+%\\
+%\end{tabular}
+\newpage
+\section{$c$-parityの決まった$c\cbar q\qbar$系}
+以後、color, isospin自由度は無視してある。
+\subsection{$q\qbar$系の$J^{PC}$}
+
+\begin{align}
+L=0&&0^{-+}(^1S_0)~ &\eta,\eta_c &1^{--}(^3S_1)~ &\omega,\Jpsi\\
+L=1&&1^{+-}(^1P_1)~ &h,h_c &J^{++}(^3P_J)~ &f_J, \chi_{cJ}
+\end{align}
+
+
+\subsection{$J^{++}$}
+
+$\ell=1$１か所までの系で$J^{++}$となる相対$S$-waveの$c\cbar q\qbar$系は2種類。
+\begin{align}
+0^{-+}0^{-+}&&\eta  \eta_c\\
+1^{--}1^{--}&&\omega\Jpsi
+\end{align}
+同、相対$P$-waveの（$S$-wave）$c\cbar q\qbar$系は無し。\\
+計、$0^{++}$が２つ、$1^{++}$が１つ、$2^{++}$が１つ。\\
+$1^{++}$は$X$(3872)に対応。
+
+\subsection{$J^{+-}$}
+
+$\ell=1$１か所までの系で$J^{+-}$となる相対$S$-waveの$c\cbar q\qbar$系は2種類。
+\begin{align}
+0^{-+}1^{--}&&\eta \Jpsi && \omega \eta_c
+\end{align}
+同、相対$P$-waveの（$S$-wave）$c\cbar q\qbar$系は無し。\\
+計、$1^{+-}$が2つ。\\
+$0^{+-}$、$2^{+-}$は$q\qbar$ meson では無いが、これでも作れない。
+
+
+\subsection{$J^{-+}$}
+$\ell=1$１か所までの系で$J^{-+}$となる相対$S$-waveの$c\cbar q\qbar$系は8種類。
+\begin{align}
+0^{-+}0^{++}&&\eta\chi_{c0}&&f_0\eta_c \\
+0^{-+}1^{++}&&\eta\chi_{c1}&&f_1\eta_c \\
+0^{-+}2^{++}&&\eta\chi_{c2}&&f_2\eta_c \\
+1^{--}1^{+-}&&\omega h_{c1} && h_1 \Jpsi
+\end{align}
+同、相対$P$-waveの（$S$-wave）$c\cbar q\qbar$系は2種類。
+\begin{align}
+0^{-+}0^{-+}&&\eta \eta_c \\
+1^{--}1^{--}&&\omega \Jpsi
+\end{align}
+計、$0^{-+}$が５つ、$1^{-+}$が８つ、$2^{-+}$が６つ、$3^{-+}$が１つ。\\
+$1^{-+}$、$3^{-+}$は$q\qbar$ meson では無い。
+
+
+
+\subsection{$J^{--}$}
+$\ell=1$１か所までの系で$J^{--}$となる相対$S$-waveの$c\cbar q\qbar$系は8種類。
+\begin{align}
+0^{-+}1^{+-}&&\eta h_{c1} && h_1 \eta_c\\
+1^{--}0^{++}&&\omega\chi_{c0}&&f_0\Jpsi \\
+1^{--}1^{++}&&\omega\chi_{c1}&&f_1\Jpsi \\
+1^{--}2^{++}&&\omega\chi_{c2}&&f_2\Jpsi 
+\end{align}
+同、相対$P$-waveの（$S$-wave）$c\cbar q\qbar$系は2種類。
+\begin{align}
+0^{-+}1^{--}&&\eta \Jpsi && \omega \eta_c
+\end{align}
+計、$0^{-+}$が４つ、$1^{-+}$が１０個、$2^{-+}$が６つ、$3^{-+}$が２つ。\\
+
+\subsection{$q\qbar c\cbar$系の自由度}
+
+計、Parityが正で、
+$J=0$が2、$1$が3個、$2$が1つ。自由度は$m$まで入れて16。
+parityが負で、$J=0$が9、$1$が18個、$2$が12、$3$が3つ。自由度は$m$まで入れて144。\\
+
+\section{$q\cbar c\qbar$系}
+\begin{align}
+L=0&&(^1S_0) D,\Dbar &&(^3S_1) D^*,\Dbar^*\\
+L=1&&(^1P_1) D_{01},\Dbar_{01} &&(^3P_J) D_{J},\Dbar_{J}
+\end{align}
+
+\subsection{$S$-wave meson のみ}
+\begin{align}
+\Dbar D &&\Dbar D^*&&\Dbar^* D&&\Dbar^* D^*
+\end{align}
+計、$J=0$が2つ、$1$が3つ、$2$が1つ。\\
+これは$J^{++}$と$J^{+-}$に対応する。
+
+\subsection{$S$-wave meson で相対$P$-wave}
+相対が$P$-waveであることを$\phi_P$をかけて表すと、
+\begin{align}
+\Dbar D\phi_P &&\Dbar D^*\phi_P&&\Dbar^* D\phi_P&&\Dbar^* D^*\phi_P
+\end{align}
+計、$J=0$が3つ、$1$が6つ、$2$が4つ、$3$が1つ。\\
+これは$J^{-+}$と$J^{--}$に含まれる。
+
+\subsection{$S$-wave meson と$P$-wave mesonの組み合わせ}
+\begin{align}
+\Dbar D_{01} &&\Dbar D_{0}&&\Dbar D_{11}&&\Dbar D_{2}\\
+\Dbar^* D_{01} &&\Dbar^* D_{0}&&\Dbar^* D_{11}&&\Dbar^* D_{2}\\
+\Dbar_{01}D &&\Dbar_{0}D&&\Dbar_{11}D&&\Dbar_{2}D\\
+\Dbar_{01}D^* &&\Dbar_{0}D^*&&\Dbar_{11}D^*&&\Dbar_{2}D^*
+\end{align}
+計、$J=0$が6つ、$1$が12つ、$2$が8つ、$3$が2つ。\\
+これは$J^{-+}$と$J^{--}$に含まれる。
+
+\subsection{$q\cbar c\qbar$系の自由度}
+計、$J=0$が11、$1$が21個、$2$が13、$3$が3つ。自由度は$m$まで入れて160。
+
+
+
+\section{$q \qbar c\cbar$ $J^{PC}=1^{--}$の組み替え}
+
+%$\Jpsi$=${}^3S_1(1S)$, $I(J^{PC})=0(1^{--})$と
+%$f_0(980)$=$q\qbar{}^3P_0(1P)$, $I^G(J^{PC})=0^+(0^{++})$
+%の組み替えを考える。
+
+\subsection{準備}
+いま、
+\begin{align}
+|(l_1l_2)L,(s_1s_2)S;JM\ket 
+&= 
+\sum_{j_1,j_2} 
+\U{l_1}{l_2}{L}{s_1}{s_2}{S}{j_1}{j_2}{J}
+|(l_1s_1)j_1,(l_2s_2)j_2;JM\ket
+\end{align}
+つまり、変換行列の要素を
+\begin{align}
+\U{l_1}{l_2}{L}{s_1}{s_2}{S}{j_1}{j_2}{J}
+&=
+\sqrt{(2L+1)(2S+1)(2j_1+1)(2j_2+1)}
+\left\{\begin{array}{ccc}l_1&l_2&L\\s_1&s_2&S\\j_1&j_2&J\\ \end{array}\right\}
+\end{align}
+と書く。
+
+軌道部分について（12-34Jacobi座標を14-32Jacobi座標、13-24Jacobi座標で書く）：
+\begin{align}
+{\vecr_{12}\over b_{12}}&=\mu_{10}{\vecr_{14}\over b_{14}}+\mu_{01}{\vecr_{32}\over b_{32}}+\mu_{00}{\vecr_{14-32}\over b_{14-32}}
+&&=\nu_{10}{\vecr_{13}\over b_{13}}+\nu_{01}{\vecr_{24}\over b_{24}}+\nu_{00}{\vecr_{13-24}\over b_{13-24}}
+\\
+{\vecr_{34}\over b_{34}}&=\mu_{10}'{\vecr_{14}\over b_{14}}+\mu_{01}'{\vecr_{32}\over b_{32}}+\mu_{00}'{\vecr_{14-32}\over b_{14-32}}
+&&=\nu_{10}'{\vecr_{13}\over b_{13}}+\nu_{01}'{\vecr_{24}\over b_{24}}+\nu_{00}'{\vecr_{13-24}\over b_{13-24}}
+\\
+{\vecr_{12-34}\over b_{12-34}}&=\mu_{10}''{\vecr_{14}\over b_{14}}+\mu_{01}''{\vecr_{32}\over b_{32}}+\mu_{00}''{\vecr_{14-32}\over b_{14-32}}
+&&=\nu_{10}''{\vecr_{13}\over b_{13}}+\nu_{01}''{\vecr_{24}\over b_{24}}+\nu_{00}''{\vecr_{13-24}\over b_{13-24}}
+\end{align}
+となる。
+これを用いると、
+軌道部分は、たとえば、
+$P$波の波動関数が${\vecr_{12}\over b_{12}}\phi_{0s}$の形をしている場合、
+\begin{align}
+&|(\ell_{12}\ell_{34})LM\ket\Big|_{\ell_{12}=1,\ell_{34}=0,L=1} 
+= \sum_{m,m' (M\text{ fixed})}(\ell_{12}m,\ell_{34}m'|LM)(\vecr_{12}/b_{12}){}^1_m\\
+&=
+ \mu_{10} |(\ell_{14}\ell_{32})L\ket\Big|_{\ell_{14}=1,\ell_{32}=0,L=1} 
++\mu_{01} |(\ell_{14}\ell_{32})L\ket\Big|_{\ell_{14}=0,\ell_{32}=1,L=1} 
++\mu_{00}|(\ell_{14}\ell_{32})L'\ket \Big|_{\ell_{14}=0,\ell_{32}=0,L'=0} |\ell_r=1\ket
+\\
+&|(\ell_{12}\ell_{34})LM\ket\Big|_{\ell_{12}=0,\ell_{34}=1,L=1} 
+= \sum_{m,m' (M\text{ fixed})}(\ell_{12}m,\ell_{34}m'|LM)(\vecr_{34}/b_{34}){}^1_{m'}\\
+&=
+ \mu'_{10} |(\ell_{14}\ell_{32})L\ket\Big|_{\ell_{14}=1,\ell_{32}=0,L=1} 
++\mu'_{01} |(\ell_{14}\ell_{32})L\ket\Big|_{\ell_{14}=0,\ell_{32}=1,L=1} 
++\mu'_{00}|(\ell_{14}\ell_{32})L'\ket \Big|_{\ell_{14}=0,\ell_{32}=0,L'=0} |\ell_r=1\ket
+\\
+&|((\ell_{12}\ell_{34})L'\ell_r)LM\ket\Big|_{L'=0,\ell_r=1,L=1} 
+= \sum_{m,m' (M\text{ fixed})}(L'm,\ell_rm'|LM)(\vecr_{12-34}/b_{12-34}){}^1_{m'}\\
+&=
+ \mu''_{10} |(\ell_{14}\ell_{32})L\ket\Big|_{\ell_{14}=1,\ell_{32}=0,L=1} 
++\mu''_{01} |(\ell_{14}\ell_{32})L\ket\Big|_{\ell_{14}=0,\ell_{32}=1,L=1} 
++\mu''_{00}|(\ell_{14}\ell_{32})L'\ket \Big|_{\ell_{14}=0,\ell_{32}=0,L'=0} |\ell_r=1\ket
+\end{align}
+などと書ける。どれかだけ1であと0のときの式だけども、いまはこれだけを使うので。
+
+1234が$q\qbar c\cbar$のとき、
+\begin{align}
+{\vecr_{12}}&=\mu_c{\vecr_{14}}+\mu_c{\vecr_{32}}+{\vecr_{14-32}}
+&&=\phantom{-}\mu_c{\vecr_{13}}-\mu_c{\vecr_{24}}+{\vecr_{13-24}}
+\\
+{\vecr_{34}}&=\mu_u{\vecr_{14}}+\mu_u{\vecr_{32}}-{\vecr_{14-32}}
+&&=-\mu_u{\vecr_{13}}+\mu_u{\vecr_{24}}+{\vecr_{13-24}}
+\\
+{\vecr_{12-34}}&={1\over 2}{\vecr_{14}}-{1\over 2}{\vecr_{32}}
+&&={1\over 2}{\vecr_{13}}+{1\over 2 }{\vecr_{24}}
+\end{align}
+ただし、
+\begin{align}
+\vecr_{ij}&=\vecr_i-\vecr_j
+\\
+\vecr_{12-34}&= {1\over 2} (\vecr_1+\vecr_2-\vecr_3-\vecr_4)
+\\
+\vecr_{14-32}&= {1\over m_u+m_c} (m_u\vecr_1-m_u\vecr_2-m_c\vecr_3+m_c\vecr_4)
+\\
+\vecr_{13-24}&= {1\over m_u+m_c} (m_u\vecr_1-m_u\vecr_2+m_c\vecr_3-m_c\vecr_4)
+\\
+\mu_c&={m_c\over m_u+m_c}
+\\
+\mu_u&={m_u\over m_u+m_c}
+\end{align}
+
+
+1234が$q\qbar c\cbar$のとき、gaussian size parameter $b$が共通とすれば、$b_{12}=\sqrt{2}b$ etc.,より
+\begin{align}
+{\vecr_{12}\over \sqrt{2} b}&=\mu_c{\vecr_{14}\over \sqrt{2} b}+\mu_c{\vecr_{32}\over \sqrt{2} b}+\sqrt{1\over 2}{\vecr_{14-32}\over  b}
+&&=\phantom{-}\mu_c{\vecr_{13}\over \sqrt{2} b}-\mu_c{\vecr_{24}\over \sqrt{2} b}+\sqrt{1\over 2}{\vecr_{13-24}\over  b}
+\\
+{\vecr_{34}\over \sqrt{2} b}&=\mu_u{\vecr_{14}\over \sqrt{2} b}+\mu_u{\vecr_{32}\over \sqrt{2} b}-\sqrt{1\over 2}{\vecr_{14-32}\over  b}
+&&=-\mu_u{\vecr_{13}\over \sqrt{2} b}+\mu_u{\vecr_{24}\over \sqrt{2} b}+\sqrt{1\over 2}{\vecr_{13-24}\over  b}
+\\
+{\vecr_{12-34}\over b}&={1\over \sqrt{2}}{\vecr_{14}\over \sqrt{2} b}-{1\over \sqrt{2}}{\vecr_{32}\over \sqrt{2} b}
+&&={1\over \sqrt{2}}{\vecr_{13}\over \sqrt{2} b}+{1\over \sqrt{2}}{\vecr_{24}\over \sqrt{2} b}
+\end{align}
+つまり、
+\begin{align}
+\mu_{10}&=\mu_c, && \mu_{01}=\mu_c, &&\mu_{00}=\sqrt{1\over 2}
+\\
+\mu'_{10}&=\mu_u, && \mu'_{01}=\mu_u, &&\mu'_{00}=-\sqrt{1\over 2}
+\\
+\mu''_{10}&=\sqrt{1\over 2}, && \mu''_{01}=-\sqrt{1\over 2}, &&\mu''_{00}=0
+\\
+\nu_{10}&=\mu_c, && \nu_{01}=-\mu_c, &&\nu_{00}=\sqrt{1\over 2}
+\\
+\nu'_{10}&=-\mu_u, && \nu'_{01}=\mu_u, &&\nu'_{00}=\sqrt{1\over 2}
+\\
+\nu''_{10}&=\sqrt{1\over 2}, && \nu''_{01}=\sqrt{1\over 2}, &&\nu''_{00}=0
+\end{align}
+
+
+また、gaussian size parameterが同じではなく、
+$\mu b^2=x_0^2$が同じとしても$\mu_{10}$etc.が変わるだけ。
+1234が$q\qbar c\cbar$のとき、
+\begin{align}
+{\vecr_{12}\over b_{12}}={\sqrt{\mu_{12}}\vecr_{12}\over x_0}
+&=\mu_c{\sqrt{\mu_{12}}\over \sqrt{\mu_{14}}}{\sqrt{\mu_{14}}\vecr_{14}\over x_0}
++\mu_c{\sqrt{\mu_{12}}\over \sqrt{\mu_{32}}}{\sqrt{\mu_{32}}\vecr_{32}\over  x_0}+{\sqrt{\mu_{12}}\over \sqrt{\mu_{14-32}}}{\sqrt{\mu_{14-32}}\vecr_{14-32}\over  x_0}
+\\
+&=\sqrt{\mu_c\over 2}{\vecr_{14}\over b_{14}}+\sqrt{\mu_c\over 2}{\vecr_{32}\over b_{32}}+\sqrt{\mu_u}{\vecr_{14-32}\over b_{14-32}}
+\\
+{\vecr_{34}\over b_{34}}
+&=\sqrt{\mu_u\over 2}{\vecr_{14}\over b_{14}}-\sqrt{\mu_u\over 2}{\vecr_{32}\over b_{32}}-\sqrt{\mu_c}{\vecr_{14-32}\over b_{14-32}}
+\\
+{\vecr_{12-34}\over b_{12-34}}
+&=\sqrt{1\over 2}{\vecr_{14}\over b_{14}}-\sqrt{1\over 2}{\vecr_{32}\over b_{32}}
+\end{align}
+\begin{align}
+{\vecr_{12}\over b_{12}}={\sqrt{\mu_{12}}\vecr_{12}\over x_0}
+&=\mu_c{\sqrt{\mu_{12}}\over \sqrt{\mu_{13}}}{\sqrt{\mu_{13}}\vecr_{13}\over x_0}
+-\mu_c{\sqrt{\mu_{12}}\over \sqrt{\mu_{24}}}{\sqrt{\mu_{24}}\vecr_{24}\over  x_0}+{\sqrt{\mu_{12}}\over \sqrt{\mu_{13-24}}}{\sqrt{\mu_{13-24}}\vecr_{13-24}\over  x_0}
+\\
+&=\sqrt{\mu_c\over 2}{\vecr_{13}\over b_{13}}-\sqrt{\mu_c\over 2}{\vecr_{24}\over b_{24}}+\sqrt{\mu_u}{\vecr_{13-24}\over b_{13-24}}
+\\
+{\vecr_{34}\over b_{34}}
+&=-\sqrt{\mu_u\over 2}{\vecr_{13}\over b_{13}}+\sqrt{\mu_u\over 2}{\vecr_{24}\over b_{24}}+\sqrt{\mu_c}{\vecr_{13-24}\over b_{13-24}}
+\\
+{\vecr_{12-34}\over b_{12-34}}
+&=\sqrt{1\over 2}{\vecr_{13}\over b_{13}}+\sqrt{1\over 2}{\vecr_{24}\over b_{24}}
+\end{align}
+\begin{align}
+\mu_{10}&=\sqrt{\mu_c\over 2}, && \mu_{01}=\sqrt{\mu_c\over 2}, &&\mu_{00}=\sqrt{\mu_u}
+\\
+\mu'_{10}&=\sqrt{\mu_u\over 2}, && \mu'_{01}=\sqrt{\mu_u\over 2}, &&\mu'_{00}=-\sqrt{\mu_c}
+\\
+\mu''_{10}&=\sqrt{1\over 2}, && \mu''_{01}=-\sqrt{1\over 2}, &&\mu''_{00}=0
+\\
+\nu_{10}&=\sqrt{\mu_c\over 2}, && \nu_{01}=-\sqrt{\mu_c\over 2}, &&\nu_{00}=\sqrt{\mu_u}
+\\
+\nu'_{10}&=-\sqrt{\mu_u\over 2}, && \nu'_{01}=\sqrt{\mu_u\over 2}, &&\nu'_{00}=\sqrt{\mu_c}
+\\
+\nu''_{10}&=\sqrt{1\over 2}, && \nu''_{01}=\sqrt{1\over 2}, &&\nu''_{00}=0
+\end{align}
+となる。
+
+%%%
+
+一方、
+1234が$q\cbar c\qbar$のとき、
+\begin{align}
+{\vecr_{12}}
+ &={\half1}{\vecr_{14}}+{\half1}{\vecr_{32}}+{\vecr_{14-32}}
+&&=   \mu_c{\vecr_{13}}   -\mu_u{\vecr_{24}}+{\vecr_{13-24}}
+\\
+{\vecr_{34}}
+ &={\half1}{\vecr_{14}}+{\half1}{\vecr_{32}}-{\vecr_{14-32}}
+&&=  -\mu_u{\vecr_{13}}   +\mu_c{\vecr_{24}}+{\vecr_{13-24}}
+\\
+{\vecr_{12-34}}
+ &=\mu_u{\vecr_{14}}-\mu_c{\vecr_{32}}
+&&=2\mu_u\mu_c{\vecr_{13}}+2\mu_u\mu_c{\vecr_{24}}+{m_u-m_c\over m_u+m_c}{\vecr_{13-24}}
+\end{align}
+\begin{align}
+\vecr_{12-34}&= {1\over m_u+m_c} (m_u\vecr_1+m_c\vecr_2-m_c\vecr_3-m_u\vecr_4)
+\\
+\vecr_{14-32}&= {1\over 2} (\vecr_1-\vecr_2-\vecr_3+\vecr_4)
+\\
+\vecr_{13-24}&= {1\over m_u+m_c} (m_u\vecr_1-m_c\vecr_2+m_c\vecr_3-m_u\vecr_4)
+\end{align}
+である。
+gaussian size parameter $b$が共通とすれば、$b_{12}=\sqrt{2}b$ etc.,より
+\begin{align}
+{\vecr_{12}\over \sqrt{2} b}&={\half1}{\vecr_{14}\over \sqrt{2} b}+{\half1}{\vecr_{32}\over \sqrt{2} b}+\sqrt{1\over 2}{\vecr_{14-32}\over  b}
+&&=\mu_c{\vecr_{13}\over \sqrt{2} b}-\mu_u{\vecr_{24}\over \sqrt{2} b}+\sqrt{1\over 2}{\vecr_{13-24}\over  b}
+\\
+{\vecr_{34}\over \sqrt{2} b}&={\half1}{\vecr_{14}\over \sqrt{2} b}+{\half1}{\vecr_{32}\over \sqrt{2} b}-\sqrt{1\over 2}{\vecr_{14-32}\over  b}
+&&=-\mu_u{\vecr_{13}\over \sqrt{2} b}+\mu_c{\vecr_{24}\over \sqrt{2} b}+\sqrt{1\over 2}{\vecr_{13-24}\over  b}
+\\
+{\vecr_{12-34}\over b}&={\sqrt{2}\mu_u}{\vecr_{14}\over \sqrt{2} b}-{\sqrt{2}\mu_c}{\vecr_{32}\over \sqrt{2} b}
+&&=2\sqrt{2}\mu_u\mu_c{\vecr_{13}\over \sqrt{2} b}+2\sqrt{2}\mu_u\mu_c{\vecr_{24}\over \sqrt{2} b}
++{(\mu_u-\mu_c)}{\vecr_{13-24}\over  b}
+\end{align}
+よって、$q\cbar c\qbar$のときは
+\begin{align}
+\mu_{10}&=\half1, && \mu_{01}=\half1, &&\mu_{00}=\sqrt{1\over 2}
+\\
+\mu'_{10}&=\half1, && \mu'_{01}=\half1, &&\mu'_{00}=-\sqrt{1\over 2}
+\\
+\mu''_{10}&=\sqrt{2}\mu_u, && \mu''_{01}=-\sqrt{2}\mu_c, &&\mu''_{00}=0
+\\
+\nu_{10}&=\mu_c, && \nu_{01}=-\mu_u, &&\nu_{00}=\sqrt{1\over 2}
+\\
+\nu'_{10}&=-\mu_u, && \nu'_{01}=\mu_c, &&\nu'_{00}=\sqrt{1\over 2}
+\\
+\nu''_{10}&=2\sqrt{2}\mu_u\mu_c, && \nu''_{01}=2\sqrt{2}\mu_u\mu_c, &&\nu''_{00}=\mu_u-\mu_c
+\end{align}
+
+%%%
+また、gaussian size parameterが同じではなく、
+$\mu b^2=x_0^2$が同じとすると
+\begin{align}
+{\vecr_{12}\over b_{12}}={\sqrt{\mu_{12}}\vecr_{12}\over x_0}
+&=\sqrt{\mu_{12}\over \mu_{14}}{\half1}{\sqrt{\mu_{14}}\vecr_{14}\over x_0}+\sqrt{\mu_{12}\over \mu_{32}}{\half1}{\sqrt{\mu_{32}}\vecr_{32}\over x_0}
++\sqrt{\mu_{12}\over \mu_{14-32}} {\sqrt{\mu_{14-32}}\vecr_{14-32}\over x_0}
+\\
+&=\sqrt{\mu_c\over 2}{\vecr_{14}\over b_{14}}+\sqrt{\mu_u\over 2}{\vecr_{32}\over b_{32}}+\sqrt{\half1}{\vecr_{14-32}\over b_{14-32}}
+\\
+{\vecr_{34}\over b_{34}}
+&=\sqrt{\mu_c\over 2}{\vecr_{14}\over b_{14}}+\sqrt{\mu_u\over 2}{\vecr_{32}\over b_{32}}-\sqrt{\half1}{\vecr_{14-32}\over b_{14-32}}
+\\
+{\vecr_{12-34}\over b_{12-34}}
+&=\sqrt{\mu_u}{\vecr_{14}\over b_{14}}-\sqrt{\mu_c}{\vecr_{32}\over b_{32}}
+\end{align}
+\begin{align}
+{\vecr_{12}\over b_{12}}={\sqrt{\mu_{12}}\vecr_{12}\over x_0}
+&=\sqrt{\mu_{12}\over \mu_{13}}\mu_c{\sqrt{\mu_{13}}\vecr_{13}\over x_0}-\sqrt{\mu_{12}\over \mu_{24}}\mu_u{\sqrt{\mu_{24}}\vecr_{24}\over x_0}
++\sqrt{\mu_{12}\over \mu_{13-24}} {\sqrt{\mu_{13-24}}\vecr_{13-24}\over x_0}
+\\
+&=\mu_c{\vecr_{13}\over b_{13}}-\mu_u{\vecr_{24}\over b_{24}}+\sqrt{2\mu_u\mu_c}{\vecr_{13-24}\over b_{13-24}}
+\\
+{\vecr_{34}\over b_{34}}
+&=-\mu_u{\vecr_{13}\over b_{13}}+\mu_c{\vecr_{24}\over b_{24}}+\sqrt{2\mu_u\mu_c}{\vecr_{13-24}\over b_{13-24}}
+\\
+{\vecr_{12-34}\over b_{12-34}}
+&=\sqrt{2\mu_u\mu_c}{\vecr_{13}\over b_{13}}+\sqrt{2\mu_u\mu_c}{\vecr_{24}\over b_{24}}+(\mu_u-\mu_c){\vecr_{13-24}\over b_{13-24}}
+\end{align}
+よって、$q\cbar c\qbar$のとき
+\begin{align}
+\mu_{10}&=\sqrt{\mu_c\over 2}, && \mu_{01}=\sqrt{\mu_u\over 2}, &&\mu_{00}=\sqrt{\half1}
+\\
+\mu'_{10}&=\sqrt{\mu_c\over 2}, && \mu'_{01}=\sqrt{\mu_u\over 2}, &&\mu'_{00}=-\sqrt{\half1}
+\\
+\mu''_{10}&=\sqrt{\mu_u}, && \mu''_{01}=-\sqrt{\mu_c}, &&\mu''_{00}=0
+\\
+\nu_{10}&=\mu_c, && \nu_{01}=-\mu_u, &&\nu_{00}=\sqrt{2\mu_u\mu_c}
+\\
+\nu'_{10}&=-\mu_u, && \nu'_{01}=\mu_c, &&\nu'_{00}=\sqrt{2\mu_u\mu_c}
+\\
+\nu''_{10}&=\sqrt{2\mu_u\mu_c}, && \nu''_{01}=\sqrt{2\mu_u\mu_c}, &&\nu''_{00}=\mu_u-\mu_c
+\end{align}
+となる。
+
+
+\subsection{組み替え}
+
+
+$q_1\qbar_2 q_3\qbar_4$として（$q$は$q$または$c$）、
+組み替え前の状態を
+\begin{align}
+|(\ell_{12}s_{12})j_{12},(\ell_{34}s_{34})j_{34};J'\ket \times|\ell_r\ket \Big|_{JM}
+\end{align}
+とする。例えば、相対$S$-waveの$f_0(980)\Jpsi $ $1^{--}$は、\\
+$q_1\qbar_2 q_3\qbar_4=q\qbar c\cbar$
+$\ell_{12}=1$, $s_{12}=1$, $j_{12}=0$, $\ell_{34}=0$, $s_{34}=1$, $j_{34}=1$, $J'=1$, $\ell_r=0$, $J=1$\\
+相対$P$-waveの$\Dbar D^*\phi_P $ $1^{--}$は、\\
+$q_1\qbar_2 q_3\qbar_4=q\cbar c\qbar$
+$\ell_{12}=0$, $s_{12}=0$, $j_{12}=0$, $\ell_{34}=0$, $s_{34}=1$, $j_{34}=1$, 
+$J'=1$, $\ell_r=1$, $J=1$\\
+である。
+これを組み替えると
+\begin{align}
+\lefteqn{|(\ell_{12}s_{12})j_{12},(\ell_{34}s_{34})j_{34};J'\ket \times|\ell_r\ket \Big|_{JM}}&\\
+&=
+\sum_{L',S}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+|(\ell_{12}\ell_{34})L',(s_{12}s_{34})S;J'\ket\times|\ell_r\ket \Big|_{JM}
+\\
+&=\sum_{L',S}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\sum_{s_{14},s_{32}}
+(-1)^{-s_{34}-s_{32}}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{14}}{s_{32}}{S}
+|(\ell_{12}\ell_{34})L',(s_{14}s_{32})S;J'\ket\times|\ell_r\ket \Big|_{JM}
+\end{align}
+ただし、符号はmesonを$q\qbar$型（$\qbar q$でなく）で定義したいので、
+\begin{align}
+|(s_3 s_4)s_{34}\ket & = (-1)^{s_3+s_4-s_{34}}|(s_4 s_3)s_{34}\ket 
+\\
+|(s_2 s_3)s_{32}\ket & = (-1)^{s_3+s_2-s_{32}}|(s_3 s_2)s_{32}\ket 
+\end{align}
+から出てくる。
+
+
+\begin{align}
+\lefteqn{|(\ell_{12}s_{12})j_{12},(\ell_{34}s_{34})j_{34};J'\ket \times|\ell_r\ket \Big|_{JM}}&\\
+&=
+\sum_{L',S}
+\sum_{s_{14},s_{32}}
+(-1)^{-s_{34}-s_{32}}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{14}}{s_{32}}{S}
+\nonumber\\
+&\times 
+\sum_{L}
+\U{L'}{\ell_r}{L}{S}{0}{S}{J'}{\ell_r}{J}
+|((\ell_{12}\ell_{34})L'\ell_r)L,(s_{14}s_{32})S;JM\ket
+\\
+&=
+\sum_{L',S}
+\sum_{s_{14},s_{32}}
+\sum_{L}
+(-1)^{-s_{34}-s_{32}}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{14}}{s_{32}}{S}
+\U{L'}{\ell_r}{L}{S}{0}{S}{J'}{\ell_r}{J}
+\nonumber\\
+&\times 
+\sum_{\ell_{14},\ell_{32},L'',\ell_r'}
+\mu_{\ell_{14}\ell_{32}} |((\ell_{14}\ell_{32})L''\ell_r')L,(s_{14}s_{32})S;JM\ket
+\\
+&=
+\sum_{L',L,S}
+\sum_{s_{14},s_{32}}
+\sum_{\ell_{14},\ell_{32},L'',\ell_r'}
+(-1)^{-s_{34}-s_{32}}
+\mu_{\ell_{14}\ell_{32}}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{14}}{s_{32}}{S}
+\U{L'}{\ell_r}{L}{S}{0}{S}{J'}{\ell_r}{J}
+\nonumber\\
+&
+\times
+\sum_{J''}
+\U{L''}{\ell_r'}{L}{S}{0}{S}{J''}{\ell_r'}{J}
+|(\ell_{14}\ell_{32})L''(s_{14}s_{32})S;J''\ket\times|\ell_r'\ket\Big|^J
+\\
+&=
+\sum_{L',L,S}
+\sum_{s_{14},s_{32}}
+\sum_{\ell_{14},\ell_{32},L'',\ell_r'}
+\sum_{J''}
+(-1)^{-s_{34}-s_{32}}
+\mu_{\ell_{14}\ell_{32}}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{14}}{s_{32}}{S}
+\U{L'}{\ell_r}{L}{S}{0}{S}{J'}{\ell_r}{J}
+\nonumber\\
+&\times
+\U{L''}{\ell_r'}{L}{S}{0}{S}{J''}{\ell_r'}{J}
+\sum_{j_{14}j_{32}}
+\U{\ell_{14}}{s_{14}}{j_{14}}{\ell_{32}}{s_{32}}{j_{32}}{L''}{S}{J''}
+|(\ell_{14}s_{14})j_{14}(\ell_{32}s_{32})j_{32};J''\ket\times|\ell_r'\ket\Big|^J
+\end{align}
+となる。改めて
+\begin{align}
+\lefteqn{|q_1\qbar_2  (\ell_{12}s_{12})j_{12};q_3\qbar_4 (\ell_{34}s_{34})j_{34};J'\ket \times|\ell_r\ket \Big|_{JM}}&\nonumber\\
+&=
+\sum_{\ell_{14},s_{14},j_{14}}
+\sum_{\ell_{32},s_{32},j_{32}}
+\sum_{J'',\ell_r'}
+c_\alpha\; \mu_{\ell_{14}\ell_{32}}
+|q_1\qbar_4 (\ell_{14}s_{14})j_{14};q_3\qbar_2  (\ell_{32}s_{32})j_{32};J''\ket\times|\ell_r'\ket\Big|_{JM}
+\end{align}
+とおき、$c_\alpha \mu_{\ell_{14}\ell_{32}}$を計算すると、それが成分。（$c_\alpha$は表\ref{tbl:1a}）
+\begin{align}
+c_\alpha&=
+\sum_{L,L',L'',S}
+(-1)^{-s_{34}-s_{32}}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{14}}{s_{32}}{S}
+\U{\ell_{14}}{s_{14}}{j_{14}}{\ell_{32}}{s_{32}}{j_{32}}{L''}{S}{J''}
+\nonumber\\
+&\times
+\U{L'}{\ell_r}{L}{S}{0}{S}{J'}{\ell_r}{J}
+\U{L''}{\ell_r'}{L}{S}{0}{S}{J''}{\ell_r'}{J}
+\end{align}
+%%%%
+
+同様に、
+\begin{align}
+\lefteqn{|(\ell_{12}s_{12})j_{12},(\ell_{34}s_{34})j_{34};J'\ket \times|\ell_r\ket \Big|_{JM}}&\\
+&=
+\sum_{L',S}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+|(\ell_{12}\ell_{34})L',(s_{12}s_{34})S;J'\ket\times|\ell_r\ket \Big|_{JM}
+\\
+&=\sum_{L',S}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\sum_{s_{13},s_{24}}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{13}}{s_{24}}{S}
+|(\ell_{12}\ell_{34})L',(s_{13}s_{24})S;J'\ket\times|\ell_r\ket \Big|_{JM}
+%\end{align}
+%
+%
+%\begin{align}
+%\lefteqn{|(\ell_{12}s_{12})j_{12},(\ell_{34}s_{34})j_{34};J'\ket \times|\ell_r\ket \Big|_{JM}}&
+\\
+&=
+\sum_{L',S}
+\sum_{s_{13},s_{24}}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{13}}{s_{24}}{S}
+%\nonumber\\
+%&\times 
+\sum_{L}
+\U{L'}{\ell_r}{L}{S}{0}{S}{J'}{\ell_r}{J}
+|((\ell_{12}\ell_{34})L'\ell_r)L,(s_{13}s_{24})S;JM\ket
+\\
+&=
+\sum_{L',S}
+\sum_{s_{13},s_{24}}
+\sum_{L}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{13}}{s_{24}}{S}
+\U{L'}{\ell_r}{L}{S}{0}{S}{J'}{\ell_r}{J}
+\nonumber\\
+&\times 
+\sum_{\ell_{13},\ell_{24},L'',\ell_r'}
+\nu_{\ell_{13}\ell_{24}} |((\ell_{13}\ell_{24})L''\ell_r')L,(s_{13}s_{24})S;JM\ket
+\\
+&=
+\sum_{L',L,S}
+\sum_{s_{13},s_{24}}
+\sum_{\ell_{13},\ell_{24},L'',\ell_r'}
+\nu_{\ell_{13}\ell_{24}}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{13}}{s_{24}}{S}
+\U{L'}{\ell_r}{L}{S}{0}{S}{J'}{\ell_r}{J}
+\nonumber\\
+&
+\times
+\sum_{J''}
+\U{L''}{\ell_r'}{L}{S}{0}{S}{J''}{\ell_r'}{J}
+|(\ell_{13}\ell_{24})L''(s_{13}s_{24})S;J''\ket\times|\ell_r'\ket\Big|^J
+\\
+&=
+\sum_{L',L,S}
+\sum_{s_{13},s_{24}}
+\sum_{\ell_{13},\ell_{24},L'',\ell_r'}
+\sum_{J''}
+\nu_{\ell_{13}\ell_{24}}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{13}}{s_{24}}{S}
+\U{L'}{\ell_r}{L}{S}{0}{S}{J'}{\ell_r}{J}
+\nonumber\\
+&\times
+\U{L''}{\ell_r'}{L}{S}{0}{S}{J''}{\ell_r'}{J}
+\sum_{j_{13}j_{24}}
+\U{\ell_{13}}{s_{13}}{j_{13}}{\ell_{24}}{s_{24}}{j_{24}}{L''}{S}{J''}
+|(\ell_{13}s_{13})j_{13}(\ell_{24}s_{24})j_{24};J''\ket\times|\ell_r'\ket\Big|^J
+\end{align}
+となる。改めて
+\begin{align}
+\lefteqn{|q_1\qbar_2  (\ell_{12}s_{12})j_{12};q_3\qbar_4 (\ell_{34}s_{34})j_{34};J'\ket \times|\ell_r\ket \Big|_{JM}}&\nonumber\\
+&=
+\sum_{\ell_{13},s_{13},j_{13}}
+\sum_{\ell_{24},s_{24},j_{24}}
+\sum_{J'',\ell_r'}
+d_\alpha\; \nu_{\ell_{13}\ell_{24}}
+|q_1\qbar_4 (\ell_{13}s_{13})j_{13};q_3\qbar_2  (\ell_{24}s_{24})j_{24};J''\ket\times|\ell_r'\ket\Big|_{JM}
+\end{align}
+とおき、$d_\alpha \nu_{\ell_{13}\ell_{24}}$を計算すると、それが成分。（$d_\alpha$は表\ref{tbl:1b}）
+\begin{align}
+d_\alpha&=
+\sum_{L,L',L'',S}
+\U{\ell_{12}}{s_{12}}{j_{12}}{\ell_{34}}{s_{34}}{j_{34}}{L'}{S}{J'}
+\U{\half1}{\half1}{s_{12}}{\half1}{\half1}{s_{34}}{s_{13}}{s_{24}}{S}
+\U{\ell_{13}}{s_{13}}{j_{13}}{\ell_{24}}{s_{24}}{j_{24}}{L''}{S}{J''}
+\nonumber\\
+&\times
+\U{L'}{\ell_r}{L}{S}{0}{S}{J'}{\ell_r}{J}
+\U{L''}{\ell_r'}{L}{S}{0}{S}{J''}{\ell_r'}{J}
+\end{align}
+%%%%
+
+%\newpage
+%例として、$D$を$c\qbar$、$\Dbar$を$q\cbar$とすると、$^1P_1$を$D_{01}$、$^3P_1$を$D_{11}$とかき、
+%相対が$P$波であることを$\phi_P$をかけて表すと、
+%\begin{align}
+%f_0(980)\Jpsi =& \mu_c\Big(
+%-\sqrt{1\over 12}(\Dbar   D_{01}+\Dbar_{01} D)
+%-\sqrt{1\over 6}(\Dbar^* D_{01}+\Dbar_{01} D^*)
+%\nonumber\\
+%&-\sqrt{1\over 6}(\Dbar   D_{11}-\Dbar_{11} D)
+%-\sqrt{1\over 3}(\Dbar^* D_{11}-\Dbar_{11} D^*)
+%+{1\over 2}(\Dbar^* D_{0}+\Dbar_{0}  D^*) \Big)
+%\nonumber\\
+%&+\sqrt{1\over 2}\Big(-\sqrt{1\over 12}\Dbar   D
+%+\sqrt{1\over 6}(\Dbar   D^*-\Dbar^* D)
+%-{1\over 6}(\Dbar^* D^*)_0
+%+\sqrt{5\over 9}(\Dbar^* D^*)_2\Big)\phi_P
+%\end{align}
+%となり、$f_0(980)\Jpsi$だけの状態は$P$波$D\Dbar$に壊れることがわかる。
+%また、$1^{--}$の組み合わせは、$\Dbar   D_{01}+\Dbar_{01} D$等になることがわかる。
+
+
+\begin{landscape}
+\begin{table}
+\caption{$c_\alpha$ for $q\qbar c\cbar(J=1)\rightarrow q\cbar c\qbar(MM')$。
+表の縦横に注意。
+これに$\mu_{\ell\ell}$がかかるのを忘れないこと。}
+\small
+\def\ssz{~${}^1S_0$}
+\def\tso{~${}^3S_1$}
+\def\spo{~${}^1P_1$}
+\def\tpz{~${}^3P_0$}
+\def\tpo{~${}^3P_1$}
+\def\tpt{~${}^3P_2$}
+\renewcommand\arraystretch{2}
+\setlength\tabcolsep{0.5mm}
+\begin{tabular}{cccccccccccccccccccccccc}\hline
+%$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ & (00)0\ssz(10)1\spo &   (10)1\spo (00)0\ssz& (00)0\ssz(11)1\tpo&   (11)1\tpo (00)0\ssz&  (01)1\tso (10)1\spo&  (10)1\spo (01)1\tso&  (01)1\tso (11)0\tpz&  (11)0\tpz (01)1\tso (10)1\spo &  (01)1\tso (11)1\tpo (10)1\spo  & (11)1\tpo (01)1\tso (10)1\spo &  (01)1\tso (11)2\tpt (10)1\spo &  (11)2\tpt (01)1\tso (10)1\spo & (00)0\ssz(00)0\ssz(01)1\tso &  (00)0\ssz(01)1\tso 1 1 1 &   (01)1\tso (00)0\ssz(11)1\tpo &  (01)1\tso (01)1\tso (01)1\tso &  (01)1\tso (01)1\tso 1 1 1 &   (01)1\tso (01)1\tso 2 1 1\\
+%$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ & \ssz\spo &   \spo\ssz&\ssz\tpo&  \tpo\ssz& \tso\spo& \spo \tso& \tso\tpz&\tpz \tso& \tso \tpo & \tpo \tso & \tso \tpt&  \tpt \tso&\ssz\ssz P&  \ssz\tso P & \tso \ssz P &  \tso \tso$|_0$ P &  \tso \tso$|_1$ P&  \tso\tso$|_2$ P\\
+$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ & $\eta$$h_{c1}$ &   $h_{1}$$\eta_c$&$\eta$$\chi_{c1}$&  $f_{1}$$\eta_c$& $\omega$$h_{c1}$& $h_1$$\Jpsi$& $\omega$$\chi_{c0}$&$f_{0}$$\Jpsi$& $\omega$$\chi_{c1}$ & $f_{1}$$\Jpsi$ & $\omega$$\chi_{c2}$&  $f_{2}$$\Jpsi$&$\eta$$\eta_c$P&  $\eta$$\Jpsi$P & $\omega$$\eta_c$P &  $\omega$$\Jpsi$$|_0$P &  $\omega$$\Jpsi$$|_1$P&  $\omega$$\Jpsi$$|_2$P\\
+%                                                &(00)0\ssz(10)1\spo    &
+%$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ 
+%                                                &$h_1\eta_c$&$\eta h_{c1}$ &$f_0\Jpsi$& $\omega\chi_{c0}$&$f_1\Jpsi$&$\omega\chi_{c1}$&$f_2\Jpsi$&$\omega\chi_{c2}$&$\eta\Jpsi\phi_P$&$\omega\eta_c\phi_P$\\
+\hline
+%                                                 0 0 0  1 0 1  1 0 1     1 0 1  0 0 0  1 0 1    0 0 0  1 1 1  1 0 1    1 1 1  0 0 0  1 0 1    0 1 1  1 0 1  1 0 1    1 0 1  0 1 1  1 0 1    0 1 1  1 1 0  1 0 1    1 1 0  0 1 1  1 0 1    0 1 1  1 1 1  1 0 1    1 1 1  0 1 1  1 0 1    0 1 1  1 1 2  1 0 1    1 1 2  0 1 1  1 0 1  % 0 0 0  0 0 0  0 1 1    0 0 0  0 1 1  1 1 1    0 1 1  0 0 0  1 1 1    0 1 1  0 1 1  0 1 1    0 1 1  0 1 1  1 1 1    0 1 1  0 1 1  2 1 1
+(00)0\ssz&(10)1\spo&1&0& $\Dbar   D_{01}$       &$       {  1\over  2}$&$       {  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over 12}$&$      -{  1\over  2}$&$       {  1\over  2}$&$ -\sqrt{  5\over 12}$&$ -\sqrt{  5\over 12}$&$       {  1\over  2}$&$                   0$&$                   0$&$ -\sqrt{  3\over  4}$&$                   0$&$                   0$&\\
+(00)0\ssz&(11)1\tpo&1&0& $\Dbar   D_{11}$       &$                   0$&$                   0$&$       {  1\over  2}$&$       {  1\over  2}$&$      -{  1\over  2}$&$       {  1\over  2}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$                   0$&$      -{  1\over  2}$&$      -{  1\over  2}$&$                   0$&$ -\sqrt{  1\over  2}$&$                   0$&\\
+(01)1\tso&(10)1\spo&1&0& $\Dbar^* D_{01}$       &$                   0$&$                   0$&$      -{  1\over  2}$&$      -{  1\over  2}$&$       {  1\over  2}$&$      -{  1\over  2}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$                   0$&$       {  1\over  2}$&$       {  1\over  2}$&$                   0$&$ -\sqrt{  1\over  2}$&$                   0$&\\
+(01)1\tso&(11)0\tpz&1&0& $\Dbar^* D_{0}$        &$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over 12}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$       {  1\over  2}$&$       {  1\over  2}$&$ -\sqrt{  1\over  3}$&$  \sqrt{  1\over  3}$&$                   0$&$                   0$&$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$      -{  1\over  6}$&$                   0$&$  \sqrt{  5\over  9}$&\\
+(01)1\tso&(11)1\tpo&1&0& $\Dbar^* D_{11}$       &$      -{  1\over  2}$&$      -{  1\over  2}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  1\over  3}$&$ -\sqrt{  1\over  3}$&$       {  1\over  4}$&$      -{  1\over  4}$&$ -\sqrt{  5\over 48}$&$ -\sqrt{  5\over 48}$&$      -{  1\over  2}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  5\over 12}$&\\
+(01)1\tso&(11)2\tpo&1&0& $\Dbar^* D_{2}$        &$ -\sqrt{  5\over 12}$&$ -\sqrt{  5\over 12}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$                   0$&$                   0$&$ -\sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$      -{  1\over  4}$&$      -{  1\over  4}$&$ -\sqrt{  5\over 12}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$ -\sqrt{  5\over 36}$&$                   0$&$       {  1\over  6}$&\\ \hline
+%
+(10)1\spo&(00)0\ssz&1&0& $\Dbar_{01} D$         &$       {  1\over  2}$&$       {  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over 12}$&$      -{  1\over  2}$&$       {  1\over  2}$&$ -\sqrt{  5\over 12}$&$ -\sqrt{  5\over 12}$&$       {  1\over  2}$&$                   0$&$                   0$&$ -\sqrt{  3\over  4}$&$                   0$&$                   0$&\\
+(11)1\tpo&(00)0\ssz&1&0& $\Dbar_{11} D$         &$                   0$&$                   0$&$       {  1\over  2}$&$       {  1\over  2}$&$      -{  1\over  2}$&$       {  1\over  2}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$                   0$&$      -{  1\over  2}$&$      -{  1\over  2}$&$                   0$&$  \sqrt{  1\over  2}$&$                   0$&\\
+(10)1\spo&(01)1\tso&1&0& $\Dbar_{01} D^*$       &$                   0$&$                   0$&$       {  1\over  2}$&$       {  1\over  2}$&$      -{  1\over  2}$&$       {  1\over  2}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$                   0$&$      -{  1\over  2}$&$      -{  1\over  2}$&$                   0$&$ -\sqrt{  1\over  2}$&$                   0$&\\
+(11)0\tpz&(01)1\tso&1&0& $\Dbar_{0}  D^*$       &$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$       {  1\over  2}$&$       {  1\over  2}$&$ -\sqrt{  1\over  3}$&$  \sqrt{  1\over  3}$&$                   0$&$                   0$&$ -\sqrt{  1\over 12}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$      -{  1\over  6}$&$                   0$&$  \sqrt{  5\over  9}$&\\
+(11)1\tpo&(01)1\tso&1&0& $\Dbar_{11} D^*$       &$       {  1\over  2}$&$       {  1\over  2}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  3}$&$  \sqrt{  1\over  3}$&$      -{  1\over  4}$&$       {  1\over  4}$&$  \sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$       {  1\over  2}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over 12}$&$                   0$&$  \sqrt{  5\over 12}$&\\
+(11)2\tpo&(01)1\tso&1&0& $\Dbar_{2} D^*$        &$ -\sqrt{  5\over 12}$&$ -\sqrt{  5\over 12}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$                   0$&$                   0$&$ -\sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$      -{  1\over  4}$&$      -{  1\over  4}$&$ -\sqrt{  5\over 12}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 36}$&$                   0$&$       {  1\over  6}$&\\ \hline
+%
+(00)0\ssz&(00)0\ssz&0&1& $\Dbar   D\phi_P$      &$       {  1\over  2}$&$       {  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over 12}$&$      -{  1\over  2}$&$       {  1\over  2}$&$ -\sqrt{  5\over 12}$&$ -\sqrt{  5\over 12}$&$       {  1\over  2}$&$                   0$&$                   0$&$ -\sqrt{  3\over  4}$&$                   0$&$                   0$&\\
+(00)0\ssz&(01)1\tso&1&1& $\Dbar   D^*\phi_P$    &$                   0$&$                   0$&$      -{  1\over  2}$&$      -{  1\over  2}$&$       {  1\over  2}$&$      -{  1\over  2}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$                   0$&$       {  1\over  2}$&$       {  1\over  2}$&$                   0$&$  \sqrt{  1\over  2}$&$                   0$&\\
+(01)1\tso&(00)0\ssz&1&1& $\Dbar^* D\phi_P$      &$                   0$&$                   0$&$      -{  1\over  2}$&$      -{  1\over  2}$&$       {  1\over  2}$&$      -{  1\over  2}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$                   0$&$       {  1\over  2}$&$       {  1\over  2}$&$                   0$&$ -\sqrt{  1\over  2}$&$                   0$&\\
+(01)1\tso&(01)1\tso&0&1& $(\Dbar^* D^*)_0\phi_P$&$ -\sqrt{  3\over  4}$&$ -\sqrt{  3\over  4}$&$                   0$&$                   0$&$                   0$&$                   0$&$      -{  1\over  6}$&$      -{  1\over  6}$&$ -\sqrt{  1\over 12}$&$  \sqrt{  1\over 12}$&$ -\sqrt{  5\over 36}$&$ -\sqrt{  5\over 36}$&$ -\sqrt{  3\over  4}$&$                   0$&$                   0$&$      -{  1\over  2}$&$                   0$&$                   0$&\\
+(01)1\tso&(01)1\tso&1&1& $(\Dbar^* D^*)_1\phi_P$&$                   0$&$                   0$&$ -\sqrt{  1\over  2}$&$  \sqrt{  1\over  2}$&$ -\sqrt{  1\over  2}$&$ -\sqrt{  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over  2}$&$ -\sqrt{  1\over  2}$&$                   0$&$                   0$&$                   0$&\\
+(01)1\tso&(01)1\tso&2&1& $(\Dbar^* D^*)_2\phi_P$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  5\over  9}$&$  \sqrt{  5\over  9}$&$ -\sqrt{  5\over 12}$&$  \sqrt{  5\over 12}$&$       {  1\over  6}$&$       {  1\over  6}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   1$&\\ \hline
+\end{tabular}
+\label{tbl:1a}
+\end{table}%
+\end{landscape}
+
+
+\begin{landscape}
+\begin{table}
+\caption{$d_\alpha$ for $q\qbar c\cbar(J=1)\rightarrow q c\qbar\cbar(Q\Qbar')$。
+表の縦横に注意。
+これに$\nu_{\ell\ell}$がかかるのを忘れないこと。}
+\small
+\def\ssz{~${}^1S_0$}
+\def\tso{~${}^3S_1$}
+\def\spo{~${}^1P_1$}
+\def\tpz{~${}^3P_0$}
+\def\tpo{~${}^3P_1$}
+\def\tpt{~${}^3P_2$}
+\renewcommand\arraystretch{2}
+\setlength\tabcolsep{0.5mm}
+\hspace*{0cm}
+\begin{tabular}{cccccccccccccccccccccccc}\hline
+$(\ell_{13}s_{13})j_{13}$&$(\ell_{24}s_{24})j_{24}$&$J'$&$\ell_r$ & $1324'$ & $\eta$$h_{c1}$ &   $h_{1}$$\eta_c$&$\eta$$\chi_{c1}$&  $f_{1}$$\eta_c$& $\omega$$h_{c1}$& $h_1$$\Jpsi$& $\omega$$\chi_{c0}$&$f_{0}$$\Jpsi$& $\omega$$\chi_{c1}$ & $f_{1}$$\Jpsi$ & $\omega$$\chi_{c2}$&  $f_{2}$$\Jpsi$&$\eta$$\eta_c$P&  $\eta$$\Jpsi$P & $\omega$$\eta_c$P &  $\omega$$\Jpsi$$|_0$P &  $\omega$$\Jpsi$$|_1$P&  $\omega$$\Jpsi$$|_2$P\\
+\hline
+(00)0\ssz&(10)1\spo&1&0& $\delta   \bar\delta_{01}$       &$       {  1\over  2}$&$       {  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over 12}$&$  \sqrt{  1\over 12}$&$       {  1\over  2}$&$      -{  1\over  2}$&$  \sqrt{  5\over 12}$&$  \sqrt{  5\over 12}$&$       {  1\over  2}$&$                   0$&$                   0$&$  \sqrt{  3\over  4}$&$                   0$&$                   0$\\
+(00)0\ssz&(11)1\tpo&1&0& $\delta   \bar\delta_{11}$       &$                   0$&$                   0$&$       {  1\over  2}$&$      -{  1\over  2}$&$       {  1\over  2}$&$       {  1\over  2}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$                   0$&$      -{  1\over  2}$&$       {  1\over  2}$&$                   0$&$ -\sqrt{  1\over  2}$&$                   0$\\
+(01)1\tso&(10)1\spo&1&0& $\delta^* \bar\delta_{01}$       &$                   0$&$                   0$&$       {  1\over  2}$&$      -{  1\over  2}$&$       {  1\over  2}$&$       {  1\over  2}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$                   0$&$      -{  1\over  2}$&$       {  1\over  2}$&$                   0$&$  \sqrt{  1\over  2}$&$                   0$\\
+(01)1\tso&(11)0\tpz&1&0& $\delta^* \bar\delta_{0}$        &$  \sqrt{  1\over 12}$&$  \sqrt{  1\over 12}$&$  \sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$       {  1\over  2}$&$       {  1\over  2}$&$ -\sqrt{  1\over  3}$&$  \sqrt{  1\over  3}$&$                   0$&$                   0$&$  \sqrt{  1\over 12}$&$ -\sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$      -{  1\over  6}$&$                   0$&$  \sqrt{  5\over  9}$\\
+(01)1\tso&(11)1\tpo&1&0& $\delta^* \bar\delta_{11}$       &$       {  1\over  2}$&$       {  1\over  2}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  1\over  3}$&$ -\sqrt{  1\over  3}$&$       {  1\over  4}$&$      -{  1\over  4}$&$ -\sqrt{  5\over 48}$&$ -\sqrt{  5\over 48}$&$       {  1\over  2}$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  5\over 12}$\\
+(01)1\tso&(11)2\tpo&1&0& $\delta^* \bar\delta_{2}$        &$  \sqrt{  5\over 12}$&$  \sqrt{  5\over 12}$&$ -\sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$                   0$&$                   0$&$ -\sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$      -{  1\over  4}$&$      -{  1\over  4}$&$  \sqrt{  5\over 12}$&$  \sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 36}$&$                   0$&$       {  1\over  6}$\\ \hline
+%
+(10)1\spo&(00)0\ssz&1&0& $\delta_{01} \bar\delta$         &$       {  1\over  2}$&$       {  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over 12}$&$  \sqrt{  1\over 12}$&$       {  1\over  2}$&$      -{  1\over  2}$&$  \sqrt{  5\over 12}$&$  \sqrt{  5\over 12}$&$       {  1\over  2}$&$                   0$&$                   0$&$  \sqrt{  3\over  4}$&$                   0$&$                   0$\\
+(11)1\tpo&(00)0\ssz&1&0& $\delta_{11} \bar\delta$         &$                   0$&$                   0$&$      -{  1\over  2}$&$       {  1\over  2}$&$      -{  1\over  2}$&$      -{  1\over  2}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$                   0$&$       {  1\over  2}$&$      -{  1\over  2}$&$                   0$&$ -\sqrt{  1\over  2}$&$                   0$\\
+(10)1\spo&(01)1\tso&1&0& $\delta_{01} \bar\delta^*$       &$                   0$&$                   0$&$       {  1\over  2}$&$      -{  1\over  2}$&$       {  1\over  2}$&$       {  1\over  2}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$                   0$&$      -{  1\over  2}$&$       {  1\over  2}$&$                   0$&$ -\sqrt{  1\over  2}$&$                   0$\\
+(11)0\tpz&(01)1\tso&1&0& $\delta_{0}  \bar\delta^*$       &$  \sqrt{  1\over 12}$&$  \sqrt{  1\over 12}$&$ -\sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  6}$&$       {  1\over  2}$&$       {  1\over  2}$&$ -\sqrt{  1\over  3}$&$  \sqrt{  1\over  3}$&$                   0$&$                   0$&$  \sqrt{  1\over 12}$&$  \sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$      -{  1\over  6}$&$                   0$&$  \sqrt{  5\over  9}$\\
+(11)1\tpo&(01)1\tso&1&0& $\delta_{11} \bar\delta^*$       &$      -{  1\over  2}$&$      -{  1\over  2}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  3}$&$  \sqrt{  1\over  3}$&$      -{  1\over  4}$&$       {  1\over  4}$&$  \sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$      -{  1\over  2}$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over 12}$&$                   0$&$  \sqrt{  5\over 12}$\\
+(11)2\tpo&(01)1\tso&1&0& $\delta_{2}  \bar\delta^*$       &$  \sqrt{  5\over 12}$&$  \sqrt{  5\over 12}$&$  \sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$  \sqrt{  5\over 24}$&$                   0$&$                   0$&$ -\sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$      -{  1\over  4}$&$      -{  1\over  4}$&$  \sqrt{  5\over 12}$&$ -\sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$ -\sqrt{  5\over 36}$&$                   0$&$       {  1\over  6}$\\ \hline
+%
+(00)0\ssz&(00)0\ssz&0&1& $\delta    \bar\delta\phi_P$     &$       {  1\over  2}$&$       {  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over 12}$&$  \sqrt{  1\over 12}$&$       {  1\over  2}$&$      -{  1\over  2}$&$  \sqrt{  5\over 12}$&$  \sqrt{  5\over 12}$&$       {  1\over  2}$&$                   0$&$                   0$&$  \sqrt{  3\over  4}$&$                   0$&$                   0$\\
+(00)0\ssz&(01)1\tso&1&1& $\delta    \bar\delta^*\phi_P$   &$                   0$&$                   0$&$      -{  1\over  2}$&$       {  1\over  2}$&$      -{  1\over  2}$&$      -{  1\over  2}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$                   0$&$       {  1\over  2}$&$      -{  1\over  2}$&$                   0$&$  \sqrt{  1\over  2}$&$                   0$\\
+(01)1\tso&(00)0\ssz&1&1& $\delta^*  \bar\delta\phi_P$     &$                   0$&$                   0$&$       {  1\over  2}$&$      -{  1\over  2}$&$       {  1\over  2}$&$       {  1\over  2}$&$ -\sqrt{  1\over  6}$&$  \sqrt{  1\over  6}$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 24}$&$                   0$&$      -{  1\over  2}$&$       {  1\over  2}$&$                   0$&$  \sqrt{  1\over  2}$&$                   0$\\
+(01)1\tso&(01)1\tso&0&1& $(\delta^* \bar\delta^*)_0\phi_P$&$  \sqrt{  3\over  4}$&$  \sqrt{  3\over  4}$&$                   0$&$                   0$&$                   0$&$                   0$&$      -{  1\over  6}$&$      -{  1\over  6}$&$ -\sqrt{  1\over 12}$&$  \sqrt{  1\over 12}$&$ -\sqrt{  5\over 36}$&$ -\sqrt{  5\over 36}$&$  \sqrt{  3\over  4}$&$                   0$&$                   0$&$      -{  1\over  2}$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&1&1& $(\delta^* \bar\delta^*)_1\phi_P$&$                   0$&$                   0$&$ -\sqrt{  1\over  2}$&$ -\sqrt{  1\over  2}$&$  \sqrt{  1\over  2}$&$ -\sqrt{  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over  2}$&$  \sqrt{  1\over  2}$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&2&1& $(\delta^* \bar\delta^*)_2\phi_P$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  5\over  9}$&$  \sqrt{  5\over  9}$&$ -\sqrt{  5\over 12}$&$  \sqrt{  5\over 12}$&$       {  1\over  6}$&$       {  1\over  6}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   1$\\ \hline
+\end{tabular}
+\label{tbl:1b}
+\end{table}%
+\end{landscape}
+
+\begin{landscape}
+\begin{table}
+\caption{$c_\alpha\mu_{\ell\ell}$ for $q\qbar c\cbar(J=1)\rightarrow q\cbar c\qbar(MM')$。
+ただし、$m_u=0$。表の縦横に注意。}
+\small
+\def\ssz{~${}^1S_0$}
+\def\tso{~${}^3S_1$}
+\def\spo{~${}^1P_1$}
+\def\tpz{~${}^3P_0$}
+\def\tpo{~${}^3P_1$}
+\def\tpt{~${}^3P_2$}
+\renewcommand\arraystretch{2}
+\setlength\tabcolsep{0.5mm}
+\begin{tabular}{cccccccccccccccccccccccc}\hline
+%$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ & (00)0\ssz(10)1\spo &   (10)1\spo (00)0\ssz& (00)0\ssz(11)1\tpo&   (11)1\tpo (00)0\ssz&  (01)1\tso (10)1\spo&  (10)1\spo (01)1\tso&  (01)1\tso (11)0\tpz&  (11)0\tpz (01)1\tso (10)1\spo &  (01)1\tso (11)1\tpo (10)1\spo  & (11)1\tpo (01)1\tso (10)1\spo &  (01)1\tso (11)2\tpt (10)1\spo &  (11)2\tpt (01)1\tso (10)1\spo & (00)0\ssz(00)0\ssz(01)1\tso &  (00)0\ssz(01)1\tso 1 1 1 &   (01)1\tso (00)0\ssz(11)1\tpo &  (01)1\tso (01)1\tso (01)1\tso &  (01)1\tso (01)1\tso 1 1 1 &   (01)1\tso (01)1\tso 2 1 1\\
+%$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ & \ssz\spo &   \spo\ssz&\ssz\tpo&  \tpo\ssz& \tso\spo& \spo \tso& \tso\tpz&\tpz \tso& \tso \tpo & \tpo \tso & \tso \tpt&  \tpt \tso&\ssz\ssz P&  \ssz\tso P & \tso \ssz P &  \tso \tso$|_0$ P &  \tso \tso$|_1$ P&  \tso\tso$|_2$ P\\
+$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ & $\eta$$h_{c1}$ &   $h_{1}$$\eta_c$&$\eta$$\chi_{c1}$&  $f_{1}$$\eta_c$& $\omega$$h_{c1}$& $h_1$$\Jpsi$& $\omega$$\chi_{c0}$&$f_{0}$$\Jpsi$& $\omega$$\chi_{c1}$ & $f_{1}$$\Jpsi$ & $\omega$$\chi_{c2}$&  $f_{2}$$\Jpsi$&$\eta$$\eta_c$P&  $\eta$$\Jpsi$P & $\omega$$\eta_c$P &  $\omega$$\Jpsi$$|_0$P &  $\omega$$\Jpsi$$|_1$P&  $\omega$$\Jpsi$$|_2$P\\
+%                                                &(00)0\ssz(10)1\spo    &
+%$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ 
+%                                                &$h_1\eta_c$&$\eta h_{c1}$ &$f_0\Jpsi$& $\omega\chi_{c0}$&$f_1\Jpsi$&$\omega\chi_{c1}$&$f_2\Jpsi$&$\omega\chi_{c2}$&$\eta\Jpsi\phi_P$&$\omega\eta_c\phi_P$\\
+\hline
+%                                                 0 0 0  1 0 1  1 0 1     1 0 1  0 0 0  1 0 1    0 0 0  1 1 1  1 0 1    1 1 1  0 0 0  1 0 1    0 1 1  1 0 1  1 0 1    1 0 1  0 1 1  1 0 1    0 1 1  1 1 0  1 0 1    1 1 0  0 1 1  1 0 1    0 1 1  1 1 1  1 0 1    1 1 1  0 1 1  1 0 1    0 1 1  1 1 2  1 0 1    1 1 2  0 1 1  1 0 1  % 0 0 0  0 0 0  0 1 1    0 0 0  0 1 1  1 1 1    0 1 1  0 0 0  1 1 1    0 1 1  0 1 1  0 1 1    0 1 1  0 1 1  1 1 1    0 1 1  0 1 1  2 1 1
+(00)0\ssz&(10)1\spo&1&0& $\Dbar   D_{01}$       &$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over 24}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  5\over 24}$&$ -\sqrt{  1\over  8}$&$                   0$&$                   0$&$  \sqrt{  3\over  8}$&$                   0$&$                   0$\\
+(00)0\ssz&(11)1\tpo&1&0& $\Dbar   D_{11}$       &$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$       {  1\over  4}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$                   0$&$       {  1\over  2}$&$                   0$\\
+(01)1\tso&(10)1\spo&1&0& $\Dbar^* D_{01}$       &$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$       {  1\over  4}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$                   0$&$       {  1\over  2}$&$                   0$\\
+(01)1\tso&(11)0\tpz&1&0& $\Dbar^* D_{0}$        &$                   0$&$ -\sqrt{  1\over 24}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$                   0$&$  \sqrt{  1\over 24}$&$  \sqrt{  1\over 12}$&$ -\sqrt{  1\over 12}$&$  \sqrt{  1\over 72}$&$                   0$&$ -\sqrt{  5\over 18}$\\
+(01)1\tso&(11)1\tpo&1&0& $\Dbar^* D_{11}$       &$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$      -{  1\over  4}$&$                   0$&$       {  1\over  4}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$ -\sqrt{  1\over 32}$&$                   0$&$ -\sqrt{  5\over 96}$&$  \sqrt{  1\over  8}$&$       {  1\over  4}$&$      -{  1\over  4}$&$  \sqrt{  1\over 24}$&$                   0$&$  \sqrt{  5\over 24}$\\
+(01)1\tso&(11)2\tpo&1&0& $\Dbar^* D_{2}$        &$                   0$&$ -\sqrt{  5\over 24}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$                   0$&$                   0$&$  \sqrt{  5\over 96}$&$                   0$&$ -\sqrt{  1\over 32}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$  \sqrt{  5\over 72}$&$                   0$&$ -\sqrt{  1\over 72}$\\ \hline
+%
+(10)1\spo&(00)0\ssz&1&0& $\Dbar_{01} D$         &$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over 24}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  5\over 24}$&$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$ -\sqrt{  3\over  8}$&$                   0$&$                   0$\\
+(11)1\tpo&(00)0\ssz&1&0& $\Dbar_{11} D$         &$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$      -{  1\over  4}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$                   0$&$       {  1\over  2}$&$                   0$\\
+(10)1\spo&(01)1\tso&1&0& $\Dbar_{01} D^*$       &$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$       {  1\over  4}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$                   0$&$      -{  1\over  2}$&$                   0$\\
+(11)0\tpz&(01)1\tso&1&0& $\Dbar_{0}  D^*$       &$                   0$&$ -\sqrt{  1\over 24}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$                   0$&$ -\sqrt{  1\over 24}$&$  \sqrt{  1\over 12}$&$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over 72}$&$                   0$&$  \sqrt{  5\over 18}$\\
+(11)1\tpo&(01)1\tso&1&0& $\Dbar_{11} D^*$       &$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$      -{  1\over  4}$&$                   0$&$       {  1\over  4}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$  \sqrt{  1\over 32}$&$                   0$&$  \sqrt{  5\over 96}$&$  \sqrt{  1\over  8}$&$      -{  1\over  4}$&$       {  1\over  4}$&$  \sqrt{  1\over 24}$&$                   0$&$  \sqrt{  5\over 24}$\\
+(11)2\tpo&(01)1\tso&1&0& $\Dbar_{2} D^*$        &$                   0$&$ -\sqrt{  5\over 24}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$                   0$&$                   0$&$  \sqrt{  5\over 96}$&$                   0$&$ -\sqrt{  1\over 32}$&$ -\sqrt{  5\over 24}$&$ -\sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$ -\sqrt{  5\over 72}$&$                   0$&$  \sqrt{  1\over 72}$\\ \hline
+%
+(00)0\ssz&(00)0\ssz&0&1& $\Dbar   D\phi_P$      &$      -{  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$       {  1\over  2}$&$                   0$&$  \sqrt{  5\over 12}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(00)0\ssz&(01)1\tso&1&1& $\Dbar   D^*\phi_P$    &$                   0$&$                   0$&$       {  1\over  2}$&$                   0$&$      -{  1\over  2}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  5\over 24}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(00)0\ssz&1&1& $\Dbar^* D\phi_P$      &$                   0$&$                   0$&$       {  1\over  2}$&$                   0$&$      -{  1\over  2}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$  \sqrt{  5\over 24}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&0&1& $(\Dbar^* D^*)_0\phi_P$&$  \sqrt{  3\over  4}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$       {  1\over  6}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$  \sqrt{  5\over 36}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&1&1& $(\Dbar^* D^*)_1\phi_P$&$                   0$&$                   0$&$  \sqrt{  1\over  2}$&$                   0$&$  \sqrt{  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&2&1& $(\Dbar^* D^*)_2\phi_P$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  5\over  9}$&$                   0$&$  \sqrt{  5\over 12}$&$                   0$&$      -{  1\over  6}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\ \hline
+\end{tabular}
+\label{tbl:1c}
+\end{table}%
+\end{landscape}
+
+\begin{landscape}
+\begin{table}
+\caption{$c_\alpha\mu_{\ell\ell}$ for $q\qbar c\cbar(J=1)\rightarrow q\cbar c\qbar(MM')$。
+ただし、$m_c=0$。表の縦横に注意。}
+\small
+\def\ssz{~${}^1S_0$}
+\def\tso{~${}^3S_1$}
+\def\spo{~${}^1P_1$}
+\def\tpz{~${}^3P_0$}
+\def\tpo{~${}^3P_1$}
+\def\tpt{~${}^3P_2$}
+\renewcommand\arraystretch{2}
+\setlength\tabcolsep{0.5mm}
+\begin{tabular}{cccccccccccccccccccccccc}\hline
+%$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ & (00)0\ssz(10)1\spo &   (10)1\spo (00)0\ssz& (00)0\ssz(11)1\tpo&   (11)1\tpo (00)0\ssz&  (01)1\tso (10)1\spo&  (10)1\spo (01)1\tso&  (01)1\tso (11)0\tpz&  (11)0\tpz (01)1\tso (10)1\spo &  (01)1\tso (11)1\tpo (10)1\spo  & (11)1\tpo (01)1\tso (10)1\spo &  (01)1\tso (11)2\tpt (10)1\spo &  (11)2\tpt (01)1\tso (10)1\spo & (00)0\ssz(00)0\ssz(01)1\tso &  (00)0\ssz(01)1\tso 1 1 1 &   (01)1\tso (00)0\ssz(11)1\tpo &  (01)1\tso (01)1\tso (01)1\tso &  (01)1\tso (01)1\tso 1 1 1 &   (01)1\tso (01)1\tso 2 1 1\\
+%$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ & \ssz\spo &   \spo\ssz&\ssz\tpo&  \tpo\ssz& \tso\spo& \spo \tso& \tso\tpz&\tpz \tso& \tso \tpo & \tpo \tso & \tso \tpt&  \tpt \tso&\ssz\ssz P&  \ssz\tso P & \tso \ssz P &  \tso \tso$|_0$ P &  \tso \tso$|_1$ P&  \tso\tso$|_2$ P\\
+$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ & $\eta$$h_{c1}$ &   $h_{1}$$\eta_c$&$\eta$$\chi_{c1}$&  $f_{1}$$\eta_c$& $\omega$$h_{c1}$& $h_1$$\Jpsi$& $\omega$$\chi_{c0}$&$f_{0}$$\Jpsi$& $\omega$$\chi_{c1}$ & $f_{1}$$\Jpsi$ & $\omega$$\chi_{c2}$&  $f_{2}$$\Jpsi$&$\eta$$\eta_c$P&  $\eta$$\Jpsi$P & $\omega$$\eta_c$P &  $\omega$$\Jpsi$$|_0$P &  $\omega$$\Jpsi$$|_1$P&  $\omega$$\Jpsi$$|_2$P\\
+%                                                &(00)0\ssz(10)1\spo    &
+%$(\ell_{14}s_{14})j_{14}$&$(\ell_{32}s_{32})j_{32}$&$J'$&$\ell_r$ & $MM'$ 
+%                                                &$h_1\eta_c$&$\eta h_{c1}$ &$f_0\Jpsi$& $\omega\chi_{c0}$&$f_1\Jpsi$&$\omega\chi_{c1}$&$f_2\Jpsi$&$\omega\chi_{c2}$&$\eta\Jpsi\phi_P$&$\omega\eta_c\phi_P$\\
+\hline
+%                                                 0 0 0  1 0 1  1 0 1     1 0 1  0 0 0  1 0 1    0 0 0  1 1 1  1 0 1    1 1 1  0 0 0  1 0 1    0 1 1  1 0 1  1 0 1    1 0 1  0 1 1  1 0 1    0 1 1  1 1 0  1 0 1    1 1 0  0 1 1  1 0 1    0 1 1  1 1 1  1 0 1    1 1 1  0 1 1  1 0 1    0 1 1  1 1 2  1 0 1    1 1 2  0 1 1  1 0 1  % 0 0 0  0 0 0  0 1 1    0 0 0  0 1 1  1 1 1    0 1 1  0 0 0  1 1 1    0 1 1  0 1 1  0 1 1    0 1 1  0 1 1  1 1 1    0 1 1  0 1 1  2 1 1
+(00)0\ssz&(10)1\spo&1&0& $\Dbar   D_{01}$       &$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over 24}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  5\over 24}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$                   0$&$  \sqrt{  3\over  8}$&$                   0$&$                   0$\\
+(00)0\ssz&(11)1\tpo&1&0& $\Dbar   D_{11}$       &$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$       {  1\over  4}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$                   0$&$       {  1\over  2}$&$                   0$\\
+(01)1\tso&(10)1\spo&1&0& $\Dbar^* D_{01}$       &$                   0$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$       {  1\over  4}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$                   0$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$                   0$&$       {  1\over  2}$&$                   0$\\
+(01)1\tso&(11)0\tpz&1&0& $\Dbar^* D_{0}$        &$ -\sqrt{  1\over 24}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over 24}$&$  \sqrt{  1\over 12}$&$ -\sqrt{  1\over 12}$&$  \sqrt{  1\over 72}$&$                   0$&$ -\sqrt{  5\over 18}$\\
+(01)1\tso&(11)1\tpo&1&0& $\Dbar^* D_{11}$       &$ -\sqrt{  1\over  8}$&$                   0$&$       {  1\over  4}$&$                   0$&$       {  1\over  4}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$  \sqrt{  1\over 32}$&$                   0$&$ -\sqrt{  5\over 96}$&$                   0$&$  \sqrt{  1\over  8}$&$       {  1\over  4}$&$      -{  1\over  4}$&$  \sqrt{  1\over 24}$&$                   0$&$  \sqrt{  5\over 24}$\\
+(01)1\tso&(11)2\tpo&1&0& $\Dbar^* D_{2}$        &$ -\sqrt{  5\over 24}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  5\over 96}$&$                   0$&$ -\sqrt{  1\over 32}$&$                   0$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$  \sqrt{  5\over 72}$&$                   0$&$ -\sqrt{  1\over 72}$\\ \hline
+%
+(10)1\spo&(00)0\ssz&1&0& $\Dbar_{01} D$         &$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over 24}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  5\over 24}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$ -\sqrt{  3\over  8}$&$                   0$&$                   0$\\
+(11)1\tpo&(00)0\ssz&1&0& $\Dbar_{11} D$         &$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$      -{  1\over  4}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$                   0$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$                   0$&$       {  1\over  2}$&$                   0$\\
+(10)1\spo&(01)1\tso&1&0& $\Dbar_{01} D^*$       &$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$       {  1\over  4}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$                   0$&$ -\sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$                   0$&$      -{  1\over  2}$&$                   0$\\
+(11)0\tpz&(01)1\tso&1&0& $\Dbar_{0}  D^*$       &$ -\sqrt{  1\over 24}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over 24}$&$  \sqrt{  1\over 12}$&$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over 72}$&$                   0$&$  \sqrt{  5\over 18}$\\
+(11)1\tpo&(01)1\tso&1&0& $\Dbar_{11} D^*$       &$  \sqrt{  1\over  8}$&$                   0$&$       {  1\over  4}$&$                   0$&$       {  1\over  4}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$ -\sqrt{  1\over 32}$&$                   0$&$  \sqrt{  5\over 96}$&$                   0$&$  \sqrt{  1\over  8}$&$      -{  1\over  4}$&$       {  1\over  4}$&$  \sqrt{  1\over 24}$&$                   0$&$  \sqrt{  5\over 24}$\\
+(11)2\tpo&(01)1\tso&1&0& $\Dbar_{2} D^*$        &$ -\sqrt{  5\over 24}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  5\over 96}$&$                   0$&$ -\sqrt{  1\over 32}$&$                   0$&$ -\sqrt{  5\over 24}$&$ -\sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$ -\sqrt{  5\over 72}$&$                   0$&$  \sqrt{  1\over 72}$\\ \hline
+%
+(00)0\ssz&(00)0\ssz&0&1& $\Dbar   D\phi_P$      &$                   0$&$       {  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$       {  1\over  2}$&$                   0$&$ -\sqrt{  5\over 12}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(00)0\ssz&(01)1\tso&1&1& $\Dbar   D^*\phi_P$    &$                   0$&$                   0$&$                   0$&$      -{  1\over  2}$&$                   0$&$      -{  1\over  2}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  5\over 24}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(00)0\ssz&1&1& $\Dbar^* D\phi_P$      &$                   0$&$                   0$&$                   0$&$      -{  1\over  2}$&$                   0$&$      -{  1\over  2}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  5\over 24}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&0&1& $(\Dbar^* D^*)_0\phi_P$&$                   0$&$ -\sqrt{  3\over  4}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$      -{  1\over  6}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  5\over 36}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&1&1& $(\Dbar^* D^*)_1\phi_P$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over  2}$&$                   0$&$ -\sqrt{  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&2&1& $(\Dbar^* D^*)_2\phi_P$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  5\over  9}$&$                   0$&$  \sqrt{  5\over 12}$&$                   0$&$       {  1\over  6}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\ \hline
+\end{tabular}
+\label{tbl:1d}
+\end{table}%
+\end{landscape}
+
+
+
+\begin{landscape}
+\begin{table}
+\caption{$d_\alpha\nu_{\ell\ell}$ for $q\qbar c\cbar(J=1)\rightarrow q c\qbar\cbar(Q\Qbar')$。
+ただし、$m_u=0$。表の縦横に注意。}
+\small
+\def\ssz{~${}^1S_0$}
+\def\tso{~${}^3S_1$}
+\def\spo{~${}^1P_1$}
+\def\tpz{~${}^3P_0$}
+\def\tpo{~${}^3P_1$}
+\def\tpt{~${}^3P_2$}
+\renewcommand\arraystretch{2}
+\setlength\tabcolsep{0.5mm}
+\hspace*{0cm}
+\begin{tabular}{cccccccccccccccccccccccc}\hline
+$(\ell_{13}s_{13})j_{13}$&$(\ell_{24}s_{24})j_{24}$&$J'$&$\ell_r$ & $1324'$ & $\eta$$h_{c1}$ &   $h_{1}$$\eta_c$&$\eta$$\chi_{c1}$&  $f_{1}$$\eta_c$& $\omega$$h_{c1}$& $h_1$$\Jpsi$& $\omega$$\chi_{c0}$&$f_{0}$$\Jpsi$& $\omega$$\chi_{c1}$ & $f_{1}$$\Jpsi$ & $\omega$$\chi_{c2}$&  $f_{2}$$\Jpsi$&$\eta$$\eta_c$P&  $\eta$$\Jpsi$P & $\omega$$\eta_c$P &  $\omega$$\Jpsi$$|_0$P &  $\omega$$\Jpsi$$|_1$P&  $\omega$$\Jpsi$$|_2$P\\
+\hline
+(00)0\ssz&(10)1\spo&1&0& $\delta   \bar\delta_{01}$       &$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over 24}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  5\over 24}$&$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$  \sqrt{  3\over  8}$&$                   0$&$                   0$\\
+(00)0\ssz&(11)1\tpo&1&0& $\delta   \bar\delta_{11}$       &$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$      -{  1\over  4}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$                   0$&$      -{  1\over  2}$&$                   0$\\
+(01)1\tso&(10)1\spo&1&0& $\delta^* \bar\delta_{01}$       &$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$       {  1\over  4}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$                   0$&$       {  1\over  2}$&$                   0$\\
+(01)1\tso&(11)0\tpz&1&0& $\delta^* \bar\delta_{0}$        &$                   0$&$ -\sqrt{  1\over 24}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$                   0$&$  \sqrt{  1\over 24}$&$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over 72}$&$                   0$&$  \sqrt{  5\over 18}$\\
+(01)1\tso&(11)1\tpo&1&0& $\delta^* \bar\delta_{11}$       &$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$      -{  1\over  4}$&$                   0$&$      -{  1\over  4}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$  \sqrt{  1\over 32}$&$                   0$&$  \sqrt{  5\over 96}$&$  \sqrt{  1\over  8}$&$      -{  1\over  4}$&$      -{  1\over  4}$&$ -\sqrt{  1\over 24}$&$                   0$&$ -\sqrt{  5\over 24}$\\
+(01)1\tso&(11)2\tpo&1&0& $\delta^* \bar\delta_{2}$        &$                   0$&$ -\sqrt{  5\over 24}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  5\over 96}$&$                   0$&$  \sqrt{  1\over 32}$&$  \sqrt{  5\over 24}$&$  \sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$ -\sqrt{  5\over 72}$&$                   0$&$  \sqrt{  1\over 72}$\\ \hline
+%
+(10)1\spo&(00)0\ssz&1&0& $\delta_{01} \bar\delta$         &$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over 24}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$  \sqrt{  5\over 24}$&$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$  \sqrt{  3\over  8}$&$                   0$&$                   0$\\
+(11)1\tpo&(00)0\ssz&1&0& $\delta_{11} \bar\delta$         &$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$       {  1\over  4}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$  \sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$                   0$&$      -{  1\over  2}$&$                   0$\\
+(10)1\spo&(01)1\tso&1&0& $\delta_{01} \bar\delta^*$       &$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$       {  1\over  4}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$                   0$&$      -{  1\over  2}$&$                   0$\\
+(11)0\tpz&(01)1\tso&1&0& $\delta_{0}  \bar\delta^*$       &$                   0$&$  \sqrt{  1\over 24}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$                   0$&$  \sqrt{  1\over 24}$&$  \sqrt{  1\over 12}$&$  \sqrt{  1\over 12}$&$ -\sqrt{  1\over 72}$&$                   0$&$  \sqrt{  5\over 18}$\\
+(11)1\tpo&(01)1\tso&1&0& $\delta_{11} \bar\delta^*$       &$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$       {  1\over  4}$&$                   0$&$       {  1\over  4}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$  \sqrt{  1\over 32}$&$                   0$&$  \sqrt{  5\over 96}$&$ -\sqrt{  1\over  8}$&$      -{  1\over  4}$&$      -{  1\over  4}$&$  \sqrt{  1\over 24}$&$                   0$&$  \sqrt{  5\over 24}$\\
+(11)2\tpo&(01)1\tso&1&0& $\delta_{2}  \bar\delta^*$       &$                   0$&$  \sqrt{  5\over 24}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$                   0$&$                   0$&$  \sqrt{  5\over 96}$&$                   0$&$ -\sqrt{  1\over 32}$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 48}$&$ -\sqrt{  5\over 48}$&$ -\sqrt{  5\over 72}$&$                   0$&$  \sqrt{  1\over 72}$\\ \hline
+%
+(00)0\ssz&(00)0\ssz&0&1& $\delta    \bar\delta\phi_P$     &$       {  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$       {  1\over  2}$&$                   0$&$  \sqrt{  5\over 12}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(00)0\ssz&(01)1\tso&1&1& $\delta    \bar\delta^*\phi_P$   &$                   0$&$                   0$&$      -{  1\over  2}$&$                   0$&$      -{  1\over  2}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$  \sqrt{  5\over 24}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(00)0\ssz&1&1& $\delta^*  \bar\delta\phi_P$     &$                   0$&$                   0$&$       {  1\over  2}$&$                   0$&$       {  1\over  2}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$  \sqrt{  5\over 24}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&0&1& $(\delta^* \bar\delta^*)_0\phi_P$&$  \sqrt{  3\over  4}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$      -{  1\over  6}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  5\over 36}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&1&1& $(\delta^* \bar\delta^*)_1\phi_P$&$                   0$&$                   0$&$ -\sqrt{  1\over  2}$&$                   0$&$  \sqrt{  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&2&1& $(\delta^* \bar\delta^*)_2\phi_P$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  5\over  9}$&$                   0$&$ -\sqrt{  5\over 12}$&$                   0$&$       {  1\over  6}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\ \hline
+\end{tabular}
+\label{tbl:1e}
+\end{table}%
+\end{landscape}
+
+\begin{landscape}
+\begin{table}
+\caption{$d_\alpha\nu_{\ell\ell}$ for $q\qbar c\cbar(J=1)\rightarrow q c\qbar\cbar(Q\Qbar')$。
+ただし、$m_c=0$。表の縦横に注意。}
+\small
+\def\ssz{~${}^1S_0$}
+\def\tso{~${}^3S_1$}
+\def\spo{~${}^1P_1$}
+\def\tpz{~${}^3P_0$}
+\def\tpo{~${}^3P_1$}
+\def\tpt{~${}^3P_2$}
+\renewcommand\arraystretch{2}
+\setlength\tabcolsep{0.5mm}
+\hspace*{0cm}
+\begin{tabular}{cccccccccccccccccccccccc}\hline
+$(\ell_{13}s_{13})j_{13}$&$(\ell_{24}s_{24})j_{24}$&$J'$&$\ell_r$ & $1324'$ & $\eta$$h_{c1}$ &   $h_{1}$$\eta_c$&$\eta$$\chi_{c1}$&  $f_{1}$$\eta_c$& $\omega$$h_{c1}$& $h_1$$\Jpsi$& $\omega$$\chi_{c0}$&$f_{0}$$\Jpsi$& $\omega$$\chi_{c1}$ & $f_{1}$$\Jpsi$ & $\omega$$\chi_{c2}$&  $f_{2}$$\Jpsi$&$\eta$$\eta_c$P&  $\eta$$\Jpsi$P & $\omega$$\eta_c$P &  $\omega$$\Jpsi$$|_0$P &  $\omega$$\Jpsi$$|_1$P&  $\omega$$\Jpsi$$|_2$P\\
+\hline
+(00)0\ssz&(10)1\spo&1&0& $\delta   \bar\delta_{01}$       &$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over 24}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  5\over 24}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$  \sqrt{  3\over  8}$&$                   0$&$                   0$\\
+(00)0\ssz&(11)1\tpo&1&0& $\delta   \bar\delta_{11}$       &$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$       {  1\over  4}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$                   0$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$                   0$&$      -{  1\over  2}$&$                   0$\\
+(01)1\tso&(10)1\spo&1&0& $\delta^* \bar\delta_{01}$       &$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$      -{  1\over  4}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$                   0$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$                   0$&$       {  1\over  2}$&$                   0$\\
+(01)1\tso&(11)0\tpz&1&0& $\delta^* \bar\delta_{0}$        &$  \sqrt{  1\over 24}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over 24}$&$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over 12}$&$ -\sqrt{  1\over 72}$&$                   0$&$  \sqrt{  5\over 18}$\\
+(01)1\tso&(11)1\tpo&1&0& $\delta^* \bar\delta_{11}$       &$  \sqrt{  1\over  8}$&$                   0$&$       {  1\over  4}$&$                   0$&$      -{  1\over  4}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$  \sqrt{  1\over 32}$&$                   0$&$ -\sqrt{  5\over 96}$&$                   0$&$  \sqrt{  1\over  8}$&$      -{  1\over  4}$&$      -{  1\over  4}$&$ -\sqrt{  1\over 24}$&$                   0$&$ -\sqrt{  5\over 24}$\\
+(01)1\tso&(11)2\tpo&1&0& $\delta^* \bar\delta_{2}$        &$  \sqrt{  5\over 24}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  5\over 96}$&$                   0$&$ -\sqrt{  1\over 32}$&$                   0$&$  \sqrt{  5\over 24}$&$  \sqrt{  5\over 48}$&$  \sqrt{  5\over 48}$&$ -\sqrt{  5\over 72}$&$                   0$&$  \sqrt{  1\over 72}$\\ \hline
+%
+(10)1\spo&(00)0\ssz&1&0& $\delta_{01} \bar\delta$         &$ -\sqrt{  1\over  8}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over 24}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  5\over 24}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$                   0$&$  \sqrt{  3\over  8}$&$                   0$&$                   0$\\
+(11)1\tpo&(00)0\ssz&1&0& $\delta_{11} \bar\delta$         &$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$      -{  1\over  4}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$                   0$&$  \sqrt{  1\over  8}$&$ -\sqrt{  1\over  8}$&$                   0$&$      -{  1\over  2}$&$                   0$\\
+(10)1\spo&(01)1\tso&1&0& $\delta_{01} \bar\delta^*$       &$                   0$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$      -{  1\over  4}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$                   0$&$ -\sqrt{  1\over  8}$&$  \sqrt{  1\over  8}$&$                   0$&$      -{  1\over  2}$&$                   0$\\
+(11)0\tpz&(01)1\tso&1&0& $\delta_{0}  \bar\delta^*$       &$ -\sqrt{  1\over 24}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over 24}$&$  \sqrt{  1\over 12}$&$  \sqrt{  1\over 12}$&$ -\sqrt{  1\over 72}$&$                   0$&$  \sqrt{  5\over 18}$\\
+(11)1\tpo&(01)1\tso&1&0& $\delta_{11} \bar\delta^*$       &$  \sqrt{  1\over  8}$&$                   0$&$      -{  1\over  4}$&$                   0$&$       {  1\over  4}$&$                   0$&$ -\sqrt{  1\over  6}$&$                   0$&$  \sqrt{  1\over 32}$&$                   0$&$ -\sqrt{  5\over 96}$&$                   0$&$ -\sqrt{  1\over  8}$&$      -{  1\over  4}$&$      -{  1\over  4}$&$  \sqrt{  1\over 24}$&$                   0$&$  \sqrt{  5\over 24}$\\
+(11)2\tpo&(01)1\tso&1&0& $\delta_{2}  \bar\delta^*$       &$ -\sqrt{  5\over 24}$&$                   0$&$ -\sqrt{  5\over 48}$&$                   0$&$  \sqrt{  5\over 48}$&$                   0$&$                   0$&$                   0$&$  \sqrt{  5\over 96}$&$                   0$&$  \sqrt{  1\over 32}$&$                   0$&$  \sqrt{  5\over 24}$&$ -\sqrt{  5\over 48}$&$ -\sqrt{  5\over 48}$&$ -\sqrt{  5\over 72}$&$                   0$&$  \sqrt{  1\over 72}$\\ \hline
+%
+(00)0\ssz&(00)0\ssz&0&1& $\delta    \bar\delta\phi_P$     &$                   0$&$       {  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$      -{  1\over  2}$&$                   0$&$  \sqrt{  5\over 12}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(00)0\ssz&(01)1\tso&1&1& $\delta    \bar\delta^*\phi_P$   &$                   0$&$                   0$&$                   0$&$       {  1\over  2}$&$                   0$&$      -{  1\over  2}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  5\over 24}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(00)0\ssz&1&1& $\delta^*  \bar\delta\phi_P$     &$                   0$&$                   0$&$                   0$&$      -{  1\over  2}$&$                   0$&$       {  1\over  2}$&$                   0$&$  \sqrt{  1\over  6}$&$                   0$&$ -\sqrt{  1\over  8}$&$                   0$&$ -\sqrt{  5\over 24}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&0&1& $(\delta^* \bar\delta^*)_0\phi_P$&$                   0$&$  \sqrt{  3\over  4}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$      -{  1\over  6}$&$                   0$&$  \sqrt{  1\over 12}$&$                   0$&$ -\sqrt{  5\over 36}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&1&1& $(\delta^* \bar\delta^*)_1\phi_P$&$                   0$&$                   0$&$                   0$&$ -\sqrt{  1\over  2}$&$                   0$&$ -\sqrt{  1\over  2}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\
+(01)1\tso&(01)1\tso&2&1& $(\delta^* \bar\delta^*)_2\phi_P$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$  \sqrt{  5\over  9}$&$                   0$&$  \sqrt{  5\over 12}$&$                   0$&$       {  1\over  6}$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$&$                   0$\\ \hline
+\end{tabular}
+\label{tbl:1f}
+\end{table}%
+\end{landscape}
+
+\subsection{$c$-parityが決まった状態$1^{-C}$}
+
+$J^{PC}=1^{--}$は10個で、
+\begin{align}
+\sqrt{1\over 2}\big( \Dbar   D_{01}+\Dbar_{01} D \big)
+ &&
+\sqrt{1\over 2}\big(\Dbar^* D_{01}+\Dbar_{01} D^*\big)
+&&
+\sqrt{1\over 2}\big(\Dbar   D_{11}-\Dbar_{11} D\big)
+\\
+\sqrt{1\over 2}\big(\Dbar^* D_{11}-\Dbar_{11} D^*\big)
+&&
+\sqrt{1\over 2}\big((\Dbar^* D_{0}+\Dbar_{0}  D^*\big)
+&&
+\sqrt{1\over 2}\big((\Dbar^* D_{2}+\Dbar_{2}  D^*\big)
+\\
+\Dbar   D\phi_P
+&&
+\big(\Dbar   D^*-\Dbar^* D\big)\phi_P
+\\
+(\Dbar^* D^*)_0\phi_P
+&&
+(\Dbar^* D^*)_2 \phi_P
+\end{align}
+
+
+$1^{-+}$は8個
+で、
+\begin{align}
+\sqrt{1\over 2}\big( \Dbar   D_{01}-\Dbar_{01} D \big)
+ &&
+\sqrt{1\over 2}\big(\Dbar^* D_{01}-\Dbar_{01} D^*\big)
+&&
+\sqrt{1\over 2}\big(\Dbar   D_{11}+\Dbar_{11} D\big)
+\\
+\sqrt{1\over 2}\big(\Dbar^* D_{11}+\Dbar_{11} D^*\big)
+&&
+\sqrt{1\over 2}\big((\Dbar^* D_{0}-\Dbar_{0}  D^*\big)
+&&
+\sqrt{1\over 2}\big((\Dbar^* D_{2}-\Dbar_{2}  D^*\big)
+\\
+\big(\Dbar   D^*+\Dbar^* D\big)\phi_P
+&&
+(\Dbar^* D^*)_1\phi_P
+\end{align}
+
+\subsection{$1^{--}$状態間の組み替え}
+
+表\ref{tbl:2a}に変換係数$\mu c_\alpha$をまとめた。
+ただし$\mu$は$x_0$が一定の場合（多分こっちの方がrealistic）。
+$[\Dbar D']_\pm$は$\sqrt{1\over 2}\big(\Dbar D'\pm\Dbar' D  \big)$etcのこと。
+$\sqrt{\mu_c}=0.9$, 
+$\sqrt{\mu_c}=0.4$くらい。 
+
+これより、たとえば
+\begin{align}
+f_0(980)\Jpsi =& \sqrt{\mu_c}\Big(
+-\sqrt{1\over 12}[\Dbar   D_{01}]_+
+-\sqrt{1\over 6}[\Dbar^* D_{01}]_+
+\nonumber\\
+&-\sqrt{1\over 6}[\Dbar   D_{11}]_-
+-\sqrt{1\over 3}[\Dbar^* D_{11}]_-
++{1\over 2}[\Dbar^* D_{0}]_+ \Big)
+\nonumber\\
+&+ \sqrt{\mu_u}\Big(-\sqrt{1\over 12}\Dbar   D
++\sqrt{1\over 3}[\Dbar   D^*]_-
+-{1\over 6}(\Dbar^* D^*)_0
++\sqrt{5\over 9}(\Dbar^* D^*)_2\Big)\phi_P
+\end{align}
+となり、$f_0(980)\Jpsi$だけの状態は$P$波$D\Dbar$に容易に壊れることがわかる。
+また、$1^{--}$の組み合わせは、$\Dbar   D_{01}+\Dbar_{01} D$等になることがわかる。
+\\
+
+$\Dbar D$に壊れないとすると、
+表\ref{tbl:2a}から、
+\begin{itemize}
+\item $\eta\Jpsi$ または $\omega \eta_c$の$P$-wave 励起状態
+
+\item
+$\sqrt{\mu_c}h_1\eta_c + \sqrt{\mu_u}\eta  h_{c1}$
+
+\item
+$[\Dbar   D_{01}]_+$または
+$[\Dbar   D_{11}]_-$
+（どちらも$f_0(980)\Jpsi$成分は小さい。$f_2(1270)$も$\pi\pi$や$KK$に壊れるけれども。
+$[\Dbar   D_{01}]_+$なら$P$-waveで容易に$\Jpsi$に壊れない？）
+\item
+$\sqrt{\mu_c}h_1\eta_c - \sqrt{\mu_u}\eta h_{c1} +\sqrt{3}(\sqrt{\mu_c}f_0\Jpsi-\sqrt{\mu_u}\omega\chi_{c0})$
+（これは、$[\Dbar^* D_{01}]_+$が一番大きい成分となる状態）
+
+\end{itemize}
+とか。
+
+
+
+\begin{table}[htp]
+\caption{$\mu c_\alpha$ for $q\qbar c\cbar(J^{PC}=1^{--})\leftrightarrow MM'$. 
+Threshold energyを計算するときは、$D_{01}$も$D_{11}$も観測される$D_1$にアサインした。}
+%\small
+\def\ssz{~${}^1S_0$}
+\def\tso{~${}^3S_1$}
+\def\spo{~${}^1P_1$}
+\def\tpz{~${}^3P_0$}
+\def\tpo{~${}^3P_1$}
+\def\tpt{~${}^3P_2$}
+\def\rtmc{\sqrt{\mu_c}}
+\def\rtmu{\sqrt{\mu_u}}
+\renewcommand\arraystretch{1.8}
+\setlength\tabcolsep{1mm}
+\begin{tabular}{l|r|cccc|cccc|cccccc}\hline
+$MM'$                    &      & $h_1\eta_c$             &$f_0$$\Jpsi$             &$f_1\Jpsi$               &$f_2\Jpsi$                &$\eta h_{c1}$            & $\omega\chi_{c0}$        &$\omega\chi_{c1}$        &$\omega\chi_{c2}$        &$\eta\Jpsi\phi_P$&$\omega\eta_c\phi_P$\\
+\hline
+threshold                &      & 4154 & 4087 & 4379 & 4373 & 4073 & 4198 & 4294 & 4339 & 3645 & 3767 
+\\
+\hline
+ $[\Dbar   D_{01}]_+$    & 4291 & $ {\rtmc\over 2}       $&$-\sqrt{\mu_c\over 12}$  &  \half\rtmc             & $-\sqrt{5\mu_c\over 12} $& $ {\rtmu\over 2}       $& $-\sqrt{\mu_u\over 12}$  &  $-$\half\rtmu          & $-\sqrt{5\mu_u\over 12} $ &0&0\\
+ $[\Dbar   D_{11}]_-$    & 4291 &  0                      &$-\sqrt{\mu_c\over 6}$   & $ \sqrt{\mu_c\over 8}  $& $ \sqrt{5\mu_c\over 24} $&  0                      & $ \sqrt{\mu_u\over 6}$   & $ \sqrt{\mu_u\over 8}  $& $-\sqrt{5\mu_u\over 24} $ &\half1&\half1\\
+ $[\Dbar^* D_{01}]_+$    & 4428 &  0                      &$-\sqrt{\mu_c\over 6}$   & $ \sqrt{\mu_c\over 8}  $& $ \sqrt{5\mu_c\over 24} $&  0                      & $ \sqrt{\mu_u\over 6}$   & $ \sqrt{\mu_u\over 8}  $& $-\sqrt{5\mu_u\over 24} $ &$-$\half1&$-$\half1\\
+ $[\Dbar^* D_{0} ]_+$    & 4325 & $-\sqrt{\mu_c\over 12} $& \half\rtmc              & $ \sqrt{\mu_c\over 3}  $& $ 0                     $& $-\sqrt{\mu_u\over 12} $&  \half\rtmu              & $-\sqrt{\mu_u\over 3}  $& $ 0                     $ &$ \sqrt{1\over  6}$&$-\sqrt{1\over  6}$\\
+ $[\Dbar^* D_{11}]_-$    & 4428 & $-{\rtmc\over 2}       $&$-\sqrt{\mu_c\over 3}$   & $-{\rtmc\over 4}       $& $-\sqrt{5\mu_c\over 48} $& $-{\rtmu\over 2}       $& $-\sqrt{\mu_u\over 3}$   & $ {\rtmu\over 4}       $& $-\sqrt{5\mu_u\over 48} $ &$ \sqrt{1\over  8}$&$-\sqrt{1\over  8}$\\
+ $[\Dbar^* D_{2} ]_+$    & 4470 & $-\sqrt{5\mu_c\over 12}$& 0                       & $ \sqrt{5\mu_c\over 48}$& $-{\rtmc\over 4}        $& $-\sqrt{5\mu_u\over 12}$&  0                       & $-\sqrt{5\mu_u\over 48}$& $-{\rtmu\over 4}        $ &$-\sqrt{5\over 24}$&$ \sqrt{5\over 24}$\\\hline%
+%
+ $\Dbar   D\phi_P      $ & 3740 & $ {\rtmu\over 2}       $&$-\sqrt{\mu_u\over 12}$  &  \half\rtmu             & $-\sqrt{5\mu_u\over 12} $& $-{\rtmc\over 2}       $& $ \sqrt{\mu_c\over 12}$  & \half\rtmc              & $\sqrt{5\mu_c\over 12}  $ &0&0 \\
+ $[\Dbar   D^*]_-\phi_P$ & 3877 &  0                      &$ \sqrt{\mu_u\over 3} $  &$-$\half\rtmu            & $-\sqrt{5\mu_u\over 12} $&  0                      & $ \sqrt{\mu_c\over 3}$   & \half\rtmc              & $-\sqrt{5\mu_c\over 12} $ &0&0 \\
+ $(\Dbar^* D^*)_0\phi_P$ & 4014 & $-\sqrt{3\mu_u\over 4} $&$-{\rtmu\over 6}      $  & $ \sqrt{\mu_u\over 12} $& $-\sqrt{5\mu_u\over 36} $& $ \sqrt{3\mu_c\over 4} $& $ {\rtmc\over 6}$        & $\sqrt{\mu_c\over 12} $ & $\sqrt{5\mu_c\over 36}  $ &0&0 \\
+ $(\Dbar^* D^*)_2\phi_P$ & 4014 &  0                      &$\sqrt{5\mu_u\over 9}  $ & $ \sqrt{5\mu_u\over 12}$& $ {\rtmu\over 6}        $&  0                      & $-\sqrt{5\mu_c\over 9}$  & $\sqrt{5\mu_c\over 12}$ & $-{\rtmc\over 6}        $ &0&0 
+\\ \hline 
+\end{tabular}
+\label{tbl:2a}
+\end{table}%
+
+\begin{table}[htp]
+\caption{$\nu d_\alpha$ for $q\qbar c\cbar(J^{PC}=1^{--})\leftrightarrow \delta\bar\delta'$. 
+Threshold energyを計算するときは、$D_{01}$も$D_{11}$も観測される$D_1$にアサインした。}
+%\small
+\def\ssz{~${}^1S_0$}
+\def\tso{~${}^3S_1$}
+\def\spo{~${}^1P_1$}
+\def\tpz{~${}^3P_0$}
+\def\tpo{~${}^3P_1$}
+\def\tpt{~${}^3P_2$}
+\def\rtmc{\sqrt{\mu_c}}
+\def\rtmu{\sqrt{\mu_u}}
+\renewcommand\arraystretch{1.8}
+\setlength\tabcolsep{1mm}
+\begin{tabular}{l|cccc|cccc|cccccc}\hline
+$\delta\bar\delta'$      & $h_1\eta_c$             &$f_0$$\Jpsi$             &$f_1\Jpsi$               &$f_2\Jpsi$                &$\eta h_{c1}$            & $\omega\chi_{c0}$        &$\omega\chi_{c1}$        &$\omega\chi_{c2}$        &$\eta\Jpsi\phi_P$&$\omega\eta_c\phi_P$\\
+\hline
+threshold                & 4154 & 4087 & 4379 & 4373 & 4073 & 4198 & 4294 & 4339 & 3645 & 3767 
+\\
+\hline
+ $[\delta   \bar\delta_{01}]_-$    & $-{\rtmc\over 2}       $&$-\sqrt{\mu_c\over 12}$  &  \half\rtmc             & $-\sqrt{5\mu_c\over 12} $& $ {\rtmu\over 2}       $& $ \sqrt{\mu_u\over 12}$  &     \half\rtmu          & $ \sqrt{5\mu_u\over 12} $ &0&0\\
+ $[\delta   \bar\delta_{11}]_-$    &  0                      &$ \sqrt{\mu_c\over 6}$   & $-\sqrt{\mu_c\over 8}  $& $-\sqrt{5\mu_c\over 24} $&  0                      & $ \sqrt{\mu_u\over 6}$   & $ \sqrt{\mu_u\over 8}  $& $-\sqrt{5\mu_u\over 24} $ &$-$\half1&\half1\\
+ $[\delta^* \bar\delta_{01}]_+$    &  0                      &$-\sqrt{\mu_c\over 6}$   & $ \sqrt{\mu_c\over 8}  $& $ \sqrt{5\mu_c\over 24} $&  0                      & $-\sqrt{\mu_u\over 6}$   & $-\sqrt{\mu_u\over 8}  $& $ \sqrt{5\mu_u\over 24} $ &$-$\half1&\half1\\
+ $[\delta^* \bar\delta_{0} ]_-$    & $-\sqrt{\mu_c\over 12} $& $-$\half\rtmc           & $-\sqrt{\mu_c\over 3}  $& $ 0                     $& $ \sqrt{\mu_u\over 12} $&  \half\rtmu              & $-\sqrt{\mu_u\over 3}  $& $ 0                     $ &$-\sqrt{1\over  6}$&$-\sqrt{1\over  6}$\\
+ $[\delta^* \bar\delta_{11}]_+$    & $-{\rtmc\over 2}       $&$ \sqrt{\mu_c\over 3}$   & $ {\rtmc\over 4}       $& $ \sqrt{5\mu_c\over 48} $& $ {\rtmu\over 2}       $& $-\sqrt{\mu_u\over 3}$   & $ {\rtmu\over 4}       $& $-\sqrt{5\mu_u\over 48} $ &$-\sqrt{1\over  8}$&$-\sqrt{1\over  8}$\\
+ $[\delta^* \bar\delta_{2} ]_-$    & $-\sqrt{5\mu_c\over 12}$& 0                       & $-\sqrt{5\mu_c\over 48}$& $ {\rtmc\over 4}        $& $ \sqrt{5\mu_u\over 12}$&  0                       & $-\sqrt{5\mu_u\over 48}$& $-{\rtmu\over 4}        $ &$ \sqrt{5\over 24}$&$ \sqrt{5\over 24}$\\\hline%
+%
+ $\delta    \bar\delta\phi_P     $ & $ {\rtmu\over 2}       $&$ \sqrt{\mu_u\over 12}$  &$-$\half\rtmu            & $ \sqrt{5\mu_u\over 12} $& $ {\rtmc\over 2}       $& $ \sqrt{\mu_c\over 12}$  & \half\rtmc              & $\sqrt{5\mu_c\over 12}  $ &0&0 \\
+ $[\delta   \bar\delta^*]_+\phi_P$ &  0                      &$ \sqrt{\mu_u\over 3} $  &$-$\half\rtmu            & $-\sqrt{5\mu_u\over 12} $&  0                      & $-\sqrt{\mu_c\over 3}$   &$-$\half\rtmc            & $ \sqrt{5\mu_c\over 12} $ &0&0 \\
+ $(\delta^* \bar\delta^*)_0\phi_P$ & $ \sqrt{3\mu_u\over 4} $&$-{\rtmu\over 6}      $  & $ \sqrt{\mu_u\over 12} $& $-\sqrt{5\mu_u\over 36} $& $ \sqrt{3\mu_c\over 4} $& $-{\rtmc\over 6}$        &$-\sqrt{\mu_c\over 12} $ & $-\sqrt{5\mu_c\over 36} $ &0&0 \\
+ $(\delta^* \bar\delta^*)_2\phi_P$ &  0                      &$\sqrt{5\mu_u\over 9}  $ & $ \sqrt{5\mu_u\over 12}$& $ {\rtmu\over 6}        $&  0                      & $ \sqrt{5\mu_c\over 9}$  &$-\sqrt{5\mu_c\over 12}$ & $ {\rtmc\over 6}        $ &0&0 
+\\ \hline 
+\end{tabular}
+\label{tbl:2b}
+\end{table}
+
+%%%%
+
+\begin{table}[htp]
+\caption{$\mu c_\alpha$ for $q\qbar c\cbar(J^{PC}=1^{-+})\leftrightarrow MM'$. }
+%\small
+\def\ssz{~${}^1S_0$}
+\def\tso{~${}^3S_1$}
+\def\spo{~${}^1P_1$}
+\def\tpz{~${}^3P_0$}
+\def\tpo{~${}^3P_1$}
+\def\tpt{~${}^3P_2$}
+\def\rtmc{\sqrt{\mu_c}}
+\def\rtmu{\sqrt{\mu_u}}
+\renewcommand\arraystretch{1.8}
+\setlength\tabcolsep{1mm}
+\begin{tabular}{l|r|cc|cc|cccccccccc}\hline
+$MM'$                    &      & $\eta$$\chi_{c1}$& $\omega$$h_{c1}$&  $f_{1}$$\eta_c$& $h_1$$\Jpsi$ &$\eta$$\eta_c$P&  $\omega$$\Jpsi$$|_0$P &  $\omega$$\Jpsi$$|_1$P&  $\omega$$\Jpsi$$|_2$P\\
+\hline
+threshold               % &      & 4154 & 4087 & 4379 & 4373 & 4073 & 4198 & 4294 & 4339 & 3645 & 3767 
+\\
+\hline
+ $[\Dbar   D_{01}]_-$    & 4291 &  0                      &  0                       &  0                      &  0                       & $-\sqrt{1\over 4}    $& $ \sqrt{3\over 4}    $& 0                    &  0                  \\
+ $[\Dbar   D_{11}]_+$    & 4291 & $ \sqrt{\mu_u\over 4}  $& $ -\sqrt{\mu_u\over 4}  $& $ \sqrt{\mu_c\over 4}  $& $  \sqrt{\mu_c\over 4}  $&  0                    &  0                    & $ \sqrt{1\over 2}   $&  0                  \\
+ $[\Dbar^* D_{01}]_-$    & 4428 & $-\sqrt{\mu_u\over 4}  $& $  \sqrt{\mu_u\over 4}  $& $-\sqrt{\mu_c\over 4}  $& $ -\sqrt{\mu_c\over 4}  $&  0                    &  0                    & $ \sqrt{1\over 2}   $&  0                  \\
+ $[\Dbar^* D_{0} ]_-$    & 4325 & $ \sqrt{\mu_u\over 6}  $& $  \sqrt{\mu_u\over 6}  $& $-\sqrt{\mu_c\over 6}  $& $  \sqrt{\mu_c\over 6}  $& $ \sqrt{1\over 12}   $& $ \sqrt{1\over 36}   $& 0                    & $-\sqrt{5\over 9}   $\\
+ $[\Dbar^* D_{11}]_+$    & 4428 & $ \sqrt{\mu_u\over 8}  $& $  \sqrt{\mu_u\over 8}  $& $-\sqrt{\mu_c\over 8}  $& $  \sqrt{\mu_c\over 8}  $& $ \sqrt{1\over 4}    $& $ \sqrt{1\over 12}   $& 0                    & $ \sqrt{5\over 12}  $\\
+ $[\Dbar^* D_{2} ]_-$    & 4470 & $-\sqrt{5\mu_u\over 24}$& $ -\sqrt{5\mu_u\over 24}$& $ \sqrt{5\mu_c\over 24}$& $ -\sqrt{5\mu_c\over 24}$& $ \sqrt{5\over 12}   $& $ \sqrt{5\over 36}   $& 0                    & $-\sqrt{1\over 36}  $\\\hline%
+%
+ $[\Dbar   D^*]_+\phi_P$ & 3877 & $ \sqrt{\mu_c\over 2}  $& $-\sqrt{\mu_c\over 2}   $& $-\sqrt{\mu_u\over 2}  $& $-\sqrt{\mu_u\over 2}   $&  0&  0 &  0&  0 \\
+ $(\Dbar^* D^*)_1\phi_P$ & 4014 & $ \sqrt{\mu_c\over 2}  $& $ \sqrt{\mu_c\over 2}   $& $ \sqrt{\mu_u\over 2}  $& $-\sqrt{\mu_u\over 2}   $&  0&  0 &  0&  0 
+\\ \hline 
+\end{tabular}
+\label{tbl:3a}
+\end{table}%
+
+\begin{table}[htp]
+\caption{$\nu d_\alpha$ for $q\qbar c\cbar(J^{PC}=1^{-+})\leftrightarrow \delta\bar\delta'$. }
+%\small
+\def\ssz{~${}^1S_0$}
+\def\tso{~${}^3S_1$}
+\def\spo{~${}^1P_1$}
+\def\tpz{~${}^3P_0$}
+\def\tpo{~${}^3P_1$}
+\def\tpt{~${}^3P_2$}
+\def\rtmc{\sqrt{\mu_c}}
+\def\rtmu{\sqrt{\mu_u}}
+\renewcommand\arraystretch{1.8}
+\setlength\tabcolsep{1mm}
+\begin{tabular}{l|cc|cc|cccccccccc}\hline
+$\delta\bar\delta'$            & $\eta$$\chi_{c1}$& $\omega$$h_{c1}$&  $f_{1}$$\eta_c$& $h_1$$\Jpsi$ &$\eta$$\eta_c$P&  $\omega$$\Jpsi$$|_0$P &  $\omega$$\Jpsi$$|_1$P&  $\omega$$\Jpsi$$|_2$P\\
+\hline
+threshold                %& 4154 & 4087 & 4379 & 4373 & 4073 & 4198 & 4294 & 4339 & 3645 & 3767 
+\\
+\hline
+ $[\delta   \bar\delta_{01}]_+$    &  0                      &  0                       &  0                      &  0                       & $ \sqrt{1\over 4}    $& $ \sqrt{3\over 4}    $& 0                    &  0                  \\
+ $[\delta   \bar\delta_{11}]_+$    & $ \sqrt{\mu_u\over 4}  $& $  \sqrt{\mu_u\over 4}  $& $ \sqrt{\mu_c\over 4}  $& $ -\sqrt{\mu_c\over 4}  $&  0                    &  0                    & $-\sqrt{1\over 2}   $&  0                  \\
+ $[\delta^* \bar\delta_{01}]_-$    & $ \sqrt{\mu_u\over 4}  $& $  \sqrt{\mu_u\over 4}  $& $ \sqrt{\mu_c\over 4}  $& $ -\sqrt{\mu_c\over 4}  $&  0                    &  0                    & $ \sqrt{1\over 2}   $&  0                  \\
+ $[\delta^* \bar\delta_{0} ]_+$    & $ \sqrt{\mu_u\over 6}  $& $ -\sqrt{\mu_u\over 6}  $& $-\sqrt{\mu_c\over 6}  $& $ -\sqrt{\mu_c\over 6}  $& $ \sqrt{1\over 12}   $& $-\sqrt{1\over 36}   $& 0                    & $ \sqrt{5\over 9}   $\\
+ $[\delta^* \bar\delta_{11}]_-$    & $ \sqrt{\mu_u\over 8}  $& $ -\sqrt{\mu_u\over 8}  $& $-\sqrt{\mu_c\over 8}  $& $ -\sqrt{\mu_c\over 8}  $& $ \sqrt{1\over 4}    $& $-\sqrt{1\over 12}   $& 0                    & $-\sqrt{5\over 12}  $\\
+ $[\delta^* \bar\delta_{2} ]_+$    & $-\sqrt{5\mu_u\over 24}$& $  \sqrt{5\mu_u\over 24}$& $ \sqrt{5\mu_c\over 24}$& $  \sqrt{5\mu_c\over 24}$& $ \sqrt{5\over 12}   $& $-\sqrt{5\over 36}   $& 0                    & $ \sqrt{1\over 36}  $\\\hline%
+%
+ $[\delta   \bar\delta^*]_-\phi_P$ & $-\sqrt{\mu_c\over 2}  $& $-\sqrt{\mu_c\over 2}   $& $ \sqrt{\mu_u\over 2}  $& $-\sqrt{\mu_u\over 2}   $&  0&  0 &  0&  0 \\
+ $(\delta^* \bar\delta^*)_1\phi_P$ & $-\sqrt{\mu_c\over 2}  $& $ \sqrt{\mu_c\over 2}   $& $-\sqrt{\mu_u\over 2}  $& $-\sqrt{\mu_u\over 2}   $&  0&  0 &  0&  0 
+\\ \hline 
+\end{tabular}
+\label{tbl:3b}
+\end{table}
+
+%%%%
+\subsection{color part}
+
+$q_1\qbar_2q_3\qbar_4$として、
+全体でcolor-singletになるのは、
+独立なものが２つある。
+\begin{align}
+|(12)1\ket&=|(q_1\qbar_2)c^1(q_3\qbar_4)c^1;c^1\ket
+\\
+|(12)8\ket&=|(q_1\qbar_2)c^8(q_3\qbar_4)c^8;c^1\ket
+\end{align}
+あるいは
+\begin{align}
+|(14)1\ket&=|(q_1\qbar_4)c^1(q_3\qbar_2)c^1;c^1\ket
+\\
+|(14)8\ket&=|(q_1\qbar_4)c^8(q_3\qbar_2)c^8;c^1\ket
+\end{align}
+あるいは
+\begin{align}
+|(13)\bar3\ket&=|(q_1q_3)c^{\bar3}(\qbar_2\qbar_4)c^3;c^1\ket
+\\
+|(13)6\ket&=|(q_1q_3)c^6(\qbar_2\qbar_4)c^{\bar6};c^1\ket
+\end{align}
+
+これらは互いに変換できて
+\begin{align}
+\begin{pmatrix}
+|(12)1\ket
+\\
+|(12)8\ket
+\end{pmatrix}
+&=
+\begin{pmatrix}
+\sqrt{1\over 9}& \sqrt{8\over 9}
+\\
+\sqrt{8\over 9}&-\sqrt{1\over 9}
+\end{pmatrix}
+\begin{pmatrix}
+|(14)1\ket
+\\
+|(14)8\ket
+\end{pmatrix}
+&&=
+\begin{pmatrix}
+-\sqrt{1\over 3}& \sqrt{2\over 3}
+\\
+\sqrt{2\over 3}& \sqrt{1\over 3}
+\end{pmatrix}
+\begin{pmatrix}
+|(13)\bar3\ket
+\\
+|(13)6\ket
+\end{pmatrix}
+\end{align}
+
+\begin{align}
+\begin{pmatrix}
+|(14)1\ket
+\\
+|(14)8\ket
+\end{pmatrix}
+&=
+\begin{pmatrix}
+\sqrt{1\over 9}& \sqrt{8\over 9}
+\\
+\sqrt{8\over 9}&-\sqrt{1\over 9}
+\end{pmatrix}
+\begin{pmatrix}
+|(12)1\ket
+\\
+|(12)8\ket
+\end{pmatrix}
+&&=
+\begin{pmatrix}
+\sqrt{1\over 3}& \sqrt{2\over 3}
+\\
+-\sqrt{2\over 3}& \sqrt{1\over 3}
+\end{pmatrix}
+\begin{pmatrix}
+|(13)\bar3\ket
+\\
+|(13)6\ket
+\end{pmatrix}
+\end{align}
+
+\begin{align}
+\begin{pmatrix}
+|(13)\bar3\ket
+\\
+|(13)6\ket
+\end{pmatrix}
+&=
+\begin{pmatrix}
+-\sqrt{1\over 3}& \sqrt{2\over 3}
+\\
+\sqrt{2\over 3}& \sqrt{1\over 3}
+\end{pmatrix}
+\begin{pmatrix}
+|(12)1\ket
+\\
+|(12)8\ket
+\end{pmatrix}
+&&=
+\begin{pmatrix}
+\sqrt{1\over 3}&-\sqrt{2\over 3}
+\\
+\sqrt{2\over 3}& \sqrt{1\over 3}
+\end{pmatrix}
+\begin{pmatrix}
+|(14)1\ket
+\\
+|(14)8\ket
+\end{pmatrix}
+\end{align}
+
+
+これらによる、$\lamilamj$の期待値を表\ref{tbl:ss}
+にまとめた。ただし、
+\begin{align}
+\bra (12)1|\lamilamj|(12)8\ket&=0 \text{\ \ for }ij=12\text{ or }34
+\label{eq:off1}\\
+\bra (14)1|\lamilamj|(14)8\ket&=0 \text{\ \ for }ij=14\text{ or }23
+\label{eq:off2}\\
+\bra (13)\bar3|\lamilamj|(13)6\ket&=0 \text{\ \ for }ij=13\text{ or }24
+\label{eq:off3}
+\end{align}
+（他はノンゼロだけど、使わないので）より、表はdiagonalのみ。
+
+\begin{table}[htbp]
+\caption{$\bra\lamilamj\ket$}
+\begin{center}
+\begin{tabular}{cccccccccc}\hline
+$ij$&12&13&14&23&24&34\\\hline
+$\bra(12)1|\lamilamj|(12)1\ket$
+& $-{16\over 3}$ & 0& 0& 0& 0&$-{16\over 3}$
+\\
+$\bra(12)8|\lamilamj|(12)8\ket$
+& ${2\over 3}$ & $-{4\over 3}$& $-{14\over 3}$& $-{14\over 3}$&$-{4\over 3}$&$ {2\over 3}$
+\\
+$\bra(14)1|\lamilamj|(14)1\ket$
+& 0 & 0& $-{16\over 3}$& $-{16\over 3}$& 0&0
+\\
+$\bra(14)8|\lamilamj|(14)8\ket$
+& $-{14\over 3}$ & $-{4\over 3}$&${2\over 3}$ & ${2\over 3}$&$-{4\over 3}$& $-{14\over 3}$
+\\
+$\bra(13)\bar3|\lamilamj|(13)\bar3\ket$
+& $-{4\over 3}$ & $-{8\over 3}$&$-{4\over 3}$& $-{4\over 3}$& $-{8\over 3}$& $-{4\over 3}$
+\\
+$\bra(13)6|\lamilamj|(13)6\ket$
+& $-{10\over 3}$ & ${4\over 3}$&$-{10\over 3}$ & $-{10\over 3}$&${4\over 3}$& $-{10\over 3}$
+\\\hline
+\end{tabular}
+\end{center}
+\label{tbl:ss}
+\end{table}%
+
+\subsection{matrix elements}
+
+結局、spinとcolorを含めると独立なtwo-meson状態としては、
+$\Dbar D$系（$\Dbar$と$D$それぞれがcolor-singlet）
+$q\qbar c\cbar$系（$q\qbar$と$c\cbar$それぞれがcolor-singlet）
+の２０個になる。それぞれを$\phi_D^a$と$\phi_\psi^a$（$a=1-10$）と略記する。
+また、$\phi_\delta^a$も使う。
+完全直交系は
+\begin{align}
+1&
+=\sum_{a=1\sim 10,\beta=1,8}    |\phi_D^a;C_{14,\beta}\ket\bra\phi_D^a;C_{14,\beta}|
+=\sum_{a=1\sim 10,\beta=1,8}    |\phi_\phi^a;C_{12,\beta}\ket\bra\phi_\phi^a;C_{12,\beta}|
+\nonumber\\
+&=\sum_{a=1\sim 10,\beta=\bar3,6}|\phi_\delta^a;C_{13,\beta}\ket\bra\phi_\delta^a;C_{13,\beta}|
+\end{align}
+\subsubsection{Norm}
+
+Normは、
+\begin{align}
+\bra \phi_D^a;C_{14,1}|\phi_D^b;C_{14,1}\ket&=\delta_{ab}
+\\
+\bra \phi_\psi^a;C_{12,1}|\phi_\psi^b;C_{12,1}\ket&=\delta_{ab}
+\\
+\bra \phi_D^a;C_{14,1}|\phi_\psi^b;C_{12,1}\ket&=\bra C_{14,1}|C_{12,1}\ket\bra \phi_D^a|\phi_\psi^b\ket
+=\sqrt{1\over 9}\bra \phi_D^a|\phi_\psi^b\ket
+\end{align}
+$\bra\phi_D^a|\phi_\psi^b\ket$は、表\ref{tbl:2a}。
+
+
+\subsubsection{Operators (central)}
+まず、中心力の期待値を見る。
+\begin{align}
+\Vcoul&=\sum_{i<j}c_\text{coul}\calO'_{ij}\Lambda_{ij}=\sum_{i<j}{\alpha_s\over 4 r_{ij}}  (\lamilamj)
+\\
+c_\text{coul}&={\alpha_s\over 4},&\calO'_{ij}&={1\over r_{ij}}
+\\
+\Vcmi&= \sum_{i<j}-c_\text{cmi}\calO_{ij}\Sigma_{ij}\Lambda_{ij}
+=\sum_{i<j}-{\alpha_s^{ss}\over 4}{2\pi \over 3 m_im_j}(\sigisigj)\delta^3(\vecr_{ij})(\lamilamj)
+\\
+c_\text{cmi}&={\alpha_s^{ss}\over 4}{2\pi \over 3 m_im_j},&\calO_{ij}&=\delta^3(\vecr_{ij})
+\Sigma_{ij}=(\sigisigj)
+\\
+\Lambda_{ij}&=(\lamilamj)
+\end{align}
+$\lambda$はantiquarkに対しては($-^t\lambda$)。
+
+いま、$\Vcoul$,$\Vcmi$の各$q\qbar$ mesonでの期待値を
+\begin{align}
+A_{D}&=\bra D|\Vcoul|D\ket=-{16\over 3}\bra D|c_\text{coul}\calO'|D\ket
+\\
+\Delta_{D}&=\bra D|\Vcmi|D\ket=-{16\over 3}\bra D|c_\text{cmi}\calO|D\ket\bra\Sigma\ket
+\end{align}
+などと書く。
+軌道部分は $\alpha_s$が定数の場合、
+\begin{align}
+\bra q\qbar (0s)|\calO'|q\qbar (0s) \ket&= \sqrt{2\over \pi}{2\sqrt{\mu}\over x_0}
+\\
+\bra q\qbar (0p)|\calO'|q\qbar (0p) \ket&=\sqrt{2\over \pi}{4\sqrt{\mu}\over 3x_0}
+\end{align}
+$\alpha_s=\sum_k\alpha_k\text{erf}[\gamma_k r]$の場合、
+\begin{align}
+\bra q\qbar (0s)|\calO'|q\qbar (0s) \ket&= 
+\sum_k\alpha_k \sqrt{2\over \pi} 2\sqrt{\mu}
+{\gamma_k\over \sqrt{2\mu +\gamma_k^2 x_0^2}}
+\rightarrow (\sum_k\alpha_k)\sqrt{2\over \pi}{2\sqrt{\mu}\over x_0}~~(\text{all } \gamma_k\rightarrow\infty)
+\\
+\bra q\qbar (0p)|\calO'|q\qbar (0p) \ket&
+=\sum_k\alpha_k\sqrt{2\over \pi}{4\sqrt{\mu}\over 3}
+{\gamma_k(3\mu +\gamma_k^2 x_0^2)\over \sqrt{2\mu +\gamma_k^2 x_0^2}^3}
+\rightarrow (\sum_k\alpha_k)\sqrt{2\over \pi}{4\sqrt{\mu}\over 3x_0}~~(\text{all } \gamma_k\rightarrow\infty)
+\end{align}
+$\delta$関数は
+\begin{align}
+\bra q\cbar (0s)|\calO|q\cbar (0s) \ket&=\sqrt{2\mu\over \pi x_0^2}^{3}
+\\
+\bra q\cbar (0p)|\calO|q\cbar (0p) \ket&=0
+\end{align}
+となる。
+
+2meson系での期待値は
+\begin{align}
+\bra \phi_D^a;C_{14,1}|\Vcoul|\phi_D^b;C_{14,1}\ket
+&=\sum_{i<j}c_\text{coul}\bra \phi_D^a|\calO'_{ij}|\phi_D^a\ket\bra C_{14,1}|\Lambda_{ij}|C_{14,1}\ket \delta^{ab}
+\\
+&=c_\text{coul}(\bra \phi_D^a|\calO'_{14}|\phi_D^a\ket\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket
+ +\bra \phi_D^a|\calO'_{23}|\phi_D^a\ket\bra C_{14,1}|\Lambda_{23}|C_{14,1}\ket)\delta^{ab}
+\end{align}
+spinを変えないので$\delta^{ab}$が付く。
+
+$\phi_D^a$が$[DD']_\pm$のとき、
+\begin{align}
+\bra \phi_D^a|\calO'_{14[23]}|\phi_D^a\ket\bra C_{14,1}|\Lambda_{14[23]}|C_{14,1}\ket
+&=\half1
+(\bra \Dbar D'|\calO'_{14[23]}|\Dbar D'\ket+\bra \Dbar' D|\calO'_{14[23]}|\Dbar' D\ket)
+\bra C_{14,1}|\Lambda_{14[23]}|C_{14,1}\ket
+\end{align}
+よって、$\phi_D^a$が$[DD']_\pm$のとき、
+\begin{align}
+\bra \phi_D^a;C_{14,1}|\Vcoul|\phi_D^a;C_{14,1}\ket
+&=\half1 (A_{\Dbar}+A_{\Dbar'}+A_D+A_{D'})
+\\
+\bra \phi_D^a;C_{14,1}|\Vcmi|\phi_D^a;C_{14,1}\ket
+&=\half1 (\Delta_{\Dbar}+\Delta_D)
+\end{align}
+ただし、operatorがDelta関数のため、$\Delta_{D'}=0$となる。
+
+$\phi_D^a$が$(\Dbar^* D^*)_J\phi_P$のとき、
+\begin{align}
+\bra \phi_D^a|\calO'_{14}|\phi_D^a\ket\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket
+&=
+\bra (\Dbar^* D^*)_J\phi_P|\calO'_{14}|(\Dbar^* D^*)_J\phi_P\ket\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket
+\\
+&=A_{\Dbar^*}
+\end{align}
+よって
+\begin{align}
+\bra \phi_D^a;C_{14,1}|\Vcoul|\phi_D^a;C_{14,1}\ket
+&=A_{\Dbar^*}+A_{D^*}
+\\
+\bra \phi_D^a;C_{14,1}|\Vcmi|\phi_D^a;C_{14,1}\ket
+&=\Delta_{\Dbar^*}+\Delta_{D^*}
+\end{align}
+
+同様に、
+$\phi_\psi^a$は、
+\begin{align}
+\bra \phi_\psi^a;C_{12,1}|\Vcoul|\phi_\psi^b;C_{12,1}\ket
+&=\bra \phi_\psi^a|\calO'_{12}|\phi_\psi^a\ket\bra C_{12,1}|\Lambda_{12}|C_{12,1}\ket\delta^{ab}
+ +\bra \phi_\psi^a|\calO'_{34}|\phi_\psi^a\ket\bra C_{12,1}|\Lambda_{34}|C_{12,1}\ket\delta^{ab}
+\nonumber\\
+&=(A_{q\qbar}+A_{c\cbar})^a\delta^{ab}
+\\
+\bra \phi_\psi^a;C_{12,1}|\Vcmi|\phi_\psi^b;C_{12,1}\ket
+&=(\Delta_{q\qbar}+\Delta_{c\cbar})^a\delta^{ab}
+\end{align}
+
+off-diagonalは、
+\begin{align}
+\bra \phi_D^a;C_{14,1}|\Vcoul|\phi_\psi^b;C_{12,1}\ket&=f_1+f_2+f_3
+\end{align}
+\begin{align}
+f_1&=\bra \phi_D^a;C_{14,1}|c_\text{coul}(\calO'_{14}\Lambda_{14}+\calO'_{23}\Lambda_{23})|\phi_\psi^b;C_{12,1}\ket
+\\
+f_2&=\bra \phi_D^a;C_{14,1}|c_\text{coul}(\calO'_{12}\Lambda_{12}+\calO'_{34}\Lambda_{34})|\phi_\psi^b;C_{12,1}\ket
+\\
+f_3&=\bra \phi_D^a;C_{14,1}|c_\text{coul}(\calO'_{13}\Lambda_{13}+\calO'_{24}\Lambda_{24})|\phi_\psi^b;C_{12,1}\ket
+\end{align}
+
+完全系を入れて、eq.\ (\ref{eq:off2})より、color-octetへのmat eleが無いことを使うと、
+\begin{align}
+f_1&=\bra \phi_D^a;C_{14,1}|c_\text{coul}(\calO'_{14}\Lambda_{14}+\calO'_{23}\Lambda_{23})
+\Big(\sum_{c=1\sim 10,\beta=1,8}    |\phi_D^c;C_{14,\beta}\ket\bra\phi_D^c;C_{14,\beta}|\Big)
+|\phi_\psi^b;C_{12,1}\ket
+\\
+&=\bra \phi_D^a;C_{14,1}|c_\text{coul}(\calO'_{14}\Lambda_{14}+\calO'_{23}\Lambda_{23})
+|\phi_D^a;C_{14,1}\ket\bra\phi_D^a;C_{14,1}|\phi_\psi^b;C_{12,1}\ket
+\\
+&=\half1 (A_{\Dbar}+A_{\Dbar'}+A_D+A_{D'})^a\sqrt{1\over 9}\bra\phi_D^a|\phi_\psi^b\ket 
+\end{align}
+
+\begin{align}
+f_2&=\bra \phi_D^a;C_{14,1}|
+\Big(\sum_{c=1\sim 10,\beta=1,8}    |\phi_\psi^c;C_{12,\beta}\ket\bra\phi_\psi^c;C_{12,\beta}|\Big)
+c_\text{coul}c_\text{coul}(\calO'_{12}\Lambda_{12}+\calO'_{34}\Lambda_{34})|\phi_\psi^b;C_{12,1}\ket
+\\
+&=\sqrt{1\over 9}\bra\phi_D^a|\phi_\psi^b\ket (A_{q\qbar}+A_{c\cbar})^b
+\end{align}
+
+\begin{align}
+f_3&=\bra \phi_D^a;C_{14,1}|
+\Big(\sum_{c=1\sim 10,\beta=\bar3,6}|\phi_\delta^c;C_{13,\beta}\ket\bra\phi_\delta^c;C_{13,\beta}|\Big)
+c_\text{coul}(\calO'_{13}\Lambda_{13}+\calO'_{24}\Lambda_{24})
+\Big(\sum_{d\beta'}|\phi_\delta^d;C_{13,\beta'}\ket\bra\phi_\delta^d;C_{13,\beta'}|\Big)
+|\phi_\psi^b;C_{12,1}\ket
+\\
+&=
+\sum_{c=1\sim 10,\beta=\bar3,6}
+\bra \phi_D^a;C_{14,1}|\phi_\delta^c;C_{13,\beta}\ket\bra\phi_\delta^c;C_{13,\beta}|
+c_\text{coul}(\calO'_{13}\Lambda_{13}+\calO'_{24}\Lambda_{24})
+|\phi_\delta^c;C_{13,\beta}\ket\bra\phi_\delta^c;C_{13,\beta}
+|\phi_\psi^b;C_{12,1}\ket
+\\
+&={8\over 9}\sum_c\bra\phi_D^a|\phi_\delta^c\ket\bra\phi_\delta^c\phi_\psi^b\ket 
+\bra\phi_\delta^c|c_\text{coul}(\calO'_{13}+\calO'_{24})|\phi_\delta^c\ket
+\\
+&=\sum_c\bra\phi_D^a|\phi_\delta^c\ket\bra\phi_\delta^c\phi_\psi^b\ket 
+(-{1\over 6})(A_D+A_{D'})^c
+\end{align}
+ただし、最後の行は13間のorbital wave function が14間のものと同じ$(0s)^4$とした。また、
+\begin{align}
+\bra C_{14,1}|C_{13,\beta}\ket\bra C_{13,\beta}|\Lambda_{13}|C_{13,\beta}\ket\bra C_{13,\beta}| C_{12,1}\ket
+&={8\over 9}\text{    for }\beta=\bar3,6
+\\
+\bra C_{14,1}|C_{13,\beta}\ket\bra C_{13,\beta}|\Lambda_{24}|C_{13,\beta}\ket\bra C_{13,\beta}| C_{12,1}\ket
+&={8\over 9}\text{    for }\beta=\bar3,6
+\end{align}
+を用いた。
+
+\subsubsection{Operators (spin-orbit)}
+\begin{align}
+\Vls&=
+\sum_{i<j}\calO''_{ij}(c_\text{sls}\Lsls +c_\text{als}\Lals)\Lambda_{ij}\\
+\calO''_{ij}&={1\over  r_{ij}^3} 
+\\
+c_\text{sls}&=-{\alpha_s\over 16 }({1\over m_i^2}+{1\over m_j^2}+{4\over m_im_j})
+\\
+c_\text{als}&=-{\alpha_s\over 16 }({1\over m_i^2}-{1\over m_j^2})
+\\
+\Lsls&={\vecsig_i+\vecsig_j\over 2}\cdot i[\vecr_{ij}\times \vecp_{ij}]
+\\
+\Lals&={\vecsig_i-\vecsig_j\over 2}\cdot i[\vecr_{ij}\times \vecp_{ij}]
+\end{align}
+ここで、
+\begin{align}
+\vecr_{ij}&=\vecr_i-\vecr_j\\
+\vecp_{ij}&=(m_j\vecp_i-m_i\vecp_j)/(m_i+m_j)
+\end{align}
+
+
+いま、$\Vls$の各$q\qbar$ mesonでの期待値を
+\begin{align}
+S_{D_{\ell s'j;\ell sj}}&=\bra D_{\ell s'j}|\Vls|D_{\ell sj}\ket
+=-{16\over 3}\bra D_{\ell s'j}|\calO''c_\text{sls}\Lsls|D_{\ell sj}\ket
+\end{align}
+などと書く。
+軌道部分は $\alpha_s$が定数の場合、
+\begin{align}
+\bra q\qbar (0p)|\calO''|q\qbar (0p) \ket&=\sqrt{2\over \pi}{8\sqrt{\mu}^3\over 3x_0^3}
+\end{align}
+$\alpha_s=\sum_k\alpha_k\text{erf}[\gamma_k r]$の場合、
+\begin{align}
+\bra q\qbar (0p)|\calO''|q\qbar (0p) \ket&=
+\sum_k\alpha_k \sqrt{2\over \pi}{8\sqrt{\mu}^3\over 3}
+{\gamma_k\over x_0^2\sqrt{2\mu +\gamma_k^2 x_0^2}}
+\rightarrow (\sum_k\alpha_k)\sqrt{2\over \pi}{8\sqrt{\mu}^3\over 3x_0^3}~~(\text{all }\gamma_k\rightarrow\infty)
+\end{align}
+
+$\Lals$があるために、$D(^3P_1)$と$D(^1P_1)$間はnon zero である。
+Spin-angular momentum part を計算する。$\Sigma$をspinに関する1階のoperatorとすると、
+\begin{align}
+\bra (\ell s')jm|(\vecL\cdot \Sigma)|(\ell s)jm\ket
+&= -\sqrt{3} \sqrt{2j+1}
+\left\{\begin{array}{ccc}\ell &s& j\\1&1&0\\\ell&s'&j\\\end{array}\right\}
+\bra\ell||L||\ell\ket\bra s'||\Sigma^1||s\ket
+\\
+&= -\sqrt{3} \sqrt{2j+1}
+\left\{\begin{array}{ccc}\ell&s'&j\\\ell &s& j\\1&1&0\\\end{array}\right\}
+\sqrt{\ell(\ell+1)(2\ell+1)}\bra s'||\Sigma^1||s\ket
+\end{align}
+ここで、
+\begin{align}
+\bra s'||\half1 [\sigma_1+\sigma_2]^1||s\ket
+&= \delta_{ss'}\sqrt{s(s+1)(2s+1)}
+=\begin{cases}
+0 & s=0\\ \sqrt{6} &s=1
+\end{cases}
+\\
+\bra s'=1||\half1 [\sigma_1-\sigma_2]^1||s=0\ket
+&= \sqrt{3}
+\\
+\bra s'=0||\half1 [\sigma_1-\sigma_2]^1||s=1\ket
+&= -\sqrt{3}
+\end{align}
+これより、$P$-wave systemについては
+\begin{align}
+\bra (\ell s')jm|(\vecL\cdot \half1 (\vecsig_1+\vecsig_2))|(\ell s)jm\ket
+& =\begin{cases}
+-2 & j=0\\ 
+-1 & j=1\\ 
+1 & j=2
+\end{cases}
+\end{align}
+（これは
+\[\bra \vecL\cdot\xbld{S} \ket=\half1(j(j+1)-\ell(\ell+1)-s(s+1))
+\]
+に一致。）また、
+\begin{align}
+\bra (\ell s')jm|(\vecL\cdot \half1 (\vecsig_1-\vecsig_2))|(\ell s)jm\ket
+& =\begin{cases}
+-\sqrt{2} & j=1, s=1, s'=0 \text{ or } j=1, s=0, s'=1\\ 
+0 & \text{otherwise}
+\end{cases}
+\end{align}
+となる。
+
+
+\subsubsection{Symmetric LS}
+
+Symmetric LSについては、centralとほぼ同じで、
+2meson系での期待値は
+\begin{align}
+\bra \phi_D^a;C_{14,1}|\Vls|\phi_D^b;C_{14,1}\ket
+&=\sum_{i<j}\bra \phi_D^a|c_\text{sls}\Lsls\calO''_{ij}|\phi_D^b\ket
+\bra C_{14,1}|\Lambda_{ij}|C_{14,1}\ket\delta^{ab}
+\\
+&=\bra \phi_D^a|\calO''_{14}c_\text{sls}\Lsls|\phi_D^a\ket\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket\delta^{ab}
+ +\bra \phi_D^a|\calO''_{23}c_\text{sls}\Lsls|\phi_D^a\ket\bra C_{14,1}|\Lambda_{23}|C_{14,1}\ket\delta^{ab}
+\end{align}
+spinを変えないので$\delta^{ab}$が付く。
+
+$\phi_D^a$が$[\Dbar D']_\pm$のとき、
+\begin{align}
+\bra \phi_D^a|\calO'_{14}|\phi_D^a\ket\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket
+&=\half1
+(\bra \Dbar D'|\calO'_{14}|\Dbar D'\ket+\bra \Dbar' D|\calO'_{14}|\Dbar' D\ket)\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket
+\\
+\bra \phi_D^a|\calO'_{23}|\phi_D^a\ket\bra C_{14,1}|\Lambda_{23}|C_{14,1}\ket
+&=\half1
+(\bra \Dbar D'|\calO'_{23}|\Dbar D'\ket+\bra \Dbar' D|\calO'_{23}|\Dbar' D\ket)\bra C_{14,1}|\Lambda_{23}|C_{14,1}\ket
+\end{align}
+よって、$\phi_D^a$が$[\Dbar D']_\pm$のとき、
+\begin{align}
+\bra \phi_D^a;C_{14,1}|\Vls|\phi_D^a;C_{14,1}\ket
+&=\half1 (S_{\Dbar'}+S_{D'})
+\end{align}
+
+$\phi_D^a$が$(\Dbar^* D^*)_J\phi_P$のとき、
+\begin{align}
+\bra \phi_D^a|\calO''_{14}|\phi_D^b\ket\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket
+&=\bra \phi_D^a|\calO''_{23}|\phi_D^b\ket\bra C_{14,1}|\Lambda_{23}|C_{14,1}\ket
+=0
+\end{align}
+よって、\begin{align}
+\bra \phi_D^a;C_{14,1}|\Vls|\phi_D^a;C_{14,1}\ket
+&=0
+\end{align}
+
+同様に、
+$\phi_\psi^a$は、$c\cbar$が$P$-waveの場合、
+\begin{align}
+\bra \phi_\psi^a;C_{12,1}|\Vls|\phi_\psi^b;C_{12,1}\ket
+&=\bra \phi_\psi^a|\calO''_{12}c_\text{sls}\Lsls|\phi_\psi^a\ket\bra C_{12,1}|\Lambda_{12}|C_{12,1}\ket\delta^{ab}
+ +\bra \phi_\psi^a|\calO''_{34}c_\text{sls}\Lsls|\phi_\psi^a\ket\bra C_{12,1}|\Lambda_{34}|C_{12,1}\ket\delta^{ab}
+\nonumber\\
+&=(S_{c\cbar})^a\delta^{ab}
+\end{align}
+
+off-diagonalは、
+\begin{align}
+\bra \phi_D^a;C_{14,1}|\Vls|\phi_\psi^b;C_{12,1}\ket&=f_1+f_2+f_3
+\end{align}
+\begin{align}
+f_1&=\bra \phi_D^a;C_{14,1}|c_\text{sls}\Lsls(\calO''_{14}\Lambda_{14}+\calO''_{23}\Lambda_{23})|\phi_\psi^b;C_{12,1}\ket
+\\
+f_2&=\bra \phi_D^a;C_{14,1}|c_\text{sls}\Lsls(\calO''_{12}\Lambda_{12}+\calO''_{34}\Lambda_{34})|\phi_\psi^b;C_{12,1}\ket
+\\
+f_3&=\bra \phi_D^a;C_{14,1}|c_\text{sls}\Lsls(\calO''_{13}\Lambda_{13}+\calO''_{24}\Lambda_{24})|\phi_\psi^b;C_{12,1}\ket
+\end{align}
+
+完全系を入れて
+\begin{align}
+f_1&=\bra \phi_D^a;C_{14,1}|c_\text{sls}\Lsls(\calO'_{14}\Lambda_{14}+\calO'_{23}\Lambda_{23})
+\Big(\sum_{c=1\sim 10,\beta=1,8}    |\phi_D^c;C_{14,\beta}\ket\bra\phi_D^c;C_{14,\beta}|\Big)
+|\phi_\psi^b;C_{12,1}\ket
+\nonumber\\
+&=\bra \phi_D^a;C_{14,1}|c_\text{sls}\Lsls(\calO'_{14}\Lambda_{14}+\calO'_{23}\Lambda_{23})
+|\phi_D^a;C_{14,1}\ket\bra\phi_D^a;C_{14,1}|\phi_\psi^b;C_{12,1}\ket
+\\
+&=\half1 (S_{\Dbar'}+S_{D'})^a\sqrt{1\over 9}\bra\phi_D^a|\phi_\psi^b\ket 
+\end{align}
+
+\begin{align}
+f_2&=\bra \phi_D^a;C_{14,1}|
+\Big(\sum_{c=1\sim 10,\beta=1,8}    |\phi_\psi^c;C_{12,\beta}\ket\bra\phi_\psi^c;C_{12,\beta}|\Big)
+c_\text{sls}\Lsls(\calO''_{12}\Lambda_{12}+\calO''_{34}\Lambda_{34})|\phi_\psi^b;C_{12,1}\ket
+\nonumber\\
+&=\sqrt{1\over 9}\bra\phi_D^a|\phi_\psi^b\ket (S_{c\cbar})^b
+\end{align}
+
+\begin{align}
+f_3&=\bra \phi_D^a;C_{14,1}|
+\Big(\sum_{c=1\sim 10,\beta=\bar3,6}|\phi_\delta^c;C_{13,\beta}\ket\bra\phi_\delta^c;C_{13,\beta}|\Big)
+c_\text{sls}\Lsls(\calO''_{13}\Lambda_{13}+\calO''_{24}\Lambda_{24})
+\nonumber\\
+&\times\Big(\sum_{d\beta'}|\phi_\delta^d;C_{13,\beta'}\ket\bra\phi_\delta^d;C_{13,\beta'}|\Big)
+|\phi_\psi^b;C_{12,1}\ket
+\\
+&=
+\sum_{c=1\sim 10,\beta=\bar3,6}
+\bra \phi_D^a;C_{14,1}|\phi_\delta^c;C_{13,\beta}\ket\bra\phi_\delta^c;C_{13,\beta}|
+c_\text{sls}\Lsls(\calO''_{13}\Lambda_{13}+\calO''_{24}\Lambda_{24})
+|\phi_\delta^c;C_{13,\beta}\ket\bra\phi_\delta^c;C_{13,\beta}
+|\phi_\psi^b;C_{12,1}\ket
+\\
+&={8\over 9}\sum_c\bra\phi_D^a|\phi_\delta^c\ket\bra\phi_\delta^c|\phi_\psi^b\ket 
+\bra\phi_\delta^c|c_\text{sls}\Lsls(\calO''_{13}+\calO''_{24})|\phi_\delta^c\ket
+\end{align}
+
+\subsubsection{Antisymmetric LS}
+
+Antiymmetric LSについては、spinを変えるのに注意して
+2meson系での期待値は
+\begin{align}
+\bra \phi_D^a;C_{14,1}|\Vls|\phi_D^b;C_{14,1}\ket
+&=\sum_{i<j}\bra \phi_D^a|c_\text{als}\Lals\calO''_{ij}|\phi_D^b\ket
+\bra C_{14,1}|\Lambda_{ij}|C_{14,1}\ket
+\\
+&=\bra \phi_D^a|c_\text{als}\Lals\calO''_{14}|\phi_D^b\ket\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket
+ +\bra \phi_D^a|c_\text{als}\Lals\calO''_{23}|\phi_D^b\ket\bra C_{14,1}|\Lambda_{23}|C_{14,1}\ket
+\end{align}
+
+$\phi_D^a$が$[\Dbar D_{11}]_-$、$\phi_D^b$が$[\Dbar D_{01}]_+$のとき（あるいはその逆）、
+$\phi_D^a$が$[\Dbar^* D_{11}]_-$、$\phi_D^b$が$[\Dbar^* D_{01}]_+$のとき（あるいはその逆）、
+のみnonzeroで、
+\begin{align}
+\lefteqn{\bra [\Dbar D_{11}]_-|c_\text{als}\Lals\calO''_{14}|[\Dbar D_{01}]_+\ket\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket}
+\nonumber\\
+&=\half1
+(\bra \Dbar D_{11}|c_\text{als}\Lals\calO''_{14}|\Dbar D_{01}\ket-\bra \Dbar_{11} D|c_\text{als}\Lals\calO''_{14}|\Dbar_{01} D\ket)\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket
+\\
+&=-\half1\bra c_\text{als}\calO''_{14}\ket(-\sqrt{2})(-{16\over 3}) \equiv -\half1 S_{\Dbar_{11}\Dbar_{01}}
+\end{align}
+\begin{align}
+\lefteqn{\bra [\Dbar D_{01}]_+|c_\text{als}\Lals\calO''_{14}|[\Dbar D_{11}]_-\ket\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket}
+\nonumber\\
+&=\half1
+(\bra \Dbar D_{01}|c_\text{als}\Lals\calO''_{14}|\Dbar D_{11}\ket-\bra \Dbar_{01} D|c_\text{als}\Lals\calO''_{14}|\Dbar_{11} D\ket)\bra C_{14,1}|\Lambda_{14}|C_{14,1}\ket
+\\
+&=-\half1\bra c_\text{als}\calO''_{14}\ket(-\sqrt{2})(-{16\over 3}) \equiv -\half1 S_{\Dbar_{01}\Dbar_{11}}
+\end{align}
+%
+\begin{align}
+\lefteqn{\bra [\Dbar D_{11}]_-|c_\text{als}\Lals\calO''_{23}|[\Dbar D_{01}]_+\ket\bra C_{14,1}|\Lambda_{23}|C_{14,1}\ket}
+\nonumber\\
+&=\lefteqn{\bra [\Dbar D_{11}]_-|c_\text{als}\Lals\calO''_{32}|[\Dbar D_{01}]_+\ket\bra C_{14,1}|\Lambda_{32}|C_{14,1}\ket}
+\nonumber\\
+&=\half1
+(\bra \Dbar D_{11}|c_\text{als}\Lals\calO''_{32}|\Dbar D_{01}\ket-\bra \Dbar_{11} D|c_\text{als}\Lals\calO''_{32}|\Dbar_{01} D\ket)\bra C_{14,1}|\Lambda_{32}|C_{14,1}\ket
+\\
+&=\half1\bra c_\text{als}\calO''_{32}\ket(-\sqrt{2})(-{16\over 3}) \equiv \half1 S_{D_{11}D_{01}}
+\end{align}
+ただし、ALSについても、$(i\leftrightarrow j)$に関してoperator$((m_i^{-2}-m_j^{-2})(\vecsig_i-\vecsig_j)\vecL)$
+は対称なので、
+operatorのindexを23から32に変えた。また、$(m_i^{-2}-m_j^{-2})$の項のため、$S_{D_{11}D_{01}}=-S_{\Dbar_{11}\Dbar_{01}}$
+である。($\Dbar = u \cbar, D=c\ubar$)
+\begin{align}
+\lefteqn{\bra [\Dbar D_{01}]_+|c_\text{als}\Lals\calO''_{32}|[\Dbar D_{11}]_-\ket\bra C_{14,1}|\Lambda_{32}|C_{14,1}\ket}
+\nonumber\\
+&=\half1
+(\bra \Dbar D_{01}|c_\text{als}\Lals\calO''_{32}|\Dbar D_{11}\ket-\bra \Dbar_{01} D|c_\text{als}\Lals\calO''_{32}|\Dbar_{11} D\ket)\bra C_{14,1}|\Lambda_{32}|C_{14,1}\ket
+\\
+&=\half1\bra c_\text{als}\calO''_{32}\ket(-\sqrt{2})(-{16\over 3}) \equiv \half1 S_{D_{01} D_{11}}
+\end{align}
+%
+よって、
+\begin{align}
+\bra [\Dbar D_{11}]_-|\Vls|[\Dbar D_{01}]_+\ket
+&=\half1 (-S_{\Dbar_{11}\Dbar_{01}}+S_{D_{11}D_{01}})=S_{D_{11}D_{01}}
+\\
+\bra [\Dbar D_{01}]_+|\Vls|[\Dbar D_{11}]_-\ket
+&=\half1 (-S_{\Dbar_{01}\Dbar_{11}}+ S_{D_{01}D_{11}})=S_{D_{01}D_{11}}
+\end{align}
+
+
+
+$\phi_\psi^a$は、係数$({1 \over m_i^2}-{1 \over m_j^2})$がzeroなので、消える。
+\begin{align}
+\bra \phi_\psi^a;C_{12,1}|\Vls|\phi_\psi^b;C_{12,1}\ket
+&=0
+\end{align}
+
+off-diagonalは、
+\begin{align}
+\bra \phi_D^a;C_{14,1}|\Vls|\phi_\psi^b;C_{12,1}\ket&=f_1+f_2+f_3
+\end{align}
+\begin{align}
+f_1&=\bra \phi_D^a;C_{14,1}|c_\text{als}\Lals(\calO''_{14}\Lambda_{14}+\calO''_{32}\Lambda_{32})|\phi_\psi^b;C_{12,1}\ket
+\\
+f_2&=\bra \phi_D^a;C_{14,1}|c_\text{als}\Lals(\calO''_{12}\Lambda_{12}+\calO''_{34}\Lambda_{34})|\phi_\psi^b;C_{12,1}\ket
+\\
+f_3&=\bra \phi_D^a;C_{14,1}|c_\text{als}\Lals(\calO''_{13}\Lambda_{13}+\calO''_{24}\Lambda_{24})|\phi_\psi^b;C_{12,1}\ket
+\end{align}
+
+完全系を入れて
+\begin{align}
+f_1&=\bra \phi_D^a;C_{14,1}|c_\text{als}\Lals(\calO''_{14}\Lambda_{14}+\calO''_{32}\Lambda_{32})
+\Big(\sum_{c=1\sim 10,\beta=1,8}    |\phi_D^c;C_{14,\beta}\ket\bra\phi_D^c;C_{14,\beta}|\Big)
+|\phi_\psi^b;C_{12,1}\ket
+\\
+&=\bra \phi_D^a;C_{14,1}|c_\text{als}\Lals(\calO''_{14}\Lambda_{14}+\calO''_{32}\Lambda_{32})
+|\phi_D^c;C_{14,1}\ket\bra\phi_D^c;C_{14,1}|\phi_\psi^b;C_{12,1}\ket
+\end{align}
+$\phi_D^a=[\Dbar D_{11}]_-$、$[\Dbar D_{01}]_+$とすると、それぞれ
+\begin{align}
+f_1&=\half1 (-S_{\Dbar_{11}\Dbar_{01}}+S_{D_{11}D_{01}})\sqrt{1\over 9}\bra[\Dbar D_{01}]_+|\phi_\psi^b\ket 
+\\
+f_1&=\half1 (-S_{\Dbar_{01}\Dbar_{11}}+S_{D_{01}D_{11}})\sqrt{1\over 9}\bra[\Dbar D_{11}]_-|\phi_\psi^b\ket 
+\end{align}
+
+\begin{align}
+f_2&=0
+\end{align}
+
+\begin{align}
+f_3&=\bra \phi_D^a;C_{14,1}|
+\Big(\sum_{c=1\sim 10,\beta=\bar3,6}|\phi_\delta^c;C_{13,\beta}\ket\bra\phi_\delta^c;C_{13,\beta}|\Big)
+c_\text{als}\Lals(\calO''_{13}\Lambda_{13}+\calO''_{24}\Lambda_{24})
+\nonumber\\
+&\times\Big(\sum_{d\beta'}|\phi_\delta^d;C_{13,\beta'}\ket\bra\phi_\delta^d;C_{13,\beta'}|\Big)
+|\phi_\psi^b;C_{12,1}\ket
+\\
+&=
+\sum_{c=1\sim 10,\beta=\bar3,6}
+\bra \phi_D^a;C_{14,1}|\phi_\delta^c;C_{13,\beta}\ket\bra\phi_\delta^c;C_{13,\beta}|
+c_\text{als}\Lals(\calO''_{13}\Lambda_{13}+\calO''_{24}\Lambda_{24})
+|\phi_\delta^d;C_{13,\beta}\ket\bra\phi_\delta^d;C_{13,\beta}
+|\phi_\psi^b;C_{12,1}\ket
+\\
+&={8\over 9}\sum_c\bra\phi_D^a|\phi_\delta^c\ket\bra\phi_\delta^d|\phi_\psi^b\ket 
+\bra\phi_\delta^c|c_\text{als}\Lals(\calO''_{13}+\calO''_{24})|\phi_\delta^d\ket
+\end{align}
+$c,d$としては、$[\delta\bar\delta_{01}]_-$、$[\delta\bar\delta_{11}]_-$、$[\delta^*\bar\delta_{01}]_+$、
+$[\delta^*\bar\delta_{11}]_+$をとる。
+$\phi_D^a=[\Dbar D_{11}]_-$、$[\Dbar D_{01}]_+$、$\phi_\psi^b=f_0\Jpsi$とすると、それぞれ
+\begin{align}
+f_3&=\sum_c\bra[\Dbar D_{11}]_-|\phi_\delta^c\ket\bra\phi_\delta^d|f_0\Jpsi\ket 
+(-{1\over 6})(S_{\delta \delta})^{cd}
+\end{align}
+ただし、最後の行は13間のorbital wave function が14間のものと同じとした場合。
+
+\subsection{$P$-wave $q\cbar$ meson}
+
+\begin{align}
+|((\ell s_u)j_us_c)j\ket&= 
+\sum_s\left[\begin{array}{ccc}\ell &s_u& j_u\\0&s_c&s_c\\\ell&s&j\\\end{array}\right]|(\ell s)j\ket
+\\
+|((1\half1 )\half1\half1)1\ket&=-\sqrt{1\over 3}|^1P_1\ket +\sqrt{2\over 3}|^3P_1\ket
+\\
+|((1\half1 )\half3\half1)1\ket&= \sqrt{2\over 3}|^1P_1\ket +\sqrt{1\over 3}|^3P_1\ket
+\end{align}
+%
+\begin{align}
+\end{align}
+
+
+\begin{table}[htbp]
+\caption{キャプション}
+\begin{center}
+\begin{tabular}{c|cccccc}\hline
+&tensor &ls\\\hline
+$^3P_0$ & $-4$ & $-2$\\
+$^3P_1$ & $2$ & $-1$\\
+$^3P_2$ & $-2/5$ & 1\\
+$^1P_1$ & 0 & 0\\\hline
+\end{tabular}
+\end{center}
+\label{ラベル}
+\end{table}%
+mf0 = 990
+mf1 = 1282
+mf2 = 1276
+とすると、
+$m_0$=1246, $als$ 46, $at$ 41 MeV.
+mh1 = 1170
+と一致しない。uubarはちょっと当てはまらない。
+
+mf0 = 3415
+mf1 = 3511
+mf2 = 3556
+とすると、
+$m_0$=3525, $als$ 35, $at$ 10 MeV.
+mh1 = 3525
+が一致。ccbar はOK.
+
+mf0 = 2318
+mf1 = 2423
+mf2 = 2464
+とすると、
+$m_0$=2434, $als$ 35, $at$ 12 MeV.
+mh1 = 2427
+が一致。ucbar はまあまあ.
+\end{document}
+
+
