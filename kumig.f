@@ -34,34 +34,45 @@
 !      call check(iqni0,1,c13,amuu,amuc)
 !      write(6,*)'====='
 !      write(28,*)'====='
-
+      do amuu = 0d0,1d0,1d0
+      amuc = 1-amuu
+      write(28,*)'==========',amuu,amuc
       call checkfx(iqni0,0,c14,amuu,amuc,amat14)
       write(28,*)'=========='
-      write(18,*)'====='
+      call cparity(amat14,0,bmatmm14,bmatmp14)
+
+      write(28,*)'==========',amuu,amuc
       call checkfx(iqni0,1,c13,amuu,amuc,amat13)
-      write(6,*)'====='
+      write(28,*)'=========='
+      call cparity(amat13,1,bmatmm13,bmatmp13)
 
       call matchk(amat14,18)
       call matchk(amat13,18)
 
-      write(28,*)'=========='
-      call cparity(amat14,bmatmm14,bmatmp14)
-      write(28,*)'=========='
-      call cparity(amat13,bmatmm13,bmatmp13)
+      end do
+
+      write(6,*)'====='
+
+
 
       call calcmi(iqni0,c14,c13,amuu,amuc)
 
       end
 !==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== =
-      subroutine cparity(amat,bmatmm,bmatmp)
+      subroutine cparity(amat,if13,bmatmm,bmatmp)
       implicit real*8(a-h,j,l,o-z)
       character*100 af
       character*23 a1
       character*23 aa(18,18)
       dimension amat(18,18)
+!      dimension iqni0(9,18)
       dimension bmatmm(18,18),bmatmp(18,18)
       dimension iflgmm(10),iflgmp(8),cmm(10,18),cmp(10,18)
 
+      dimension facmu(0:1,0:1),facnu(0:1,0:1)
+      character*1 amu(0:1,0:1),anu(0:1,0:1)
+
+      iflatex=1
 
       iflgmm = (/2,8,10,12,1,7,9,11,14,15/)
       iflgmp = (/3,5,4,6,13,16,17,18/)
@@ -69,41 +80,49 @@
       nmxmp = 8
       nmx = 18
       
+      facmu=0
+      facnu=0
+      amu=' '
+      anu=' '
+
+      ip = 1
+      if(if13.eq.1) ip = -1
+      
       rt2i = 1/sqrt(2d0)
       cmm = 0
       cmm(1, 1) =  rt2i
-      cmm(1, 2) =  rt2i
+      cmm(1, 2) =  rt2i*ip
       cmm(2, 3) =  rt2i
       cmm(2, 4) = -rt2i
       cmm(3, 5) =  rt2i
       cmm(3, 6) =  rt2i
       cmm(4, 7) =  rt2i
-      cmm(4, 8) =  rt2i
+      cmm(4, 8) =  rt2i*ip
       cmm(5, 9) =  rt2i
-      cmm(5,10) = -rt2i
+      cmm(5,10) = -rt2i*ip
       cmm(6,11) =  rt2i
-      cmm(6,12) =  rt2i
+      cmm(6,12) =  rt2i*ip
       cmm(7,13) =  1
       cmm(8,14) =  rt2i
-      cmm(8,15) = -rt2i
+      cmm(8,15) = -rt2i*ip
       cmm(9,16) =  1
       cmm(10,18)=  1
 
       cmp = 0
       cmp(1, 1) =  rt2i
-      cmp(1, 2) = -rt2i
+      cmp(1, 2) = -rt2i*ip
       cmp(2, 3) =  rt2i
       cmp(2, 4) =  rt2i
       cmp(3, 5) =  rt2i
       cmp(3, 6) = -rt2i
       cmp(4, 7) =  rt2i
-      cmp(4, 8) = -rt2i
+      cmp(4, 8) = -rt2i*ip
       cmp(5, 9) =  rt2i
-      cmp(5,10) =  rt2i
+      cmp(5,10) =  rt2i*ip
       cmp(6,11) =  rt2i
-      cmp(6,12) = -rt2i
+      cmp(6,12) = -rt2i*ip
       cmp(7,14) =  rt2i
-      cmp(7,15) =  rt2i
+      cmp(7,15) =  rt2i*ip
       cmp(8,17) =  1
 
 
@@ -121,9 +140,11 @@
 
       end do
 
+      do 10 iflatex=0,1
+
       do i1=1,10
       do i2=1,10
-        call aform(bmatmm(i1,i2),af)
+        call aform(bmatmm(i1,i2),af,iflatex)
 
 !      write(8,600)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
 !     & trim(af),sum,sum**2
@@ -133,18 +154,28 @@
 !
 !
 !610   format(3f5.1,3x,3f5.1,3x,3f5.1,2x,a,a20,a,1pe18.8,e12.4)
-      write(a1,'(a,a20,a)')'$',trim(af),'$&'
+      if(iflatex.eq.1) then
+        write(a1,'(a,a20,a)')'$',trim(af),'$&'
+      else
+        write(a1,'(a,a20,a)')'',trim(af),','
+      endif
       aa(i1,i2) = a1
 
       end do
       end do
 
-      do ii=1,10
-!      if(ihit(ii).gt.0) then
-      write(28,'(18a)')(aa(ii,ici),ici=1,10)
-!      write(48,'(18a)')(ab(ii,ici),ici=1,18)
-!      endif
-      end do
+      if(iflatex.eq.1) then
+        do ii=1,10
+          write(28,'(18a)')(aa(ii,ici),ici=1,10)
+        end do
+      else
+        do ii=1,10
+          write(29,'(18a)')(aa(ii,ici),ici=1,10)
+        end do
+        write(29,*)' '
+      endif
+      
+10    continue
 
       end
 !==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== =
@@ -480,6 +511,7 @@
 !---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
       hlf = 0.5d0
 
+      iflatex = 1
       c14 = 0
       amat = 0
 !      ihit = 0
@@ -552,20 +584,26 @@
       sum = sum + fac1*fac2*fac3*fac4*fac5*fac6
 
 20    continue
+
       sum0 = sum0+sum**2
       ii=icf
       c14(ici,ixb1,ixb2,jf,lrf) = sum
+
       if(if13.eq.1) then
       sum1 = sum1 + (sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc))**2
       else
       sum1 = sum1 + (sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc))**2
       endif
 
+      if(if13.eq.1) then
+        sum = sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc)
+      else
+        sum = sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc)
+      endif
       amat(icf,ici) = sum
-
 !---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
 ! for tex files
-        call aform(sum,af)
+        call aform(sum,af,iflatex)
 
       write(8,600)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
      & trim(af),sum,sum**2
@@ -576,21 +614,21 @@
 
 610   format(3f5.1,3x,3f5.1,3x,3f5.1,2x,a,a20,a,1pe18.8,e12.4)
       write(a1,'(a,a20,a)')'$',trim(af),'$&'
-      aa(ii,ici) = a1
+      aa(icf,ici) = a1
 
-      if(if13.eq.1) then
-        call aform(sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc),af)
-        write(38,610)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
-     & '$',trim(af),'$&',sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc)
-      write(a1,'(a,a20,a)')'$',trim(af),'$&'
-      ab(ii,ici) = a1
-      else
-        call aform(sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc),af)
-        write(38,610)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
-     & '$',trim(af),'$&',sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc)
-      write(a1,'(a,a20,a)')'$',trim(af),'$&'
-      ab(ii,ici) = a1
-      endif
+!      if(if13.eq.1) then
+!       call aform(sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc),af,iflatex)
+!        write(38,610)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
+!     & '$',trim(af),'$&',sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc)
+!      write(a1,'(a,a20,a)')'$',trim(af),'$&'
+!      ab(ii,ici) = a1
+!      else
+!       call aform(sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc),af,iflatex)
+!        write(38,610)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
+!     & '$',trim(af),'$&',sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc)
+!      write(a1,'(a,a20,a)')'$',trim(af),'$&'
+!      ab(ii,ici) = a1
+!      endif
 
 
       write(6,*)sum0,sum1
@@ -704,7 +742,7 @@
       end if
 
       if(ic1.eq.2 .and. ihit(ii).gt.0) then
-        call aform(sum,af)
+        call aform(sum,af,iflatex)
 
 !      write(6,600)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
 !     & trim(af),sum,sum**2
@@ -720,13 +758,13 @@
       aa(ii,ic) = a1
 
       if(if13.eq.1) then
-        call aform(sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc),af)
+       call aform(sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc),af,iflatex)
         write(38,610)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
      & '$',trim(af),'$&',sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc)
       write(a1,'(a,a20,a)')'$',trim(af),'$&'
       ab(ii,ic) = a1
       else
-        call aform(sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc),af)
+       call aform(sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc),af,iflatex)
         write(38,610)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
      & '$',trim(af),'$&',sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc)
       write(a1,'(a,a20,a)')'$',trim(af),'$&'
@@ -801,14 +839,14 @@
 
       end
 !==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== =
-      subroutine aform(a,af)
+      subroutine aform(a,af,iflatex)
       implicit real*8(a-h,o-z)
       character*1 ap
       character*100 af,ad
       eps = 1d-8
       jmx = 1024
 
-      iflatex = 1
+!      iflatex = 1
       
       do 20 j=1,jmx+1
 
