@@ -69,9 +69,6 @@
       dimension bmatmm(18,18),bmatmp(18,18)
       dimension iflgmm(10),iflgmp(8),cmm(10,18),cmp(10,18)
 
-      dimension facmu(0:1,0:1),facnu(0:1,0:1)
-      character*1 amu(0:1,0:1),anu(0:1,0:1)
-
       iflatex=1
 
       iflgmm = (/2,8,10,12,1,7,9,11,14,15/)
@@ -80,10 +77,6 @@
       nmxmp = 8
       nmx = 18
       
-      facmu=0
-      facnu=0
-      amu=' '
-      anu=' '
 
       ip = 1
       if(if13.eq.1) ip = -1
@@ -126,6 +119,7 @@
       cmp(8,17) =  1
 
 
+!---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
       write(28,*)amat(1,1),amat(18,18)
 
       bmatmm = 0
@@ -139,6 +133,9 @@
       end do
 
       end do
+
+        write(28,*)' %  negative c-parity'
+        write(29,*)' (* negative c-parity *)'
 
       do 10 iflatex=0,1
 
@@ -176,6 +173,60 @@
       endif
       
 10    continue
+!---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
+
+      bmatmp = 0
+      do i2=1,8
+      ix = iflgmp(i2)
+      
+      do i1=1,8
+      do i3=1,nmx
+      bmatmp(i1,i2) = bmatmp(i1,i2)+ cmp(i1,i3)*amat(i3,ix)
+      end do
+      end do
+
+      end do
+
+        write(28,*)' %  positive c-parity'
+        write(29,*)' (* positive c-parity *)'
+
+      do 20 iflatex=0,1
+
+      do i1=1,8
+      do i2=1,8
+        call aform(bmatmp(i1,i2),af,iflatex)
+
+!      write(8,600)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
+!     & trim(af),sum,sum**2
+!600   format(3f5.1,3x,3f5.1,3x,3f5.1,2x,a20,1p2e20.10)
+!      write(18,610)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
+!     & '$',trim(af),'$&',sum,sum**2
+!
+!
+!610   format(3f5.1,3x,3f5.1,3x,3f5.1,2x,a,a20,a,1pe18.8,e12.4)
+      if(iflatex.eq.1) then
+        write(a1,'(a,a20,a)')'$',trim(af),'$&'
+      else
+        write(a1,'(a,a20,a)')'',trim(af),','
+      endif
+      aa(i1,i2) = a1
+
+      end do
+      end do
+
+      if(iflatex.eq.1) then
+        do ii=1,8
+          write(28,'(18a)')(aa(ii,ici),ici=1,8)
+        end do
+      else
+        do ii=1,8
+          write(29,'(18a)')(aa(ii,ici),ici=1,8)
+        end do
+        write(29,*)' '
+      endif
+      
+20    continue
+!---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
 
       end
 !==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== =
