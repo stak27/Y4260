@@ -4,6 +4,9 @@
 !      dimension c14(12,12,12,12,0:4,0:1)
       dimension c13(18,12,12,0:4,0:1)
       dimension c14(18,12,12,0:4,0:1)
+      dimension amat13(18,18),amat14(18,18)
+      dimension bmatmm13(18,18),bmatmm14(18,18)
+      dimension bmatmp13(18,18),bmatmp14(18,18)
 ! q qbar c cbar
       
       amu = 300
@@ -25,18 +28,140 @@
       end do
 
       call cha(iqni0)
-      call check(iqni0,0,c14,amuu,amuc)
+
+!      call check(iqni0,0,c14,amuu,amuc)
+!      write(28,*)'=========='
+!      call check(iqni0,1,c13,amuu,amuc)
+!      write(6,*)'====='
+!      write(28,*)'====='
+
+      call checkfx(iqni0,0,c14,amuu,amuc,amat14)
       write(28,*)'=========='
-      call check(iqni0,1,c13,amuu,amuc)
+      write(18,*)'====='
+      call checkfx(iqni0,1,c13,amuu,amuc,amat13)
       write(6,*)'====='
 
-      call checkfx(iqni0,0,c14,amuu,amuc)
-      write(28,*)'=========='
-      call checkfx(iqni0,1,c13,amuu,amuc)
-      write(6,*)'====='
+      call matchk(amat14,18)
+      call matchk(amat13,18)
 
+      write(28,*)'=========='
+      call cparity(amat14,bmatmm14,bmatmp14)
+      write(28,*)'=========='
+      call cparity(amat13,bmatmm13,bmatmp13)
 
       call calcmi(iqni0,c14,c13,amuu,amuc)
+
+      end
+!==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== =
+      subroutine cparity(amat,bmatmm,bmatmp)
+      implicit real*8(a-h,j,l,o-z)
+      character*100 af
+      character*23 a1
+      character*23 aa(18,18)
+      dimension amat(18,18)
+      dimension bmatmm(18,18),bmatmp(18,18)
+      dimension iflgmm(10),iflgmp(8),cmm(10,18),cmp(10,18)
+
+
+      iflgmm = (/2,8,10,12,1,7,9,11,14,15/)
+      iflgmp = (/3,5,4,6,13,16,17,18/)
+      nmxmm = 10
+      nmxmp = 8
+      nmx = 18
+      
+      rt2i = 1/sqrt(2d0)
+      cmm = 0
+      cmm(1, 1) =  rt2i
+      cmm(1, 2) =  rt2i
+      cmm(2, 3) =  rt2i
+      cmm(2, 4) = -rt2i
+      cmm(3, 5) =  rt2i
+      cmm(3, 6) =  rt2i
+      cmm(4, 7) =  rt2i
+      cmm(4, 8) =  rt2i
+      cmm(5, 9) =  rt2i
+      cmm(5,10) = -rt2i
+      cmm(6,11) =  rt2i
+      cmm(6,12) =  rt2i
+      cmm(7,13) =  1
+      cmm(8,14) =  rt2i
+      cmm(8,15) = -rt2i
+      cmm(9,16) =  1
+      cmm(10,18)=  1
+
+      cmp = 0
+      cmp(1, 1) =  rt2i
+      cmp(1, 2) = -rt2i
+      cmp(2, 3) =  rt2i
+      cmp(2, 4) =  rt2i
+      cmp(3, 5) =  rt2i
+      cmp(3, 6) = -rt2i
+      cmp(4, 7) =  rt2i
+      cmp(4, 8) = -rt2i
+      cmp(5, 9) =  rt2i
+      cmp(5,10) =  rt2i
+      cmp(6,11) =  rt2i
+      cmp(6,12) = -rt2i
+      cmp(7,14) =  rt2i
+      cmp(7,15) =  rt2i
+      cmp(8,17) =  1
+
+
+      write(28,*)amat(1,1),amat(18,18)
+
+      bmatmm = 0
+      do i2=1,10
+      ix = iflgmm(i2)
+      
+      do i1=1,10
+      do i3=1,nmx
+      bmatmm(i1,i2) = bmatmm(i1,i2)+ cmm(i1,i3)*amat(i3,ix)
+      end do
+      end do
+
+      end do
+
+      do i1=1,10
+      do i2=1,10
+        call aform(bmatmm(i1,i2),af)
+
+!      write(8,600)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
+!     & trim(af),sum,sum**2
+!600   format(3f5.1,3x,3f5.1,3x,3f5.1,2x,a20,1p2e20.10)
+!      write(18,610)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
+!     & '$',trim(af),'$&',sum,sum**2
+!
+!
+!610   format(3f5.1,3x,3f5.1,3x,3f5.1,2x,a,a20,a,1pe18.8,e12.4)
+      write(a1,'(a,a20,a)')'$',trim(af),'$&'
+      aa(i1,i2) = a1
+
+      end do
+      end do
+
+      do ii=1,10
+!      if(ihit(ii).gt.0) then
+      write(28,'(18a)')(aa(ii,ici),ici=1,10)
+!      write(48,'(18a)')(ab(ii,ici),ici=1,18)
+!      endif
+      end do
+
+      end
+!==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== =
+      subroutine matchk(amat,nmx)
+      implicit real*8(a-h,j,l,o-z)
+      character*100 af
+      dimension amat(18,18)
+      
+      do i1=1,nmx
+      do i2=1,nmx
+      sum = 0
+      do i3=1,nmx
+      sum = sum + amat(i1,i3)*amat(i2,i3)
+      end do
+      if(abs(sum).gt.1d-9) write(9,*)i1,i2,sum
+      end do
+      end do
 
       end
 !==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== =
@@ -344,26 +469,25 @@
       f13 = a13(l12,l34,lri,l13,l24,lrf)
       end
 !==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== =
-      subroutine checkfx(iqni0,if13,c14,amuu,amuc)
+      subroutine checkfx(iqni0,if13,c14,amuu,amuc,amat)
       implicit real*8(a-h,j,l,o-z)
       character*100 af
       character*23 a1
       character*23 aa(1000,18)
       character*23 ab(1000,18)
       dimension iqni(9),iqnf(9),iqni0(9,18)
-!      dimension ihit(1000)
-!      dimension c13(12,12,12,12,0:4,0:1)
-      dimension c14(18,12,12,0:4,0:1)
+      dimension c14(18,12,12,0:4,0:1),amat(18,18)
 !---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
       hlf = 0.5d0
 
       c14 = 0
+      amat = 0
 !      ihit = 0
 ! total j = 1
 !---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
-      do 100 ic = 1,18
+      do 100 ici = 1,18
       do i=1,9
-         iqni(i) = iqni0(i,ic)
+         iqni(i) = iqni0(i,ici)
       end do
 
       l12 = iqni(1)
@@ -382,9 +506,9 @@
 !---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
       sum1 = 0
 
-      do 100 jc = 1,18
+      do 100 icf = 1,18
       do i=1,9
-         iqnf(i) = iqni0(i,jc)
+         iqnf(i) = iqni0(i,icf)
       end do
 
       l14 = iqnf(1)
@@ -401,27 +525,9 @@
       write(8,'(3i3,3x,3i3,3x,3i3)')(iqnf(i),i=1,9)
       write(18,'(3x,3i2,1x,3i2,1x,3i2)')(iqnf(i),i=1,9)
 
-!      ii=0
-!      do 30 lrf =0d0,1d0,1d0
-
-!      sum0 = 0
-!      do 15 l14 =0d0,1d0,1d0
-      
-!      do 15 s14=0d0,1d0,1d0
-!      do 15 j14=0d0,2d0,1d0
-
-!      do 15 l32 =0d0,1d0,1d0
-!      if(abs(lrf+l14+l32-1).lt.1d-3) then
-!      do 10 s32=0d0,1d0,1d0
-!      do 10 j32=0d0,2d0,1d0
-
+!---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
       ixb1 = iix(l14,s14,j14)
       ixb2 = iix(l32,s32,j32)
-
-!      do 10 jf = 0d0,3d0,1d0
-
-
-
 
 
       sum = 0
@@ -447,22 +553,20 @@
 
 20    continue
       sum0 = sum0+sum**2
-      ii=jc
-      c14(ic,ixb1,ixb2,jf,lrf) = sum
+      ii=icf
+      c14(ici,ixb1,ixb2,jf,lrf) = sum
       if(if13.eq.1) then
       sum1 = sum1 + (sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc))**2
       else
       sum1 = sum1 + (sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc))**2
       endif
 
-!      if(ic1.eq.1 .and. abs(sum).gt.1d-8) then
-!      ihit(ii) = ihit(ii)+1
-!      end if
+      amat(icf,ici) = sum
 
+!---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
+! for tex files
         call aform(sum,af)
 
-!      write(6,600)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
-!     & trim(af),sum,sum**2
       write(8,600)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
      & trim(af),sum,sum**2
 600   format(3f5.1,3x,3f5.1,3x,3f5.1,2x,a20,1p2e20.10)
@@ -472,36 +576,39 @@
 
 610   format(3f5.1,3x,3f5.1,3x,3f5.1,2x,a,a20,a,1pe18.8,e12.4)
       write(a1,'(a,a20,a)')'$',trim(af),'$&'
-      aa(ii,ic) = a1
+      aa(ii,ici) = a1
 
       if(if13.eq.1) then
         call aform(sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc),af)
         write(38,610)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
      & '$',trim(af),'$&',sum*f13(l12,l34,lri,l14,l32,lrf,amuu,amuc)
       write(a1,'(a,a20,a)')'$',trim(af),'$&'
-      ab(ii,ic) = a1
+      ab(ii,ici) = a1
       else
         call aform(sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc),af)
         write(38,610)l14,s14,j14,l32,s32,j32,jf,lrf,jtot,
      & '$',trim(af),'$&',sum*f14(l12,l34,lri,l14,l32,lrf,amuu,amuc)
       write(a1,'(a,a20,a)')'$',trim(af),'$&'
-      ab(ii,ic) = a1
+      ab(ii,ici) = a1
       endif
 
 
       write(6,*)sum0,sum1
 30    continue
-      write(6,*)' --- sum1',ic,sum1
+      write(6,*)' --- sum1',ici,sum1
 
+!---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
 100   continue
+!---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
 
       do ii=1,18
 !      if(ihit(ii).gt.0) then
-      write(28,'(18a)')(aa(ii,ic),ic=1,18)
-      write(48,'(18a)')(ab(ii,ic),ic=1,18)
+      write(28,'(18a)')(aa(ii,ici),ici=1,18)
+      write(48,'(18a)')(ab(ii,ici),ici=1,18)
 !      endif
       end do
 
+!---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- -
       end
 !==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== =
       subroutine check(iqni0,if13,c14,amuu,amuc)
